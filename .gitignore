@@ -1,6 +1,0 @@
-docs/
-mongoexports/
-pkgs/
-*.json
-*.gz
-*.zip
