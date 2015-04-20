@@ -1,0 +1,15 @@
+$def with (login_form)
+<h1>Blog posts</h1>
+$if not cookie().get('username'):
+    <form action="" method="post">
+    $:login_form.render()
+    </form>
+$else:
+    Welcome $cookie().get('username')!<a href="/logout" mce_href="logout">Logout</a>
+    <form action="login" method="post">
+        <input id="test" name="test" type="text"></input>
+        <button id="notlogin" name="notlogin"></button>
+    </form>
+<!-- <ul>
+
+</ul> -->

@@ -1,0 +1,27 @@
+$def with (page)
+<html>
+    <head>
+        <title>My Blog</title>
+        <mce:style><!--
+            #menu {
+                width: 200px;
+                float: right;
+            }
+        
+--></mce:style><style mce_bogus="1">            #menu {
+                width: 200px;
+                float: right;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <ul id="menu">
+            <li><a href="/" mce_href="">Home</a></li>
+            $if cookie().get('username'):
+                <li><a href="/new" mce_href="new">New Post</a></li>
+        </ul>
+        
+        $:page
+    </body>
+</html>
