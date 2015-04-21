@@ -1,101 +1,74 @@
 #coding=utf-8
-import pymongo
-# import logging
-from pymongo import MongoClient
+from model import *
 import web
-
-
-# mongo数据库配置
-conn = MongoClient('localhost',27017) 
-db = conn.group_mems
-
-# 有缓存的数据库类，第一次访问的信息会被保存下来
-class RecsysDatabase(object):
-
-    def __init__(self):
-        self.books_info   = {}
-        self.users_info   = {}
-        # self.umodel_info  = {}
-        self.tags_info    = {}
-
-    def findOneBook(self, book_id):
-        if book_id in self.books_info:
-            return self.books_info[book_id]
-        else:
-            book = db.books.find_one({"id":book_id})
-            if book and 'title' in book:
-                self.books_info[book_id] = book
-                return book
-
-    def findOneUser(self, user_id):
-        if user_id in self.users_info:
-            return self.users_info[user_id]
-        else:
-            user = db.users.find_one({"user_id":user_id})
-            if user:
-                self.users_info[user_id] = user
-                return user
-
-    def findOneTag(self, tag_id):
-        if tag_id in self.tags_info:
-            return self.tags_info[tag_id]
-        else:
-            tag = db.tags.find_one({"name":tag_id})
-            if tag:
-                self.tags_info[tag_id] = tag
-                return tag
-
-    def findOneModel(self, mod_id):
-        if mod_id in self.umodel_info:
-            return self.umodel_info[mod_id]
-        else:
-            mod = db.umodel.find_one({"user_id":mod_id})
-            if mod:
-                self.umodel_info[mod_id] = mod
-                return mod
-
-rsdb = RecsysDatabase()
+from web import form
 
 urls = (
-	'/', 'index',
-	'/book/(\d+)', 'book', 
-	'/user/(\d+)', 'user',
-	'/tag/(\d+)', 'tag', 
-    '/login', 'login',
-    '/logout', 'logout',
-    '/register', 'register',
+    '/', 'Index',
+    '/book/(\d+)', 'Book', 
+    '/user/(\d+)', 'User',
+    '/tag/(\d+)', 'Tag', 
+    '/login', 'Login',
+    '/logout', 'Logout',
+    '/register', 'Register',
 )
 
-render = web.template.render('templates/')
-web.config.debug = False
+#模板公共变量
+t_globals = {
+    'datestr': web.datestr,
+    'cookie': web.cookies,
+}
+
 app = web.application(urls, locals())
+render = web.template.render('templates/')
 session = web.session.Session(app, web.session.DiskStore('sessions'))  
+web.config.debug = False
 
 
-class index(object):
-	def GET(self, name='prehawk'):
-		return render.index(name)
+login = form.Form(
+            form.Textbox('username'),
+            form.Password('password'),
+            form.Button('login')
+    )
+  
+register = form.Form(
+            form.Textbox('username', form.regexp(r".{3,20}$", '用户名长度为3-20位'), description=u'用户名'), 
+            form.Textbox('email', form.regexp(r".*@.*", "must be a valid email address") , description=u'电子邮箱') 
+            form.Password("password", form.regexp(r".{6,20}$", '密码长度为6-20位'), description=u"密码"),  
+            form.Password("password2", description=u"确认密码"),  
+            form.Button("register", type="submit", description="submit"),  
+            form.Textbox('idcode')
+            validators = [ form.Validator("两次输入的密码不一致", lambda i: i.password == i.password2) ]
+    )  
 
-class book(object):
-	def GET(self, book_id):
-		# return '<p>%s</p>' % book_id
-		book_info = rsdb.findOneBook(book_id)
-		return render.book(book_info)
+class Index(object):
+    def GET(self, name='prehawk'):
+        return render.index(name, popbooks, recbooks)
+    def POST(self):
+        pass
 
-class user(object):
-	pass
+class Login(object):
+    def POST(self):
+        f = form
+        print '%r' % f
 
-class tag(object):
-	pass
+class Book(object):
+    def GET(self, book_id):
+        # return '<p>%s</p>' % book_id
+        book_info = rsdb.findOneBook(book_id)
+        return render.book(book_info)
 
-class login(object):
-	pass
+class User(object):
+    pass
 
-class logout(object):
-	pass
+class Tag(object):
+    pass
 
-class register(object):
-	pass
+class Logout(object):
+    pass
+
+class Register(object):
+    pass
 
 if __name__ == '__main__':
-	app.run()
+    app.run()

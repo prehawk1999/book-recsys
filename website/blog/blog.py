@@ -30,8 +30,6 @@ login = web.form.Form(
                       web.form.Button('login')
                       )
 
-
-
 #首页类
 class Index:
     def GET(self):
