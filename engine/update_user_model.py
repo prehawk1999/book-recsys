@@ -159,9 +159,10 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 
 def main():
 
-    query = {'read':{'$gte':60, '$lte':600}}
+    query = {'read':{'$gte':15, '$lte':15}}
     total = db.users.find(query).count()
-    for i,u in enumerate( db.users.find(query, timeout=False) ):
+    for i,u in enumerate( db.users.find(query) ):
+        print u
         updateUserModel(u, datetime.datetime(2015,4,1), 'recsys')
         # break
 
@@ -174,10 +175,6 @@ def main():
         # 记录所有umodel的user所阅读的书籍
         for h in users_his[u['user_id']]:
             umodel_books.add(h['book_id'])
-
-        # # 记录每个umodel，待排序
-        # if 'pro_eval' in u:
-        #     umodels.append(u)
 
         if 'interest_eval' not in u:
             continue
@@ -224,10 +221,9 @@ def main():
                     continue
                 if not binfo['domain']:
                     continue
-                comm_read.add(x['book_id'])
+                comm_read.add( x['book_id'] )
                 if um[0] == u['user_id']:
-                    self_read.add(x['book_id'])
-        # print 'stuck?'
+                    self_read.add( x['book_id'] )
         logging.debug('user %s, sim_users len: %d, comm_read len:%d self_read len:%d\r\n\r\n ' % (u['user_id'], len(user_sim_list), len(comm_read), len(self_read)) )
 
         # 获得comm_read的近邻用户书籍平均评分和评分人数
@@ -276,15 +272,6 @@ def main():
             book = rsdb.findOneBook(pr[0])
             if book and pr[1] > 0:
                 print book['title'], pr[1]
-
-        #  # 获得用户的近邻用户上下索引
-        # floor = i - PRO_SIM_RECORD_FLOOR
-        # if floor < 0:
-        #     floor = 0
-        # ceiling = i + PRO_SIM_RECORD_CEILING
-        # if ceiling > len(umodels) - 1:
-        #     ceiling = len(umodels) - 1
-        # uneightboor = umodels[floor:ceiling]
 
         ## 写入用户最终推荐书目
         ret = db.umodel.update({"_id":u['_id']}, u)

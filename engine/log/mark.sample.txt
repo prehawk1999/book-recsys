@@ -1,0 +1,1081 @@
+2567698, http://book.douban.com/subject/2567698/, 三体, 科幻 刘慈欣 三体 中国 科幻小说 小说 硬科幻 中国科幻,  0
+10746113, http://book.douban.com/subject/10746113/, HTTP权威指南, HTTP 网络 计算机 互联网 协议 web开发 基础理论 编程,  1
+1440345, http://book.douban.com/subject/1440345/, 燕尾蝶, 岩井俊二 燕尾蝶 日本 小说 日本文学 青春 电影书 文学,  0
+1036087, http://book.douban.com/subject/1036087/, 戴女士与蓝, 小说 朱文颖 戴女士与蓝 中国文学 ＜收获＞长篇 文学 Novel 日本,  0
+2024655, http://book.douban.com/subject/2024655/, 数据结构, 数据结构 计算机 算法 教材 数据结构(C语言版) 编程 数据结构（C版） 经典课本,  1
+1022060, http://book.douban.com/subject/1022060/, 狼图腾, 狼图腾 小说 狼 姜戎 草原 中国文学 文化 图腾,  0
+1187832, http://book.douban.com/subject/1187832/, 曾国藩（上中下）, 曾国藩 历史 历史小说 传记 人物传记 唐浩明 小说 传记小说,  0
+1937164, http://book.douban.com/subject/1937164/, 论馈赠, 人类学 社会学 莫斯 礼物 人类学/社会学/民俗学 开卷8分钟 文化 符号人类学,  0
+1020670, http://book.douban.com/subject/1020670/, 舞！舞！舞！, 村上春树 舞!舞!舞! 小说 日本 日本文学 外国文学 文学 村上春樹,  0
+1002825, http://book.douban.com/subject/1002825/, 诠释与过度诠释, 艾柯 诠释学 文学理论 符号学 UmbertoEco 结构主义、符号学、人类学 意大利 文学,  0
+1029241, http://book.douban.com/subject/1029241/, 惊世之作, 池莉 小说 中国文学 当代文学 中国 惊世之作 文集 中国作家,  0
+1449352, http://book.douban.com/subject/1449352/, 朝花夕拾, 鲁迅 散文 中国文学 朝花夕拾 经典 中国 文学 现代文学,  0
+1205370, http://book.douban.com/subject/1205370/, 羊脂球, 莫泊桑 外国文学 羊脂球 小说 法国 名著 经典 外国名著,  0
+1089243, http://book.douban.com/subject/1089243/, 黄金时代, 王小波 黄金时代 小说 中国文学 经典 当代 文学 中国,  0
+1659031, http://book.douban.com/subject/1659031/, 理性与人道--周作人文选, 周作人 文选 散文随笔 闻讯,  0
+3865924, http://book.douban.com/subject/3865924/, 唐代文士与中国思想的转型, 思想史 历史 陈弱水 唐代 文化 中国古代史 隋唐 学术,  0
+1758358, http://book.douban.com/subject/1758358/, 啊哈，灵机一动, 科普 数学 趣味数学 思维 趣味 科学 英文 给孩子的好书,  1
+2057790, http://book.douban.com/subject/2057790/, Java JDK6学习笔记, Java 编程 jdk 计算机 软件开发 笔记 程序设计 计算机类,  1
+10877051, http://book.douban.com/subject/10877051/, 顾城哲思录, 顾城 哲学 中国文学 哲思 诗心 思想 当代文学 只可惜明白了而没做到,  0
+4830879, http://book.douban.com/subject/4830879/, 老子本义, 老子 魏源 道德经 古典 哲学 国学 齐·历代文史要籍注释选刊（华东师范大学出版社） 道家,  0
+2364919, http://book.douban.com/subject/2364919/, 求医不如求己养生救命大宝典, 养生 健康 求医不如求己 医学 中医 身心健康 ｖｘｖ放 生活与艺术,  0
+1485224, http://book.douban.com/subject/1485224/, 悟空传, 今何在 悟空传 小说 网络文学 奇幻 经典 幻想 中国文学,  0
+1195025, http://book.douban.com/subject/1195025/, A FAREWELL TO ARMS, HEMINGWAY 美国文学 小说 ErnestHemingway 海明威 英文原版 外国文学 文学,  0
+1391740, http://book.douban.com/subject/1391740/, 逻辑的引擎, 科普 逻辑 计算机 数学 计算机科学 哲学 计算机史 逻辑的引擎,  1
+25870931, http://book.douban.com/subject/25870931/, 他來了，請閉眼 上, 丁墨 言情 推理 小说 超级好看的文! 网络小说 都市言情 超级好看,  0
+25660015, http://book.douban.com/subject/25660015/, 以自己喜欢的方式过一生, 用自己喜欢的方式过一生 生活 梦想 自我完善 随笔 林特特 青春 朴素,  0
+25830845, http://book.douban.com/subject/25830845/, 邪恶催眠师2, 周浩晖 悬疑 推理 小说 罗飞系列 中国 罗飞 中国文学,  0
+19934344, http://book.douban.com/subject/19934344/, 交互设计沉思录, 交互设计 设计 用户体验 UI 交互 交互设计沉思录 计算机 很好！太棒了！中国就缺交互设计大师！,  1
+6088152, http://book.douban.com/subject/6088152/, 千秋, 落落 散文 千秋 小说 青春文学 短篇 青春 柯艾,  0
+1049584, http://book.douban.com/subject/1049584/, 北京法源寺, 李敖 小说 历史 北京法源寺 历史小说 台湾 中国文学 文学,  0
+3012360, http://book.douban.com/subject/3012360/, C和指针, C C语言 编程 指针 程序设计 计算机 C/C++ Programming,  1
+1007914, http://book.douban.com/subject/1007914/, 窗边的小豆豆, 窗边的小豆豆 黑柳彻子 日本 儿童文学 教育 童年 日本文学 小说,  0
+1466069, http://book.douban.com/subject/1466069/, The Gods Themselves, 科幻 阿西莫夫 小说 美国 科幻小说 艾萨克·阿西莫夫 sci-fi 经典,  0
+6064502, http://book.douban.com/subject/6064502/, 超级快速阅读, 快速阅读 效率 学习 学习方法 自我管理 阅读 方法论 个人管理,  0
+3937716, http://book.douban.com/subject/3937716/, 亚历山大大帝（全二册）, 亚历山大大帝 历史 传记 传记文学 人物传记,  0
+6827453, http://book.douban.com/subject/6827453/, 货币战争, 金融 经济学 货币战争 经济 阴谋论调 宋鸿兵 经济史 颠覆性观点,  1
+2285230, http://book.douban.com/subject/2285230/, 玛雅, 乔斯坦·贾德 哲学 小说 玛雅 挪威 外国文学 哲学入门 文学,  0
+2231870, http://book.douban.com/subject/2231870/, 现代小说技巧初探, 高行健 文学理论 小说 文学 中国 创作谈 文论 研究,  0
+6727862, http://book.douban.com/subject/6727862/, 後九七香港粵語流行歌詞研究, 香港 粤语歌词 港樂 文化研究 歌词 朱耀伟 黄伟文 音乐,  0
+2176823, http://book.douban.com/subject/2176823/, 华尔街的智慧天才, 金融 传记 华尔街 费希尔·布莱克 投资 人物 天才 Black,  0
+4908886, http://book.douban.com/subject/4908886/, 金蔷薇, 帕乌斯托夫斯基 俄罗斯 外国文学 文学 俄罗斯文学 散文 俄国文学 小说,  0
+1143656, http://book.douban.com/subject/1143656/, 证券交易新空间, 投资 股票 混沌 交易 技术分析 比尔.威廉姆 金融 证券,  1
+3713327, http://book.douban.com/subject/3713327/, 圣女的救济, 东野圭吾 推理 日本 東野圭吾 小说 伽利略系列 推理小说 日本文学,  0
+25720141, http://book.douban.com/subject/25720141/, A Tour of C++, C++ 计算机 C++11 入门 BjarneStroustrup 英文版 编程 经典,  1
+7064456, http://book.douban.com/subject/7064456/, 研究之美, 计算机科学 Knuth 思维 数学 计算机 研究 思想 科普,  1
+1027528, http://book.douban.com/subject/1027528/, Borland传奇, Borland IT 企业史 传记 计算机 李维 商业 管理,  0
+1843486, http://book.douban.com/subject/1843486/, 浮城, 梁晓声 小说 浮城 灾难，人性 中国文学 人性 荒诞 中国,  0
+25765743, http://book.douban.com/subject/25765743/, ZooKeeper, 分布式 zookeeper Java 大数据 计算机 编程 zk 英文版,  1
+24375031, http://book.douban.com/subject/24375031/, Hadoop技术内幕, Hadoop MapReduce 云计算 分布式 源码分析 Hadoop技术内幕 hadoop 大数据,  1
+1908463, http://book.douban.com/subject/1908463/, 与未来同行, 李开复 励志 与未来同行 教育 职业规划 管理 《大学生》推荐 成长,  0
+2253381, http://book.douban.com/subject/2253381/, 战争与和平（全四册）, 托尔斯泰 俄国文学 小说 世界名著 战争与和平 外国文学 经典 文学,  0
+25854442, http://book.douban.com/subject/25854442/, 东方风暴, 历史 蒙元史 蒙古 军事 要读 新书记 英文 非常不错,  0
+1851874, http://book.douban.com/subject/1851874/, Regression Analysis by Example, 统计学 回归分析 统计 statistics regression 数学 教材 quantitative,  1
+1774750, http://book.douban.com/subject/1774750/, 黑质三部曲·之一·黄金罗盘, 奇幻 黑质三部曲 魔幻 小说 黄金罗盘 英国 西方奇幻 奇幻文学,  0
+7007231, http://book.douban.com/subject/7007231/, 房间, 爱尔兰文学 小说 外国文学 亲情 爱玛·多诺霍 房间 成长 爱尔兰,  0
+2024224, http://book.douban.com/subject/2024224/, 揭发女明星, 美容 大S 美容大王2:揭发女明星 生活 时尚 台湾 美容护肤 女性,  0
+6518229, http://book.douban.com/subject/6518229/, 走向辉煌, 历史 金一南 近代史 走向辉煌 长征 2011 中国 好书,  0
+3719531, http://book.douban.com/subject/3719531/, 经济学原理, 经济学 曼昆 宏观经济学 经济 经济学原理 教材 经典 Economics,  1
+3196884, http://book.douban.com/subject/3196884/, 儿子韩寒, 韩寒 韩仁均 传记 儿子韩寒 成长 教育 中国 散文随笔,  0
+20254543, http://book.douban.com/subject/20254543/, 算法竞赛入门经典, 算法 ACM 编程 算法竞赛入门经典 程序设计 algorithm 计算机科学 计算机,  1
+1205456, http://book.douban.com/subject/1205456/, 未来之路, 比尔盖茨 未来之路 微软 IT 计算机 传记 商业 自传,  0
+10572016, http://book.douban.com/subject/10572016/, 失去的二十年, 日本 经济 经济学 失去的二十年 历史 经济史 消费危机，预言，经济，崩盘 泡沫,  0
+1431177, http://book.douban.com/subject/1431177/, 藏獒, 藏獒 小说 西藏 杨志军 文学 动物 狗 中国文学,  0
+6189764, http://book.douban.com/subject/6189764/, 长发飞扬的日子, 姜昕 摇滚 青春 自传 回忆 窦唯 女性 传记,  0
+1007045, http://book.douban.com/subject/1007045/, 茶花女, 小仲马 外国文学 爱情 茶花女 法国 小说 名著 法国文学,  0
+5111867, http://book.douban.com/subject/5111867/, 高考零分作文大全, 学术史 搞怪 社会,  0
+10600614, http://book.douban.com/subject/10600614/, 哲学与人生 （第二版）, 哲学 傅佩荣 入门 人生 国学 独立思考 2014 思想,  0
+5957500, http://book.douban.com/subject/5957500/, 中国艺术品资本市场概论, 小说 文学 艺术产业 藝術市場,  0
+1957796, http://book.douban.com/subject/1957796/, 我的前半生, 溥仪 传记 历史 末代皇帝 回忆录 我的前半生 自传 近代史,  0
+1394787, http://book.douban.com/subject/1394787/, Harry Potter and the Half-Blood Prince, harrypotter 小说 英国 哈利波特 魔幻 英文原著 J.K.罗琳 奇幻,  0
+1536776, http://book.douban.com/subject/1536776/, 拜厄钢琴基本教程, 钢琴 琴谱 拜厄 音乐 拜厄钢琴基本教程 教材 弹过的钢琴书 乐谱,  0
+3878514, http://book.douban.com/subject/3878514/, 苍黄, 官场小说 王跃文 小说 官场 政治 中国 苍黄 文学,  0
+1070215, http://book.douban.com/subject/1070215/, 一个经济学家给女儿的忠告, 经济学 经济 生活 生活:经济学 一个经济学家给女儿的忠告 教育 史蒂文·兰兹伯格 美国,  0
+4261148, http://book.douban.com/subject/4261148/, The Quants, 金融 Quant finance 数学 交易 投资 次贷危机 美国,  1
+1140457, http://book.douban.com/subject/1140457/, 敏捷软件开发, 敏捷开发 软件工程 设计模式 软件开发 敏捷 计算机 agile 编程,  1
+4902209, http://book.douban.com/subject/4902209/, Social Choice and Individual Values., 经济学 社會選擇 PoliticalEconomy 博弈论 选举 美國 經濟學 社会学,  1
+11156119, http://book.douban.com/subject/11156119/, Getting Started with SAS Enterprise Miner 7.1, EM sas,  1
+3223715, http://book.douban.com/subject/3223715/, 菜根谭, 修身 菜根谭 古典文学 国学 随笔 哲学 洪应明 中国古典文学,  0
+2117279, http://book.douban.com/subject/2117279/, 教授为什么没告诉我, 论文写作 论文 写作 学术 方法论 科研 毕恒达 台湾,  0
+7065521, http://book.douban.com/subject/7065521/, 银河帝国：基地, 科幻 阿西莫夫 基地系列 小说 银河帝国 科幻小说 美国 心理史学,  0
+6557693, http://book.douban.com/subject/6557693/, 新GRE高频词汇, GRE 英语 杜昶旭 单词 English 工具书 考试 老杜,  1
+1902632, http://book.douban.com/subject/1902632/, 禅里禅外悟人生, 李叔同 弘一法师 佛学 禅 宗教 佛教 禅里禅外悟人生 哲学,  0
+3191257, http://book.douban.com/subject/3191257/, 乌有乡, 尼尔·盖曼 奇幻 小说 英国 乌有乡 科幻 外国文学 幻想小说,  0
+1288895, http://book.douban.com/subject/1288895/, 在乌苏里的莽林中, 俄罗斯 探险 旅行 自然 德尔苏·乌扎拉 阿尔谢尼耶夫 人类学 旅行记,  0
+4028219, http://book.douban.com/subject/4028219/, 新托福考试备考策略与模拟试题, TOEFL 英语 考试 蓝DELTA 托福 美国 English iBT,  1
+2374703, http://book.douban.com/subject/2374703/, Lonely Planet Vietnam, 旅行 LonelyPlanet LP 越南 Vietnam Planet Lonely 自助旅行,  0
+1134199, http://book.douban.com/subject/1134199/, 语法讲义, 语言学 朱德熙 现代汉语 语法 汉语语法 汉语 语言 结构主义,  1
+4242094, http://book.douban.com/subject/4242094/, 郎咸平说：新帝国主义在中国, 郎咸平 经济 经济学 新帝国主义在中国 金融 财经 社科 中国研究,  0
+1899082, http://book.douban.com/subject/1899082/, 一桩事先张扬的凶杀案, 加西亚·马尔克斯 小说 马尔克斯 魔幻现实主义 拉美文学 外国文学 拉美 拉丁美洲文学,  0
+4917574, http://book.douban.com/subject/4917574/, 梁实秋系列-雅舍小品, 梁实秋 散文 随笔 中国文学 散文杂文随笔 中国现代文学 中国 文学,  0
+6038927, http://book.douban.com/subject/6038927/, R Cookbook, R 统计 Statistics 编程 数据挖掘 Programming 数据分析 机器学习,  1
+1737432, http://book.douban.com/subject/1737432/, 徐志摩精选集, 徐志摩 诗歌 中国文学 散文 现当代诗文 精选 梦一般 已藏,  0
+4924297, http://book.douban.com/subject/4924297/, 编程珠玑（英文版・第2版）, 算法 编程 计算机 programming 程序设计 Algorithm 数据结构 理论基础,  1
+24533313, http://book.douban.com/subject/24533313/, R语言经典实例, R 统计 数据分析 R语言 数据挖掘 R语言经典实例 O'Reilly 计算机,  1
+21357364, http://book.douban.com/subject/21357364/, 间隔年，一个女孩在游行, 旅行 间隔年，一个女孩在游行 旅行笔记 间隔年 旅行随笔 生活 蔡璐璐 随笔,  0
+6809087, http://book.douban.com/subject/6809087/, 大话处理器, 计算机 CPU 体系结构 科普 计算机科学 硬件 计算机系统 IT,  1
+6761669, http://book.douban.com/subject/6761669/, Willpower, 心理学 自我控制 自制力 个人管理 思维 心理 psychology English,  0
+4797549, http://book.douban.com/subject/4797549/, The Little SAS Book for Enterprise Guide 4.2, sas 数据挖掘 SAS,  1
+4903437, http://book.douban.com/subject/4903437/, 趁生命气息逗留, 科幻 罗杰·泽拉兹尼 小说 美国 科幻小说 世界科幻大师丛书 外国文学 罗杰泽拉兹尼,  0
+1036171, http://book.douban.com/subject/1036171/, 夏先生的故事, 聚斯金德 小说 德国 帕特里克·聚斯金德 外国文学 德国文学 童书 德国小说,  0
+2351086, http://book.douban.com/subject/2351086/, 人寰, 严歌苓 小说 人寰 女性 中国文学 中国 成长 当代,  0
+1174290, http://book.douban.com/subject/1174290/, C++程序设计, C++ 编程 计算机 谭浩强 教材 程序设计 C/C++ 经典课本,  1
+4077879, http://book.douban.com/subject/4077879/, 零起点学中医, 中医 零起点学中医 养生 医学 健康 学习 针灸 理论,  0
+2044592, http://book.douban.com/subject/2044592/, 英汉大词典, 工具书 陆谷孙 英语 词典 英汉大词典 翻译 英语工具书 dictionary,  1
+4945589, http://book.douban.com/subject/4945589/, 刘邦是怎样炼成的, 历史 刘邦 汉朝 乌角道人 励志 另类视角 人物传记 历史小说,  0
+1056968, http://book.douban.com/subject/1056968/, 老饕漫笔, 美食 饮食文化 赵珩 饮食 随笔 散文 老北京 三联书店,  0
+2193777, http://book.douban.com/subject/2193777/, Joel谈优秀软件开发方法, 软件开发 软件工程 Joel Programming 编程 计算机 计算机科学 软件,  1
+3155710, http://book.douban.com/subject/3155710/, 算法概论, 算法 计算机 algorithms 编程 计算机科学 algorithm 算法与数据结构 经典,  1
+19985944, http://book.douban.com/subject/19985944/, 司马懿吃三国.3, 三国 历史 司马懿传记 小说 人物传记 司马懿 知人知己 权谋,  0
+1201835, http://book.douban.com/subject/1201835/, 文字学概要, 文字学 裘锡圭 语言学 古文字 小学 文字 国学 汉语,  0
+2338464, http://book.douban.com/subject/2338464/, 鸟哥的Linux私房菜, linux 服务器 鸟哥的Linux私房菜 鸟哥 计算机 Linux Linux基础 Server,  1
+1069351, http://book.douban.com/subject/1069351/, 虎女金叶子, 儿童文学 aa aaa 我 只要、每天都能看见你的微笑、就足够、 饿 茜茜公主 它,  0
+2048364, http://book.douban.com/subject/2048364/, 独步天下（上下卷）, 穿越 独步天下 清穿 李歆 小说 言情 皇太极 网络小说,  0
+1777853, http://book.douban.com/subject/1777853/, 屠猫记, 法国 文化史 历史 文化 屠猫记 文化史研究 法国文化 新文化史,  0
+3746797, http://book.douban.com/subject/3746797/, 东游记, 荷兰 西方人看中国 2010,  0
+1038196, http://book.douban.com/subject/1038196/, 尤利西斯, 意识流 乔伊斯 尤利西斯 外国文学 爱尔兰 小说 经典 文学,  0
+3622904, http://book.douban.com/subject/3622904/, 不抱怨的世界, 励志 不抱怨的世界 心理 修身养性，完善自我 心理学 成长 不抱怨 心灵,  0
+1478487, http://book.douban.com/subject/1478487/, 曼珠沙华, 沧月 武侠 曼珠沙华 小说 奇幻 玄幻 爱情 中国,  0
+1861189, http://book.douban.com/subject/1861189/, Envisioning Information, 设计 visualization 信息设计 design EdwordTuffe information 交互设计 建筑,  1
+1045352, http://book.douban.com/subject/1045352/, 二十首情诗与绝望的歌, 聂鲁达 诗歌 爱情 智利 诗 外国文学 外国诗歌 文学,  0
+2125854, http://book.douban.com/subject/2125854/, 青春X游戏, 80后 游戏人生 中国 因为温暖 因为游戏 因为记忆 小说,  0
+6735972, http://book.douban.com/subject/6735972/, 兔子什么都知道, 治愈系 童话 夏正正 绘本 童话绘本 生活 read-like-children Q歪歪,  0
+4846015, http://book.douban.com/subject/4846015/, 性福圣经, 健康 性学 性 两性 生活 爱 文化 sex,  0
+5336008, http://book.douban.com/subject/5336008/, 瞬变, 思维 行为心理学 心理学 管理 转变管理 心理 瞬变 人性,  0
+2859595, http://book.douban.com/subject/2859595/, Data Mining Using SAS Enterprise Miner, sas data mining 数据挖掘,  1
+4908992, http://book.douban.com/subject/4908992/, 如何拿博士学位, 研究生 教育 研究方法 方法论 个人管理 方法 科研 预备课程,  0
+3750309, http://book.douban.com/subject/3750309/, 安静的位置, 周国平 哲学 随笔 散文 人生 安静的人生 素雅的封面，安静的风格 哲理,  0
+5436113, http://book.douban.com/subject/5436113/, DOM Scripting, 2nd Edition, javascript DOM JavaScript Programming html5 web Web 计算机,  1
+2044520, http://book.douban.com/subject/2044520/, 走自己的路, 自我实现/励志 自我完善 励志 向同学借的,  0
+4905858, http://book.douban.com/subject/4905858/, 后天美女养成记, 美容 保养 后天美女养成记 瘦身 小腻腻 生活 健康 养生,  0
+3673668, http://book.douban.com/subject/3673668/, 红玫瑰与白玫瑰, 张爱玲 小说 红玫瑰与白玫瑰 中国文学 爱情 经典 中国 文学,  0
+2285572, http://book.douban.com/subject/2285572/, 圣传, CLAMP 漫画 圣传 日本漫画 日本 经典 阿修罗 夜叉王,  0
+2055164, http://book.douban.com/subject/2055164/, 学以致富, 投资 理财 彼得林奇 金融 股票 经济 学以致富 彼得·林奇,  0
+11500258, http://book.douban.com/subject/11500258/, 复杂网络基础理论, 复杂网络 复杂网络理论基础 教科书 数学 计算社会科学,  1
+4704953, http://book.douban.com/subject/4704953/, The Cartoon Introduction to Economics, 经济 economics General 漫画 经济学,  1
+4739267, http://book.douban.com/subject/4739267/, 少年SF短篇集 1, 漫画 藤子・F・不二雄 科幻 短篇集 日本 藤子·F·不二雄 藤子不二雄 经典,  0
+1182494, http://book.douban.com/subject/1182494/, 小女子哈鲁, 绘本 小女子哈鲁 韩国 哈鲁 漫画 李真伊 绘图本 Haru,  0
+25945442, http://book.douban.com/subject/25945442/, AngularJS权威教程, JavaScript AngularJS 前端开发 Web 技术 web开发 互联网 programming,  1
+21352126, http://book.douban.com/subject/21352126/, 沙海, 南派三叔 盗墓笔记 盗墓 小说 少年篇 悬疑 好基友一辈子【大雾】 坑坑,  0
+1879127, http://book.douban.com/subject/1879127/, 基于Excel和VBA的高级金融建模, 金融 EXCEL VBA 金融工程 投资-建模 经济学 财务 工具书,  1
+3698390, http://book.douban.com/subject/3698390/, 送你一匹马, 三毛 散文 送你一匹马 台湾 随笔 中国文学 文学 三毛echo,  0
+2334843, http://book.douban.com/subject/2334843/, Sams Teach Yourself Java 6 in 21 Days (5th Edition), java 计算机 [pdf] Sams 硕士 英文原版,  1
+6527134, http://book.douban.com/subject/6527134/, 偶然的音乐, 保罗·奥斯特 小说 美国 美国文学 外国文学 PaulAuster 文学 2011,  0
+7915128, http://book.douban.com/subject/7915128/, Programming Clojure, clojure Programming Lisp FP Clojure 函数式编程 程序设计 编程,  1
+23186549, http://book.douban.com/subject/23186549/, 我们家, 颜歌 小说 当代文学 我们家 中国文学 中国 文学 永安平乐镇,  0
+1938591, http://book.douban.com/subject/1938591/, 鬼吹灯之昆仑神宫, 鬼吹灯 盗墓 小说 天下霸唱 探险 网络小说 中国 奇幻, 0 
+25783344, http://book.douban.com/subject/25783344/, 牌局心理学, 心理学 gf 多看 多看限免 牌局 诈金花 赌博,  0
+1037060, http://book.douban.com/subject/1037060/, 曾国藩（上中下）, 曾国藩 传记 历史 历史小说 人物传记 唐浩明 小说 人物,  0
+1932856, http://book.douban.com/subject/1932856/, 微分几何, 数学 微分几何 教材 Mathematics 数学：几何学 几何 经典教材 理工,  1
+22139961, http://book.douban.com/subject/22139961/, Doing Data Science, 数据挖掘 数据分析 数据科学 datascience 计算机 O'Reilly 统计 机器学习,  1
+5906099, http://book.douban.com/subject/5906099/, 毛以后的中国1976-1983, 摄影 刘香成 历史 中国 摄影集 画册 社会和人 新中國,  0
+5966891, http://book.douban.com/subject/5966891/, 深夜食堂 7, 漫画 『深夜食堂』 安倍夜郎 日本 美食 深夜食堂 治愈系 绘本,  0
+25812006, http://book.douban.com/subject/25812006/, Raspberry Pi Python编程入门, python 编程 Pi入门 硬件 树莓派 入门 RaspberryPi Python,  1
+6902317, http://book.douban.com/subject/6902317/, 革命时期的爱情, 王小波 小说 革命时期的爱情 王二 中国文学 中国 中国现当代文学 文学,  0
+2333837, http://book.douban.com/subject/2333837/, 雨天炎天, 村上春树 游记 日本 旅行 雨天炎天 日本文学 随笔 土耳其,  0
+4009658, http://book.douban.com/subject/4009658/, 微软的软件测试之道, 软件测试 测试 计算机 软件工程 行业.技能.知识 Testing 教材 经典,  1
+1427281, http://book.douban.com/subject/1427281/, 羊脂球, 莫泊桑 小说 外国文学 法国 名著 法国文学 羊脂球 羊脂球,莫泊桑,  0
+25775445, http://book.douban.com/subject/25775445/, 睡不着：Tango一日一画, 绘本 漫画 Tango 睡前故事 有想法 中国 绘画 2014,  0
+6431994, http://book.douban.com/subject/6431994/, 悟空传, 今何在 悟空传 小说 奇幻 网络小说 中国文学 猴子 中国,  0
+25897333, http://book.douban.com/subject/25897333/, 我讲个故事，你可别当真啊, 囧叔 随笔 小人物 好玩的 小说 这个封面好喜欢 中国文学 我想做侠客,  0
+1798972, http://book.douban.com/subject/1798972/, 原来我不帅, 原来我不帅 网络小说 小说 台湾 Lowes 搞笑 校园青春 青春,  0
+4924153, http://book.douban.com/subject/4924153/, 数据结构与算法分析, 算法 数据结构 计算机 C Algorithms 编程 计算机科学 机械工业出版社,  1
+3015008, http://book.douban.com/subject/3015008/, 何须浅碧轻红色, 言情 何须浅碧青红色 小说 青梅竹马 现代都市 紫贝 晋江 青春,  0
+1001737, http://book.douban.com/subject/1001737/, 失败的逻辑, 思维 逻辑 心理学 科普 失败的逻辑 系统思维 自我完善 系统,  0
+24882313, http://book.douban.com/subject/24882313/, 地海传奇2：地海古墓, 奇幻 奇幻小说 小说 厄休拉·勒奎恩 西方奇幻 美国文学 美国 文学,  0
+24527472, http://book.douban.com/subject/24527472/, 狗日的战争, 战争 小说 历史 特殊历史时期 冰河 读客 文学 二战,  0
+20516974, http://book.douban.com/subject/20516974/, 木心纪念专号, 木心 随笔 陈丹青 温故 文学 现当代文学 理想国 知识分子,  0
+1281428, http://book.douban.com/subject/1281428/, 经济与管理教程, 经济管理 学习·教材 教材 管理学 经济学,  1
+21794917, http://book.douban.com/subject/21794917/, Arduino技术内幕, Arduino 单片机 arduino技术内幕 计算机 编程 嵌入式 diy 电子,  1
+24745212, http://book.douban.com/subject/24745212/, 投资稳赚, 投资 价值投资 金融 优先读 投机 投资/金融/经济学,  1
+1095883, http://book.douban.com/subject/1095883/, C程序设计语言, C C语言 编程 programming 计算机 经典 C/C++ 程序设计,  1
+10785589, http://book.douban.com/subject/10785589/, 我想陪你去麦加, 小说 简直 爱情 启蒙 后现代PE悬疑 牛人牛文 商界 常识,  0
+1044772, http://book.douban.com/subject/1044772/, 雷雨, 曹禺 戏剧 中国文学 剧本 中国 雷雨 经典 文学,  0
+13084891, http://book.douban.com/subject/13084891/, A Beginner's Guide to Investing, 投资 理财 财务 金融 2014 Investment 经济 英文版,  1
+3103036, http://book.douban.com/subject/3103036/, 在轮下, 黑塞 赫尔曼·黑塞 小说 德国 外国文学 德国文学 HermannHesse 二十世纪外国文学丛书,  0
+24754275, http://book.douban.com/subject/24754275/, 为什么疯子比常人更容易成功, 心理学 疯子 精神病 内心强大 天才 很期待 好书 成功,  0
+1834458, http://book.douban.com/subject/1834458/, Simulink通信仿真教程, 通信 simulink 仿真 编程 Simulink matlab 计算机 通信仿真,  1
+3076942, http://book.douban.com/subject/3076942/, LUA程序设计(第2版), Lua 编程语言 编程 脚本 计算机 游戏开发 programming 游戏编程,  1
+25813440, http://book.douban.com/subject/25813440/, 80/20法则, 时间管理 管理 思维 效率 2014 Kindle 论述 职场,  0
+24827456, http://book.douban.com/subject/24827456/, 万箭穿心, 方方 小说 万箭穿心 中国文学 中国当代文学 中国 生活 武汉,  0
+2696119, http://book.douban.com/subject/2696119/, Effective Java: Second Edition, java programming 编程 计算机 Effective Java 软件开发 程序设计,  1
+20545453, http://book.douban.com/subject/20545453/, The World of Yesterday, 外国文学 欧洲 自传,  0
+2995640, http://book.douban.com/subject/2995640/, 大学 中庸, 国学 哲学 中国经典 儒学 经典 古籍 中庸 大学,  0
+3813194, http://book.douban.com/subject/3813194/, 火车, 宫部美雪 推理 日本 宫部美幸 小说 社会派 日本文学 推理小说,  0
+2365393, http://book.douban.com/subject/2365393/, Designing Interfaces中文版, 交互设计 UI 用户体验 设计 Design Interfaces 互联网 O'Reilly,  1
+1793990, http://book.douban.com/subject/1793990/, 早晨从中午开始, 路遥 散文随笔 早晨从中午开始 随笔 中国文学 文学 人生 小说,  0
+2132634, http://book.douban.com/subject/2132634/, OpenCV教程, OpenCV 图像处理 计算机视觉 视觉 计算机 程序开发 C++ like,  1
+1629512, http://book.douban.com/subject/1629512/, 领域驱动设计, 领域驱动 软件设计 软件工程 DDD 架构 设计模式 软件开发 计算机,  1
+1033248, http://book.douban.com/subject/1033248/, 幸福之路, 罗素 哲学 幸福之路 人生 思想 幸福 英国 生活,  0
+3733082, http://book.douban.com/subject/3733082/, 莲花次第开放, 禅 散文 程然 随笔 佛教 人生 心智 宗教,  0
+3062229, http://book.douban.com/subject/3062229/, 邓小平改变中国, 历史 邓小平 叶永烈 纪实文学 政治 传记 人物 中国,  0
+1144819, http://book.douban.com/subject/1144819/, 旅鼠的困境, 管理 管理学 寓言 学习型组织 你的航标!你的导师! 第五项修炼 翻翻 思想,  0
+4894982, http://book.douban.com/subject/4894982/, 历史是个什么玩意儿4, 历史 袁腾飞 世界史 历史是个什么玩意儿 中国 历史是个什么玩意儿4 历史的另类解读 袁sir,  0
+1037954, http://book.douban.com/subject/1037954/, 告别圆舞曲, 米兰·昆德拉 米兰・昆德拉 小说 外国文学 告别圆舞曲 捷克 文学 昆德拉,  0
+1012039, http://book.douban.com/subject/1012039/, 我的视觉日记, 王小慧 摄影 传记 视觉日记 女性 艺术 自传 生活,  0
+1540270, http://book.douban.com/subject/1540270/, 太极拳全书, 武术 太极 太极拳 养生 健康 体育 武 气功,  0
+3268564, http://book.douban.com/subject/3268564/, Outliers, 心理学 成功 教育 社会学 成功学 人生管理 Non-fiction 英文,  0
+1951158, http://book.douban.com/subject/1951158/, 代码大全, 编程 代码大全 Programming 软件开发 软件工程 计算机 程序设计 经典,  1
+2183171, http://book.douban.com/subject/2183171/, 什么是文字设计, 设计 文字 平面设计 typography 文字设计 艺术 设计理论 印刷,  1
+5355492, http://book.douban.com/subject/5355492/, 蒋勋说红楼梦（第二辑）, 蒋勋 红楼梦 台湾 红学 文学 文化 《红楼梦》研究 美学,  0
+1075174, http://book.douban.com/subject/1075174/, 逻辑学（下卷）, 哲学 黑格尔 逻辑学 西方哲学 德国 逻辑 商务印书馆 Hegel,  0
+4285988, http://book.douban.com/subject/4285988/, 离散数学教程, 复旦 教材 数学 计算机 计算机科学,  1
+2269648, http://book.douban.com/subject/2269648/, 正则表达式必知必会, 正则表达式 计算机 编程 正则 Regex regexp programming 软件开发,  1
+1465401, http://book.douban.com/subject/1465401/, 崔健：在一无所有中呐喊, 崔健 摇滚 音乐 崔健：在一无所有中呐喊 传记 摇滚乐 人物传记 中国现代,  0
+11516220, http://book.douban.com/subject/11516220/, 第2份工作, 职场 第二份工作 成长 小说 人生思考 估计以后用得着 职场小说 2012,  0
+3533087, http://book.douban.com/subject/3533087/, Opinion Mining and Sentiment Analysis, 观点挖掘 情感分析 NLP 数据挖掘 SA 网络挖掘 机器学习 public.opinion,  1
+1894881, http://book.douban.com/subject/1894881/, 神经网络, 神经网络 人工智能 学习 AI ANN 很好 机器学习 革命去,  1
+25825717, http://book.douban.com/subject/25825717/, 龙族Ⅲ, 江南 龙族 奇幻 小说 虐心 中国 青春 冒险,  0
+4462934, http://book.douban.com/subject/4462934/, How to Think Like a Mathematician, 数学 mathematics 科普 科学 advices Math to How,  1
+6822452, http://book.douban.com/subject/6822452/, 超个体, 科普 生物学 社会学 昆虫 生物 系统论 自然 超有机体,  0
+1926980, http://book.douban.com/subject/1926980/, 空间分析, GIS 空间分析 王劲峰 科学出版社,  1
+7054746, http://book.douban.com/subject/7054746/, 读库1204, 读库 张立宪 2012 人文 老六 文化 随笔 新星出版社,  0
+1400049, http://book.douban.com/subject/1400049/, 搜神记Ⅱ·大荒惊变, 树下野狐 玄幻 搜神记 小说 奇幻 网络小说 中国 武侠,  0
+1768683, http://book.douban.com/subject/1768683/, Geometry, Topology and Physics, Second Edition, 物理 physics 微分几何 topology 数学物理 数学 拓扑学 geometry,  1
+1357601, http://book.douban.com/subject/1357601/, 基地與帝國, 科幻 艾萨克·阿西莫夫 基地系列 艾西莫夫 科幻小说 阿西莫夫 小说 小說,  0
+1222032, http://book.douban.com/subject/1222032/, 梦的解析, 心理学 弗洛伊德 梦的解析 精神分析 心理 哲学 西格蒙德・弗洛伊德 梦,  0
+1013980, http://book.douban.com/subject/1013980/, 边城, 沈从文 小说 中国文学 湘西 边城 中国 文学 清新,  0
+1065596, http://book.douban.com/subject/1065596/, 站着相爱, 爱情 网络小说 站着相爱 小说 建议看医生 青春 男人 消费爱情,  0
+5280986, http://book.douban.com/subject/5280986/, 尘缘3, 烟雨江南 仙侠 玄幻 网络小说 尘缘 小说 玄幻武侠魔幻 中国,  0
+1853552, http://book.douban.com/subject/1853552/, 中世纪的城市, 历史 中世纪 城市史 城市 欧洲史 欧洲 汉译世界学术名著丛书 商务印书馆,  0
+3746934, http://book.douban.com/subject/3746934/, 中日合作编写全新日语教材·新日本语教程, 日语 教材 日本語學習 相信 日语学习 已收 宅菊学习课本 学术&教辅,  1
+1041414, http://book.douban.com/subject/1041414/, 威尼斯日记, 阿城 随笔 旅行 威尼斯日记 散文 游记 中国 中国文学,  0
+4231293, http://book.douban.com/subject/4231293/, 软件调试实战, 调试 编程 计算机 debug 软件调试实战 计算机科学 程序设计 技术,  1
+1475815, http://book.douban.com/subject/1475815/, Introduction to Algorithms, 算法 algorithm 计算机 programming 计算机科学 编程 编程艺术 程序设计,  1
+1972412, http://book.douban.com/subject/1972412/, 说谎者的扑克牌, 金融 华尔街 投资 经济 证券 美国 经济学 小说,  0
+1205367, http://book.douban.com/subject/1205367/, 呼啸山庄, 艾米莉・勃朗特 外国文学 呼啸山庄 小说 英国 经典 名著 爱情,  0
+1430871, http://book.douban.com/subject/1430871/, 亵渎1·轮回·月陨, 亵渎 网络小说 玄幻 奇幻 小说 魔幻 经典 罗格,  0
+1150503, http://book.douban.com/subject/1150503/, 资本论（第一卷）, 马克思 资本论 经济学 政治经济学 哲学 经济 经典 经典名著,  1
+1071794, http://book.douban.com/subject/1071794/, 魔戒（第三部）, 托尔金 魔戒 魔幻 小说 奇幻 英国 外国文学 经典,  0
+1921589, http://book.douban.com/subject/1921589/, 周易, 周易 国学 哲学 八卦 古籍 易经 中国 易学,  0
+1421311, http://book.douban.com/subject/1421311/, Band of Brothers, 二战 war novel 小说 历史 history tv 外国文学,  0
+4908844, http://book.douban.com/subject/4908844/, 明朝一哥王阳明, 王阳明 历史 心学 哲学 传记 明朝 小说 精神修炼,  0
+1231326, http://book.douban.com/subject/1231326/, 当代数学大师, 数学 数学史 科普 传记 沃尔夫奖 数学书 數學 数学闲书,  1
+10528449, http://book.douban.com/subject/10528449/, 数据仓库应用指南, 数据仓库 商业智能 IT 信息技术类 我的实体书 指南 科技大类 管理,  1
+4818690, http://book.douban.com/subject/4818690/, 用户体验面面观, 用户体验 交互设计 UE 互联网 UCD 可用性 设计 UX,  1
+3596714, http://book.douban.com/subject/3596714/, 我的一生 对个性的探讨, 传记 双赢 a 认识世界,  0
+24890463, http://book.douban.com/subject/24890463/, 拒绝平庸, 创业 传记 互联网 成长 商业 职场 自我管理 思维,  0
+2009711, http://book.douban.com/subject/2009711/, 生成音系学理论及其应用, 音系学 语言学 生成音系学 齐·当代语言学理论丛书（中国社会科学出版社） 音韵学 语言 生成语言学 泛,  0
+1436346, http://book.douban.com/subject/1436346/, 草木春秋, 汪曾祺 散文 中国文学 随笔 草木春秋 散文随笔 中国 现代文学,  0
+2841837, http://book.douban.com/subject/2841837/, Mind in a Physical World, 心灵哲学 哲学 心理 toc身心问题 toc心灵因果性 toc心灵与世界 of mind,  0
+1842937, http://book.douban.com/subject/1842937/, 你是不是我那杯茶, 你是不是我那杯茶 小说 爱情 百合依然 网络小说 女性思考 女性 网络,  0
+2100288, http://book.douban.com/subject/2100288/, 东方神话, 神话 东方 人文 英国 文化探讨 知识图本 词典 历史,  0
+20268402, http://book.douban.com/subject/20268402/, 有爱无爱都铭心刻骨, 方方 小说 中国 重庆出版社 中国当代文学 2014 2013 2012,  0
+2375835, http://book.douban.com/subject/2375835/, 沉思录, 哲学 沉思录 马可·奥勒留 三联 人文 生活·读书·新知三联书店 沉思 社会,  0
+10678825, http://book.douban.com/subject/10678825/, 小白素食记录, 素食 美食 生活 食谱 小白 饮食 家常菜 吃,  0
+3253983, http://book.douban.com/subject/3253983/, 原来这才是春秋 第一部:《称霸》, 历史 春秋 贾志刚 白话历史 文化 历史小说 小说 人文,  0
+3338894, http://book.douban.com/subject/3338894/, 木炭, 卫斯理 倪匡 科幻 小说 科幻小说 香港 悬疑 中国,  0
+1433379, http://book.douban.com/subject/1433379/, 看上去很美, 王朔 小说 看上去很美 中国文学 中国 成长 当代 青春,  0
+3316438, http://book.douban.com/subject/3316438/, 孤独及其所创造的, 保罗·奥斯特 孤独及其所创造的 小说 外国文学 美国 美国文学 PaulAuster 文学,  0
+25812358, http://book.douban.com/subject/25812358/, 连接者, 沟通 湛庐文化 商业 财富汇 连接者 管理 个人成长 社会化网络及营销,  0
+10825091, http://book.douban.com/subject/10825091/, 穿裘皮大衣的维纳斯, 小说 奥地利 利奥波德·萨克·莫索克 文学 SM 奥地利文学 奥地利小说 莫索克,  0
+1788649, http://book.douban.com/subject/1788649/, 过把瘾就死, 王朔 小说 过把瘾就死 中国 中国文学 当代文学 王朔之痞 当代,  0
+2044757, http://book.douban.com/subject/2044757/, 黄金探案系列 约瑟芬·铁伊推理全集, 推理 约瑟芬・铁伊 英国 小说 推理小说 约瑟芬·铁伊 历史推理 約瑟芬・铁伊,  0
+1647850, http://book.douban.com/subject/1647850/, 马丁·伊登, 杰克·伦敦 外国文学 美国文学 美国 小说 成长 JackLondon 翻译文学,  0
+1082182, http://book.douban.com/subject/1082182/, 魔戒（第三部）, 魔戒 托尔金 魔幻 小说 奇幻 英国 外国文学 经典,  0
+2134786, http://book.douban.com/subject/2134786/, 觉悟之道, 佛教 佛学 南传佛教 上座部 宗教 修行 小乘 灵修,  0
+1326131, http://book.douban.com/subject/1326131/, 展望未来, 英语 教科书 教材 英语学习 我的高中 English LookAhead 回忆,  0
+2339968, http://book.douban.com/subject/2339968/, 周国平论人生（周国平卷）, 周国平 哲学 人生 散文 思考 周国平论人生 人生哲学 思想,  0
+1889166, http://book.douban.com/subject/1889166/, 我的反间谍生涯, 间谍 传记 我的反间谍生涯 历史 外国文学 荷兰 小说 特情,  0
+2871329, http://book.douban.com/subject/2871329/, Mathematical Logic (Oxford Texts in Logic), 逻辑学 数理逻辑 logic 数学 Math MathLogic 英文 英文原版,  1
+1064682, http://book.douban.com/subject/1064682/, 稻草人手记, 三毛 稻草人手记 散文 台湾 随笔 中国文学 文学 三毛的书,  0
+4908883, http://book.douban.com/subject/4908883/, 荒原狼, 赫尔曼·黑塞 德国 小说 外国文学 黑塞 德国文学 荒原狼 文学,  0
+6327843, http://book.douban.com/subject/6327843/, Fixed Income Securities, 金融 fixed income finance fixed-income 固定收益,  1
+1035974, http://book.douban.com/subject/1035974/, 余墨集, 陆谷孙 随笔 散文 杂文 翻译家 翻译 语言与文学 复旦,  0
+1361168, http://book.douban.com/subject/1361168/, 武器屋, 兵器 科普 奇幻基地 资料 游戏 武器简介 武器 幻想,  0
+10469911, http://book.douban.com/subject/10469911/, 给我的孩子们, 丰子恺 丰子恺散文 生活 散文 文学 随笔 创意 儿童读物,  0
+1921558, http://book.douban.com/subject/1921558/, 华为的世界, 华为 管理 企业史 商业 IT 华为的世界 企业 传记,  0
+1103162, http://book.douban.com/subject/1103162/, 啼笑因缘, 张恨水 小说 民国 中国文学 啼笑姻缘 爱情 中国 现代小说,  0
+1883989, http://book.douban.com/subject/1883989/, 早期作品 唐人故事 似水柔情, 王小波 小说 中国文学 文学 中国 早期作品 王小波·经典 唐人故事,  0
+5391705, http://book.douban.com/subject/5391705/, 轮舞, 施尼茨勒 小说 奥地利 外国文学 德语文学 德国 戏剧 奥地利文学,  0
+2973657, http://book.douban.com/subject/2973657/, 微雨红尘（上下）, 桩桩 微雨红尘 言情 现代都市 小说 爱情 晋江 网络小说,  0
+1016486, http://book.douban.com/subject/1016486/, 笑忘录, 米兰·昆德拉 笑忘录 小说 米兰・昆德拉 捷克 外国文学 文学 昆德拉,  0
+1169296, http://book.douban.com/subject/1169296/, 朗文高级英语阅读（下）, 英语 阅读 英语阅读 语言 English 想读 朗文 英语学习,  1
+1802061, http://book.douban.com/subject/1802061/, 诗经原始(上下), 诗经 方玉润 古典文学 国学 诗经原始 经学 文学 诗词,  0
+3837614, http://book.douban.com/subject/3837614/, 最后的舞蹈, 心理学 死亡 哲学 死亡学 心理 死亡百科全书 社会学 最后的舞蹈,  0
+1074207, http://book.douban.com/subject/1074207/, 李岚清音乐笔谈, 音乐 古典音乐 李岚清 艺术 李岚清音乐笔谈 音乐笔谈 西方音乐 经典音乐,  0
+1872086, http://book.douban.com/subject/1872086/, iWoz, 传记 apple iWoz 英文原版 自传 biography SteveWozniak Wozniak,  0
+4709172, http://book.douban.com/subject/4709172/, 理解资本主义 （第3版）, 经济学 政治经济学 资本主义 经济 马克思主义 鲍尔斯 经济科学 社会,  1
+2203742, http://book.douban.com/subject/2203742/, 人类的艺术, 艺术 房龙 历史 美国 亨德里克・房龙 音乐 译本 藏,  0
+3393056, http://book.douban.com/subject/3393056/, 流动的盛宴, 海明威 巴黎 流动的盛宴 回忆录 外国文学 美国 散文 美国文学,  0
+20282052, http://book.douban.com/subject/20282052/, 再见故宫, 安意如 故宫 历史 文化 随笔 李少白 散文 古典,  0
+1161795, http://book.douban.com/subject/1161795/, 德语入门, 德语 语言 学习 deutsch Deutschland 英文还没学好........ANYWAY啦 德国 普鲁士-德国,  1
+2279945, http://book.douban.com/subject/2279945/, 天才教育从早期抓起, 架空历史 小说 酒徒 历史小说 历史 网络小说 家园 网络文学,  0
+1055522, http://book.douban.com/subject/1055522/, 亲历历史, 传记 希拉里 美国 女性 政治 人物传记 自传 亲历历史,  0
+1341035, http://book.douban.com/subject/1341035/, 痛快日记, 蔡康永 痛快日記 随笔 台湾 散文 台灣 台湾文学 康永,  0
+1737661, http://book.douban.com/subject/1737661/, 算法设计, 算法 algorithm 计算机科学 计算机 算法设计 编程 programming algorithms,  1
+1088030, http://book.douban.com/subject/1088030/, 莎士比亚喜剧集, 莎士比亚 戏剧 外国文学 英国 喜剧 经典 文学 名著,  0
+1230400, http://book.douban.com/subject/1230400/, 代数(英文版), 数学 代数 algebra 抽象代数 math Mathematics 教材 近世代数,  1
+3177627, http://book.douban.com/subject/3177627/, 一休和尚(02), 坂口尚 漫画 佛教 历史 日本 青年漫，社会实录人生百态 2011书单 一休,  0
+7163123, http://book.douban.com/subject/7163123/, 哀痛日记, 罗兰·巴特 法国 随笔 法国文学 外国文学 文学 社会学 散文随笔,  0
+10600374, http://book.douban.com/subject/10600374/, 拖延心理学2, 心理学 拖延症 时间管理 个人管理 心理 时间规划 方法 励志,  0
+2251415, http://book.douban.com/subject/2251415/, 谁家老婆上错床, 话剧 台湾 李立群 政治讽刺 喜剧 戏剧 舞台剧 剧本,  0
+10545175, http://book.douban.com/subject/10545175/, 专念, 心理学 积极心理学 思维 心理 正念 情商 励志 成长,  0
+1061615, http://book.douban.com/subject/1061615/, 方与圆, 励志 方与圆 处世 人生 成功学 情商 成长 学习,  0
+4146585, http://book.douban.com/subject/4146585/, 风光摄影实拍完全掌握:自然、气象、乡村、花鸟、城市, 摄影 摄影,风光,拍摄 2010 Photography 摄影技巧 风光 想买的书 拍摄,  0
+1017103, http://book.douban.com/subject/1017103/, 竞争论, 管理 战略 波特 竞争论 商业 竞争 竞争战略 管理学,  0
+1541591, http://book.douban.com/subject/1541591/, 质的研究方法与社会科学研究, 研究方法 社会学 质性研究 质的研究 方法论 陈向明 教育学 方法,  0
+1237508, http://book.douban.com/subject/1237508/, 工科数学分析教程（下册）, 工数分析 工科数学分析 数学 下册 考试用书 课本&研研研,  1
+6044463, http://book.douban.com/subject/6044463/, Essay on the Origin of Languages and Writings Related to Music, 2014 PHIL Rousseau 哲学 大一,  0
+3372123, http://book.douban.com/subject/3372123/, 黟县宏村方言, 方言 语言学 汉语 语言,  1
+3064861, http://book.douban.com/subject/3064861/, 意义解释和真, 戴维森 语言学 陈鬼之书 autDavidson 哲学 语言哲学,  1
+1969885, http://book.douban.com/subject/1969885/, 他们为什么效忠希特勒, 二战 历史 纳粹 希特勒 第三帝国 德国 他们为什么效忠希特勒 资料书,  0
+1822866, http://book.douban.com/subject/1822866/, 王小波全集(第五卷), 王小波 小说 剧本 中国文学 东宫西宫 中国 文学 寻找无双,  0
+1958771, http://book.douban.com/subject/1958771/, 病榻杂记, 季羡林 随笔 病榻杂记 名人随笔 感悟 传记 中国文学 人生,  0
+1545883, http://book.douban.com/subject/1545883/, 中国移民史（第6卷）, 移民史 历史 清朝 移民 曹树基 民国 人口学 葛剑雄,  0
+2102515, http://book.douban.com/subject/2102515/, CES学习法：开创版, 学习 在我想起来\拾遗书 读过的实体书,  0
+1044038, http://book.douban.com/subject/1044038/, 前夜 父与子, 屠格涅夫 外国文学 小说 俄罗斯 俄国 俄罗斯文学 名著 文学,  0
+1949816, http://book.douban.com/subject/1949816/, 印度佛教史, 佛教 印度 宗教 历史 佛学 佛教史 哲学 佛法,  0
+1478809, http://book.douban.com/subject/1478809/, 魔磁, 卫斯理 倪匡 小说 科幻 香港 科幻小说 衛斯理 中国,  0
+4191517, http://book.douban.com/subject/4191517/, 云计算, 云计算 计算机 互联网 IT 科普 趋势 技术 商业,  1
+4772956, http://book.douban.com/subject/4772956/, 投机与骗局, 投资 金融 经济 非理性 投资理财 操盘 财务自由 集体愚蠢,  1
+1932553, http://book.douban.com/subject/1932553/, 涌现.青年建筑师作品, 建筑 非线性 建筑设计 数字建构 NeilLeach 建筑理论 概述 设计,  1
+1010458, http://book.douban.com/subject/1010458/, 中国通史, 历史 中国通史 范文澜 中国历史 通史 国史 中國通史 还是不错的,  0
+3815674, http://book.douban.com/subject/3815674/, 交互式计算机图形学, 图形学 计算机图形学 计算机 计算机科学 编程 3D 设计 OpenGL,  1
+2281055, http://book.douban.com/subject/2281055/, 小就是大, 商业 小就是大 营销 互联网 商业，革新，新思维 创意 思维 管理,  0
+24704115, http://book.douban.com/subject/24704115/, Cocos2d-x高级开发教程, cocos2d-x 游戏编程 cocos2d 游戏开发 iphone 计算机 编程 Programming,  1
+6110189, http://book.douban.com/subject/6110189/, 大唐狄公案, 高罗佩 推理 狄仁杰 公案小说 小说 荷兰 推理小说 文学,  0
+1003387, http://book.douban.com/subject/1003387/, 雪国 古都 千只鹤, 川端康成 日本文学 日本 小说 雪国 千只鹤 古都 经典,  0
+1051814, http://book.douban.com/subject/1051814/, 外国文学史（上）, 外国文学 文学史 教材 外国文学史 郑克鲁 汉语言文学专业教程 文学 文艺理论,  0
+5915381, http://book.douban.com/subject/5915381/, 烙印戰士 11, 漫画 三浦建太郎 三浦健太郎 日本漫画 日本 奇幻 剑风传奇 经典,  0
+2151815, http://book.douban.com/subject/2151815/, 新托福考试冲刺试题, TOEFL 英语 iBT 考试 托福 新托福 Delta English,  1
+10745173, http://book.douban.com/subject/10745173/, 科学的反革命, 哈耶克 哲学 理性滥用 弗里德里希·A.哈耶克 人文与社会译丛 社会学 英国 人文与社会丛书,  0
+3023766, http://book.douban.com/subject/3023766/, Analyzing Linguistic Data, R 语言学 统计 Statistics NLP Psycholinguistics ComputationalLinguistics 数据处理,  1
+6785583, http://book.douban.com/subject/6785583/, 地下室里的萨德, 法国 纪实文学 性 法国文学 边缘人群 文学 萨德 让-吕克·海宁,  0
+3251774, http://book.douban.com/subject/3251774/, Storia moderna, moderna storia,  0
+5975571, http://book.douban.com/subject/5975571/, 天香, 王安忆 小说 当代文学 中国文学 天香 中国 文学 当代中国文学,  0
+1072508, http://book.douban.com/subject/1072508/, 哈克贝利·费恩历险记, 马克吐温 小说 外国文学 美国 马克·吐温 美国文学 名著 幽默,  0
+6439734, http://book.douban.com/subject/6439734/, Stephen King's N, ,  0
+3065647, http://book.douban.com/subject/3065647/, 爱因斯坦传, 爱因斯坦 传记 科学家 人物传记 科普类传记 一个沉醉于科研的为人 人物 思维,  0
+1988423, http://book.douban.com/subject/1988423/, 新概念物理教程 电磁学(第二版), 物理 电磁学 教材 物理学 赵凯华 普通物理 本科教材 新概念,  1
+4028747, http://book.douban.com/subject/4028747/, 萌动漫, 杂志 动漫 ACG 动漫杂志 二次元 雜誌 杂志　ACG 无聊时光,  0
+4772492, http://book.douban.com/subject/4772492/, Belonging, 4 Planning Sociology, Urban 漫画/绘本,  0
+5391063, http://book.douban.com/subject/5391063/, 形式汉语句法学, 语言学 语法研究 汉语 形式语法 生成语言学 句法学 教材 语言,  1
+1085842, http://book.douban.com/subject/1085842/, 数据结构, 数据结构 计算机 算法 教材 编程 计算机科学 Programming 程序设计,  1
+26256849, http://book.douban.com/subject/26256849/, Haskell并行与并发编程, haskell 并发 并行 程序设计 Haskell parallel,  1
+1231365, http://book.douban.com/subject/1231365/, 实变函数与泛函分析, 数学 泛函分析 实变函数与泛函分析 实变函数 分析 Mathematics 神 课本,  1
+3878283, http://book.douban.com/subject/3878283/, iPhone, 说明书,  0
+2284626, http://book.douban.com/subject/2284626/, 認得幾個字, 張大春 台灣 张大春 散文 文化 認得幾個字 台湾 教育,  0
+4067778, http://book.douban.com/subject/4067778/, 文字的故事, 唐诺 文化 文字的故事 台湾 文字 随笔 汉字 文字学,  0
+4955336, http://book.douban.com/subject/4955336/, The Blue Hotel, Stephen crane,  0
+2204826, http://book.douban.com/subject/2204826/, 生活美学.谐趣, 随笔,  0
+4882159, http://book.douban.com/subject/4882159/, 橘子不是唯一的水果, 橘子不是唯一的水果 小说 英国 珍妮特··温森特 珍妮特·温特森 外国文学 英国文学 JeanetteWinterson,  0
+1610233, http://book.douban.com/subject/1610233/, Understanding the Linux Virtual Memory Manager, Linux Kernel 操作系统 MM kernel 内核 计算机 内存管理,  1
+1456860, http://book.douban.com/subject/1456860/, The Design and Evolution of C++, c++ C++ programming 编程 计算机 C/C++ 经典 Evolution,  1
+1874366, http://book.douban.com/subject/1874366/, 在自己房间里的旅行, 在自己房间里的旅行 法国 旅行 思考 外国文学 法国文学 文学 小说,  0
+3293339, http://book.douban.com/subject/3293339/, 黑公主Ⅲ·涌泉幻境, 游素兰 奇幻小说 小说 黑公主 玄幻小说 ssss 台湾 幻想,  0
+1594562, http://book.douban.com/subject/1594562/, 普通唯理语法, 语言学 语法研究 经典著作 普通语言学 齐·语言学名家译丛（湖南教育出版社） 首图 教科书 小學類,  1
+1750622, http://book.douban.com/subject/1750622/, 歌德谈话录, 歌德 思想 文学 德国 外国文学 谈话录 艾克曼 艺术,  0
+12030125, http://book.douban.com/subject/12030125/, Scientific Inference, 哲学 科普,  0
+1170801, http://book.douban.com/subject/1170801/, 泰戈尔诗集, 泰戈尔 诗歌 外国文学 诗集 印度 经典 泰戈尔诗集 文学,  0
+2052474, http://book.douban.com/subject/2052474/, 资治通鉴, 历史 资治通鉴 古籍 中华经典藏书 中国文学 歷史 已购 国学,  0
+2132955, http://book.douban.com/subject/2132955/, 艾柯卡自传, 传记 管理 艾柯卡 自传 商业 经营 汽车公司 职业发展,  0
+1909510, http://book.douban.com/subject/1909510/, 中国盐业考古（第一集）, 李水城 盐业 考古 考古学 论文啊论文,  0
+25779416, http://book.douban.com/subject/25779416/, 大数据营销, 大数据 互联网 营销 商业 数据 2014 数据挖掘 程序员的思维修炼,  1
+1244771, http://book.douban.com/subject/1244771/, Perl Web 开发技术, Perl Apache+MySQL+memcached+Perl开发高速 Web 软件,  1
+2148524, http://book.douban.com/subject/2148524/, 我的心中每天开出一朵花, 幾米 绘本 几米 我的心中每天开出一朵花 台湾 漫画 生活哲理 繪本,  0
+25940601, http://book.douban.com/subject/25940601/, 怪咖的自我修养, 绘本 漫画 怪咖 青春 小清新 生活 治愈 中信出版社,  0
+2032167, http://book.douban.com/subject/2032167/, 藏文拼音教材, 藏语 藏文 语言 藏文-拼音 佛学 教材 语言文字 拼音,  0
+17786730, http://book.douban.com/subject/17786730/, An Idiot Abroad, nonfiction 国外旅记,  0
+1417779, http://book.douban.com/subject/1417779/, 17青春遁走 (Vol. 2), 古谷实 漫画 日本 古谷實 青春 17青春遁走 日本漫画 青年漫画,  0
+1812422, http://book.douban.com/subject/1812422/, 尸骨袋, 斯蒂芬·金 悬疑 恐怖小说 小说 美国 尸骨袋 恐怖 外国文学,  0
+1030205, http://book.douban.com/subject/1030205/, 西方语言学名著选读（第二版）, 语言学 西方语言学名著 原著选读 人民社 linguistics 选读 语言文字 语言学教材,  0
+6904647, http://book.douban.com/subject/6904647/, 编程匠艺, 编程 软件开发 软件工程 计算机 编程匠艺 编程经典 编程规范 计算机科学,  1
+1110699, http://book.douban.com/subject/1110699/, 简明复分析, 数学 复分析 龚昇 复变函数 分析 龚升 教材 Analysis,  1
+4707725, http://book.douban.com/subject/4707725/, TCP/IP详解 卷1：协议（英文版）, TCP/IP 网络 计算机 经典 计算机科学 Programming UNIX Stevens,  1
+1087886, http://book.douban.com/subject/1087886/, 语用学教程, 语言学 语用学 语言文字 语用和修辞 教材 研一 语 语用,  1
+2133496, http://book.douban.com/subject/2133496/, Falling Man, DeLillo 美国 911 Don Fiction 家庭 小说 抽筋,  0
+2171896, http://book.douban.com/subject/2171896/, 提升宝宝情商的游戏, ,  0
+24845050, http://book.douban.com/subject/24845050/, 神探夏洛克, 神探夏洛克 BBC 英国 周边书 sherlock 本尼迪克特·康巴伯奇 福尔摩斯 设定集,  0
+5378558, http://book.douban.com/subject/5378558/, Artificial Intelligence: A modern approach, 人工智能 计算机科学 Artificial_Intelligence ai 计算机 计算语言学 英文版 算法,  1
+2041526, http://book.douban.com/subject/2041526/, 视读逻辑学, 逻辑学 逻辑 科普 哲学 视读系列 科学 逻辑启蒙 杂,  0
+3091349, http://book.douban.com/subject/3091349/, 鲤·孤独, 张悦然 鲤·孤独 鲤 青春 孤独 文学 周嘉宁 杂志,  0
+5989297, http://book.douban.com/subject/5989297/, 法律的异邦, 法律 张海斌 随笔 法学随笔 法学 人文 法理学 法学相关,  0
+25716166, http://book.douban.com/subject/25716166/, 从缺陷中学习C/C++, C++ 编程 C 技术 Programming 编程语言 程序设计语言 程序设计,  1
+1844976, http://book.douban.com/subject/1844976/, I, Robot (Oxford Bookworms Library), ,  0
+1904131, http://book.douban.com/subject/1904131/, Martin Dressler, 22,  0
+5994458, http://book.douban.com/subject/5994458/, 尼洛亚特狂歌, 水果君 轻小说 白日梦骑士团 小说 中国 輕小說 奇幻 糖果骑士,  0
+11549519, http://book.douban.com/subject/11549519/, Proof of Heaven, 天堂的证据 神经科学 心理 宗教 英文原版 死亡 心灵成长 哲学,  0
+1485569, http://book.douban.com/subject/1485569/, 宇宙全息自律, 全息 宇宙 文化 中国 国学 想读 经典,  0
+1836671, http://book.douban.com/subject/1836671/, 三十年河东三十年河西, 季羡林 文化 杂文 社会 中国文学 中国 议而不中,中而不高; leisure,  0
+21453395, http://book.douban.com/subject/21453395/, 与他共度六十一世, 张国荣 哥哥 电影 传记 leslie 香港 電影世界 張國榮,  0
+4230198, http://book.douban.com/subject/4230198/, 再见，维罗妮卡, 法国 法国文学 小说 外国文学 现代派小说 A 〓小说 外文,  0
+3910220, http://book.douban.com/subject/3910220/, 十四堂人生创意课Ⅱ, 李欣频 创意 十四堂人生创意课Ⅱ——推翻李欣频的创意学 广告 启发 台湾 人生 心灵,  0
+1393724, http://book.douban.com/subject/1393724/, 楚辞, 楚辞 古典文学 诗歌 国学 古典 中国文学 诗词 经典,  0
+1230040, http://book.douban.com/subject/1230040/, C语言接口与实现, c语言 c 编程 程序设计 计算机 Programming C/C++ C,  1
+1016332, http://book.douban.com/subject/1016332/, 第五大道的Pilates, 萧亚轩 Elva Pilates 萧亚轩.第五大道的PILATES 第五大道的PILATES（萧亚轩） 生活 流行读本 明星,  0
+4048957, http://book.douban.com/subject/4048957/, Things Fall Apart, 非洲文学 钦努阿·阿契贝 小说 非洲 外国文学 英文课读的书 文学 经典,  0
+1105146, http://book.douban.com/subject/1105146/, 局外人, 加缪 存在主义 小说 法国 局外人 外国文学 法国文学 诺贝尔文学奖,  0
+1442623, http://book.douban.com/subject/1442623/, Design Patterns Explained, 设计模式 pattern 软件工程 OO 计算机 DesignPatterns, programming 编程,  1
+1441922, http://book.douban.com/subject/1441922/, 从一到无穷大, 科普 数学 伽莫夫 经典 科学 自然科学 物理 美国,  1
+2977932, http://book.douban.com/subject/2977932/, 藥師寺涼子怪奇事件簿 2, 田中芳树 轻小说 日本 田中芳樹 药师寺凉子怪奇事件簿 小说 垣野內成美 奇幻,  0
+2278689, http://book.douban.com/subject/2278689/, 红楼梦魇, 张爱玲 红楼梦 红楼梦魇 红学 文学评论 文学 石头记 文艺理论,  0
+1926324, http://book.douban.com/subject/1926324/, 罗马史-诺贝尔文学奖文集, 历史 罗马 罗马史 外国文学 蒙森 诺贝尔 德国 欧洲,  0
+3122860, http://book.douban.com/subject/3122860/, Chinese Propaganda Posters, 毛,  0
+21346008, http://book.douban.com/subject/21346008/, 米格尔街, 奈保尔 外国文学 小说 诺贝尔文学奖 英国文学 英国 维迪亚达尔·苏雷吉普拉萨德·奈保尔 文学,  0
+10745270, http://book.douban.com/subject/10745270/, 只剩一个角落的繁华, 陈文茜 经济 只剩一个角落的繁华 台湾 世界经济 社会 文化 中信出版社,  0
+5990493, http://book.douban.com/subject/5990493/, 流浪玛厄斯, 科幻 郝景芳 小说 中国 科幻小说 新星出版社 中国科幻 华文原创,  0
+2396947, http://book.douban.com/subject/2396947/, The Morphology of Chinese, 语言学 Linguistics Chinese 语言学/习 语法 类型学 现代汉语 汉语言文字,  1
+2193302, http://book.douban.com/subject/2193302/, Fifty Challenging Problems in Probability with Solutions, 数学 概率 统计学 quant interview 概率统计 面试 Probability,  1
+1003598, http://book.douban.com/subject/1003598/, 富爸爸,穷爸爸-富爸爸系列丛书(1), 理财 富爸爸,穷爸爸 投资 罗伯特·T·清崎 财富 管理 励志 美国,  0
+2987179, http://book.douban.com/subject/2987179/, 科学究竟是什么, 科学哲学 哲学 科学 科普 查尔默思 科学哲学与科学史 西方哲学 科技哲学,  0
+1767307, http://book.douban.com/subject/1767307/, 文化大革命中的地下文学, 文革 文学 地下文学 文学史 历史 史料 中国当代文学 真实,  0
+2007245, http://book.douban.com/subject/2007245/, 梁思成传, 梁思成 传记 建筑 人物传记 社会 传记系 林徽因 梁林,  0
+1009931, http://book.douban.com/subject/1009931/, 潘金莲之前世今生 诱僧, 李碧华 小说 香港 李碧華 爱情 潘金莲之前世今生 中国文学 文学,  0
+1452107, http://book.douban.com/subject/1452107/, The C++ Programming Language, C++ Programming 编程 经典 计算机 程序设计 C/C++ 英文原版,  1
+1916347, http://book.douban.com/subject/1916347/, 变形记, 奥维德 古罗马 外国文学 诗歌 神话 文学 小说 网格本,  0
+2014201, http://book.douban.com/subject/2014201/, 凤霸九天（上下）, 蒋胜男 小说 宋朝 历史 言情 晋江 历史言情 网络小说,  0
+1449421, http://book.douban.com/subject/1449421/, 古文观止, 古文观止 古典文学 古籍 古文 中国 文学 古典 经典,  0
+6961064, http://book.douban.com/subject/6961064/, 長崎, Eric_Faye 長崎 埃里克·费伊《长崎》 翻譯 小说 欧美文学 日本 小說,  0
+3280459, http://book.douban.com/subject/3280459/, Principles of Communications, ,  0
+1336093, http://book.douban.com/subject/1336093/, 国际新锐平面创意设计, 设计 design 設計 DESIGN 借 国际新锐平面创意设计 平面设计,  1
+1044121, http://book.douban.com/subject/1044121/, 稻草人, 叶圣陶 童话 儿时读物 还要点多少遍看过才停止推荐呢？ 童年永远的梦 我远去的天真 ； 漫画,  0
+3571979, http://book.douban.com/subject/3571979/, Programming the Semantic Web, 语义网 数据挖掘 semantic语义网 RDF 计算机科学 计算机 Programming python,  1
+1974023, http://book.douban.com/subject/1974023/, 华盖集, 鲁迅 杂文 中国文学 文学 华盖集 中国 经典 迅哥儿,  0
+1873281, http://book.douban.com/subject/1873281/, 少年残像, 由贵香织里 漫画 少年残像 日本漫画 日本 灰暗 耽美 由貴香織里,  0
+1466190, http://book.douban.com/subject/1466190/, 海を見る人, 小林泰三 科幻 小说 日本文学 日本 科幻小说 日文 sf,  0
+1783558, http://book.douban.com/subject/1783558/, 达·芬奇密码, 悬疑 小说 丹·布朗 宗教 达芬奇密码 推理 外国文学 芬奇密码,  0
+1455909, http://book.douban.com/subject/1455909/, 世界电影史（1960年以来）（上、下）, 电影 电影史 电影研究 电影理论 德国 历史 考研 电影历史,  0
+1916661, http://book.douban.com/subject/1916661/, 堂吉诃德（上下）, 塞万提斯 外国文学 西班牙 堂吉诃德 小说 杨绛 文学 经典,  0
+1832693, http://book.douban.com/subject/1832693/, 狼群4, 狼群 军事 雇佣兵 军事小说 小说 经典 军事题材 网络文学,  0
+7970620, http://book.douban.com/subject/7970620/, Corpus Linguistics, 语料库语言学 语言学 语料库 linguistics corpus NLP 计算语言学和语料库 计算语言学,  1
+2696944, http://book.douban.com/subject/2696944/, I. M. Wright's  Hard Code, 软件工程 编程 软件开发 计算机 programming 项目管理 计算机技术 程序,  1
+6025622, http://book.douban.com/subject/6025622/, 五分钟曼陀罗彩绘减压, 曼陀罗彩绘 减压 绘画 心灵 心理学 绘本 曼陀罗 心灵成长,  0
+3852114, http://book.douban.com/subject/3852114/, 裂变中的传承, 罗志田 思想史 近代史 历史 学术 学术史 文化 思想文化史,  0
+4199509, http://book.douban.com/subject/4199509/, 开发自己的搜索引擎, 搜索引擎 lucene Java 编程 heritrix 计算机 Design 程序设计,  1
+2121078, http://book.douban.com/subject/2121078/, Ajax设计模式, ajax 设计模式 javascript web2.0 web 设计 模式 web开发,  1
+1392822, http://book.douban.com/subject/1392822/, 子不语, 笔记小说 子不语 中国古典 袁枚 小说 古典文学 怪力乱神 神鬼,  0
+4828952, http://book.douban.com/subject/4828952/, 鲁豫有约·开心果, 陈鲁豫 人物 凤凰卫视 传记 ***凤凰卫视*** 人物传记 励志 生活的万花筒,  0
+3206270, http://book.douban.com/subject/3206270/, 拥抱战败, 日本 历史 二战 战后 普利策奖 纪实 拥抱战败 社会,  0
+1959124, http://book.douban.com/subject/1959124/, 生活之路, 托尔斯泰 哲学 列夫·托尔斯泰 思想 俄罗斯 生活 外国文学 文学,  0
+1761142, http://book.douban.com/subject/1761142/, 人和食物是平等的, 殳俏 美食 随笔 生活 饮食 散文 文人食谱 专栏,  0
+3859952, http://book.douban.com/subject/3859952/, 恨不相逢陌上花（上下）, 穿越 言情 孤钵 小说 恨不相逢陌上花 古代 网络小说 爱情,  0
+1102820, http://book.douban.com/subject/1102820/, 人类的故事, 房龙 历史 人文 人类 社会历史 社会杂谈 经典 文化,  0
+2223488, http://book.douban.com/subject/2223488/, 系统解剖学, 医学 解剖学,  0
+4836523, http://book.douban.com/subject/4836523/, 印度神话, 神话 印度 印度神话 宗教 文化 青泥 文化研究 旅行,  0
+2118435, http://book.douban.com/subject/2118435/, 大名府, 连环画 童年 朱光玉 小人书 连环画：水浒30回本 绘本图志 漫画 水浒传,  0
+4261996, http://book.douban.com/subject/4261996/, 这些年, 毛尖 随笔 散文随笔 杂文 散文 中国 文学 2011,  0
+3633805, http://book.douban.com/subject/3633805/, 铸就偶像, 传记 苏珊·桑塔格 SusanSontag 美国 人物 苏珊・桑塔格 桑塔格 人物传记,  0
+3568300, http://book.douban.com/subject/3568300/, Obedience, ,  0
+1070201, http://book.douban.com/subject/1070201/, 徐朔方说戏曲, 戏曲 戏剧 徐朔方 古典文学 昆曲 学术 音乐 小说戏曲理论,  0
+1690768, http://book.douban.com/subject/1690768/, 金戈铁马的交汇, 历史 辽金元西夏,  0
+6885007, http://book.douban.com/subject/6885007/, 石榴树, 萨洛扬 吕叔湘 小说 小說戲劇與詩歌 童书 美国文学 高尔泰推荐,  0
+2666520, http://book.douban.com/subject/2666520/, Introduction to Java Programming, java Programming 大学教材 Java 计算机 编程 专业课 {TextBook.SCUT},  1
+1353711, http://book.douban.com/subject/1353711/, 香港風格., 香港 胡恩威 文化 城市 建築 城市研究 設計 香港風格,  0
+3276681, http://book.douban.com/subject/3276681/, 他其实没那么喜欢你, 他其实没那么喜欢你 爱情 心理 两性 女性 心理学 美国 外国文学,  0
+1078962, http://book.douban.com/subject/1078962/, 财智时代（王志纲）, 王志纲 财智时代（王志纲） 策划 商业 商业:思想类 货殖 经济学与管理 经济学,  1
+1146900, http://book.douban.com/subject/1146900/, 现代设计史, ,  1
+6896040, http://book.douban.com/subject/6896040/, 好小猫, 猫 顾湘 好小猫 随笔 小说 生活的慢板 中国文学 猫志,  0
+1181354, http://book.douban.com/subject/1181354/, 择吉与中国文化, 择吉 中国文化　择吉 中国文化 社会学 文化 周易 古典文艺 传统其他专题,  0
+3992737, http://book.douban.com/subject/3992737/, 鲤·因爱之名, 张悦然 鲤 青春 杂志 小说 周嘉宁 青春文学 文学,  0
+10439785, http://book.douban.com/subject/10439785/, 國王遊戲, 金泽伸明 日本 漫画 小说 推理 悬疑 轻小说 日本推理,  0
+1325158, http://book.douban.com/subject/1325158/, 汉藏系语言和汉语方言比较研究, 历史语言学 语言学 音韵学 ebook 中国研究 古文字 工具书 汉语,  1
+4246980, http://book.douban.com/subject/4246980/, 地粮, 安德烈·纪德 纪德 法国 法国文学 外国文学 散文 小说 文学,  0
+1418119, http://book.douban.com/subject/1418119/, 闲话闲说, 阿城 随笔 文化 散文 台版 繁體 中国 台灣,  0
+1069994, http://book.douban.com/subject/1069994/, 傅雷家书, 傅雷 傅雷家书 书信 教育 随笔 书信集 中国文学 文学,  0
+2361886, http://book.douban.com/subject/2361886/, 蒙学十篇, 蒙学 国学 古典文学 蒙学十篇 开蒙 名著 古典 中国,  0
+1001560, http://book.douban.com/subject/1001560/, 现代中国学术论衡, 钱穆 国学 历史 学术 文化 文化研究 现代中国学术论衡 三联,  0
+1458192, http://book.douban.com/subject/1458192/, 犬夜叉01, 高桥留美子 漫画 犬夜叉 日本漫画 日本 少年漫画 经典 动漫,  0
+4850804, http://book.douban.com/subject/4850804/, 禅与生活, 禅 铃木大拙 佛学 禅学 日本 哲学 宗教 禅宗,  0
+1126206, http://book.douban.com/subject/1126206/, 城堡, 卡夫卡 小说 外国文学 奥地利 城堡 现代主义 文学 经典,  0
+1266097, http://book.douban.com/subject/1266097/, 被遗忘的战争, 历史 土客械斗 晚清史 客家 乡土史 中国近代史 土客大械斗 近代,  0
+1999323, http://book.douban.com/subject/1999323/, 房道, 投资 理财 房地产 楼市 投资理财 房道 房道-登上财务自由之路 财经（经济+金融+商业）,  1
+1667324, http://book.douban.com/subject/1667324/, 线性代数, 数学 教材 大学教材 线代 教科书 数学原理 工程丝儿 高等代数5,  1
+2364176, http://book.douban.com/subject/2364176/, Text Mining Application Programming, text 文本挖掘 mining 信息检索,  1
+1760134, http://book.douban.com/subject/1760134/, 茨威格小说集, 茨威格 小说 外国文学 奥地利 短篇小说 文学 德语文学 百花文艺出版社,  0
+1150702, http://book.douban.com/subject/1150702/, 资本论(第二卷), 马克思 经济学 资本论 政治经济学 哲学 经济 经典 德国,  1
+1068474, http://book.douban.com/subject/1068474/, 欧·亨利短篇小说选, 欧・亨利 美国 外国文学 短篇小说 小说 欧亨利短篇小说选 文学 欧亨利,  0
+1958312, http://book.douban.com/subject/1958312/, 关于方文山的素颜韵脚诗, 方文山 关于方文山的素颜韵脚诗 诗歌 诗词 诗集 诗 文学 台湾,  0
+1159918, http://book.douban.com/subject/1159918/, 中国历代语言学家, 语言学 人文 复旦 学术史 工具书,  1
+1005115, http://book.douban.com/subject/1005115/, 十七岁不哭, 青春 十七岁不哭 校园 小说 剧本 成长 李芳芳 中国,  0
+1035027, http://book.douban.com/subject/1035027/, 爵士圣经, 音乐 爵士乐 工具书 jazz 爵士圣经 李宏杰 艺术 爵士,  0
+1291341, http://book.douban.com/subject/1291341/, 瓦兰短诗集赏析, 瓦兰 诗歌 短诗集 中国 中国新诗 诗集 中国文学 诗,  0
+3159873, http://book.douban.com/subject/3159873/, 故宫陶瓷馆, 陶瓷馆 陶瓷 文华殿 故宫 艺术史 博物 紫禁城出版社 收藏,  0
+5264467, http://book.douban.com/subject/5264467/, 战争在海对岸开始, 村上龙 日本 日本文学 小说 文学 外国文学 战争在海对岸开始 日@村上龙,  0
+3920495, http://book.douban.com/subject/3920495/, 做自己的建築師: 蓋綠色的房子, 建筑 设计 自立造屋 生活 创意 台@L林黛羚 家居 舒适地活着,  0
+2050429, http://book.douban.com/subject/2050429/, The Categories [EasyRead Large Edition], Aristotle categories,  0
+3861540, http://book.douban.com/subject/3861540/, 回到歌唱, 李皖 音乐 评论 乐评 南大出版社 民谣 艺术 随笔,  0
+2266498, http://book.douban.com/subject/2266498/, 白夜行（下）, 東野圭吾 东野圭吾 推理 日本 小说 白夜行 推理小说 犯罪,  0
+2090051, http://book.douban.com/subject/2090051/, THE FIRST FORTY-NINE STORIES, hemingway 小说 海明威 2013 Fiction Hemingway US,  0
+1518148, http://book.douban.com/subject/1518148/, 黑天使, 江户川乱步 推理 日本 小说 侦探 悬疑:推理 悬疑 日本推理,  0
+3758792, http://book.douban.com/subject/3758792/, 军碑一九四二, 中国远征军 历史 抗日 缅甸 天方夜谭 垃圾书 军碑1942 军碑,  0
+11580233, http://book.douban.com/subject/11580233/, 系统原理下的语言问题, 系统 语义 语言学 语言研究,  1
+6731445, http://book.douban.com/subject/6731445/, 巴黎，很烦人, 巴黎 旅行 随笔 生活 法国 游记 游记.笔记 毕远月,  0
+1452550, http://book.douban.com/subject/1452550/, 中西美术比较十书, 艺术 中西 收藏 美术,  0
+1760067, http://book.douban.com/subject/1760067/, Queer Theory, queer 文化研究 酷儿理论 社會學 性别研究 Queer 政治 文学理论,  0
+24708198, http://book.douban.com/subject/24708198/, 红拂夜奔, 王小波 小说 红拂夜奔 有趣 思想 中国 长篇小说 原作语言：中文,  0
+3226011, http://book.douban.com/subject/3226011/, 理性之夢 The Dreams of Reason, 科普 科学 哲学 理性之夢TheDreamsofReason 人文 這世界屬於會做夢的人 港台版 感兴趣,  0
+3733607, http://book.douban.com/subject/3733607/, Bakkhai (Greek Tragedy in New Translations), 古希腊 戏剧 神话,  0
+4917079, http://book.douban.com/subject/4917079/, 人性能达到的境界, 心理学 马斯洛 人性 精神分析 哲学 社会心理学 美国 见识,  0
+2341848, http://book.douban.com/subject/2341848/, 身体语言密码, 心理学 身体语言 沟通 身体语言密码 心理 肢体语言 非语言交际 个人修养,  0
+1242649, http://book.douban.com/subject/1242649/, 现代俄语口语概论, 专业 语言学,  1
+1151873, http://book.douban.com/subject/1151873/, 我是你爸爸, 王朔 我是你爸爸 小说 中国文学 现实主义 中国 文学 现代小说,  0
+1933843, http://book.douban.com/subject/1933843/, 人像摄影用光指南, 摄影 人像摄影 用光 教程 人像 克里斯托弗 photography 赫特尔,  0
+1482000, http://book.douban.com/subject/1482000/, Data Mining, 数据挖掘 DataMining 教材 Data-Mining 计算机 清华计算机 textbook ny720,  1
+3403328, http://book.douban.com/subject/3403328/, General Linguistics, 外院外国文学 普通语言学 语言学,  1
+3057119, http://book.douban.com/subject/3057119/, 江湖奇侠传（全四册）, 武侠 平江不肖生 小说 武侠小说 民国 明清章回小说 中国 经典,  0
+2060238, http://book.douban.com/subject/2060238/, 一个叫窦唯de孩子, 童话 一个叫窦唯的孩子 林一苇 成人童话 窦唯 文学 中国文学 传记,  0
+1277761, http://book.douban.com/subject/1277761/, 根, 美国黑人 小说 根 美国文学 外国文学 美国 寻根文学 经典,  0
+1092523, http://book.douban.com/subject/1092523/, 语言与文化, 语言学 文化 英语 语言与文化 英语专业 语言 汉语语法 百科,  1
+4087541, http://book.douban.com/subject/4087541/, 中国传统建筑图鉴, 建筑 图鉴 历史 传统 中国 资料 艺 画册,  1
+3636157, http://book.douban.com/subject/3636157/, 四世同堂, 老舍 小说 中国文学 老北京 经典 四世同堂 中国现当代文学 现代,  0
+5171498, http://book.douban.com/subject/5171498/, 月入过万, 淘宝 开店 经验 营销 杂项 网店推广 菜鸟,  0
+5322670, http://book.douban.com/subject/5322670/, 别说你懂职场礼仪, 职场 礼仪 人际沟通 人际 生活 别说你懂职场礼仪 心理 沟通,  0
+4859892, http://book.douban.com/subject/4859892/, 中国古代建筑史, 建筑 建筑史 历史 歷史 建築 刘敦桢 雜俎 经典,  0
+5416916, http://book.douban.com/subject/5416916/, 乌鸦面包店, 绘本 日本 加古里子 童话 中文绘本 童书 日本绘本 图画书,  0
+1547265, http://book.douban.com/subject/1547265/, 她比烟花寂寞, 亦舒 小说 她比烟花寂寞 香港 爱情 言情 师太 中国文学,  0
+25894141, http://book.douban.com/subject/25894141/, 罗素, 哲学 学术读本,  0
+2973270, http://book.douban.com/subject/2973270/, 六弄咖啡馆, 藤井树 六弄咖啡馆 小说 台湾 青春 人生 网络小说 台湾作者,  0
+21328173, http://book.douban.com/subject/21328173/, 费里尼, 电影 费里尼 意大利 费德里科·费里尼 导演@Federico_Fellini 意大利电影研究 电影书 艺术,  0
+1004056, http://book.douban.com/subject/1004056/, 神兵玄奇（全24册）, 黄玉郎 漫画 神兵玄奇 香港漫画 香港 武侠 港漫 中国,  0
+24714250, http://book.douban.com/subject/24714250/, 老得可以告别孤独, 蔡澜 老得可以告别孤独 随笔 怀旧 香港四大才子 散文 2013 金庸,  0
+1155064, http://book.douban.com/subject/1155064/, 线性代数附册学习辅导与习题选解, 线性代数 数学 考研 经济金融 教辅 工科作品 大学数学学习辅导丛书 高等数学,  1
+1252698, http://book.douban.com/subject/1252698/, 尼米兹, 第二次世界大战十大名将丛书 传记 军事 尼米兹 人物 历史 二战 小说,  0
+1075084, http://book.douban.com/subject/1075084/, 语言与哲学--当代英美与德法哲学传统比较研究, 哲学 语言哲学 分析哲学 徐友渔 语言 现象学 philosophy 语言学,  1
+1046025, http://book.douban.com/subject/1046025/, 绝对挺有意思, ,  0
+1006770, http://book.douban.com/subject/1006770/, 卡尔维诺文集（第一卷 上下）, 卡尔维诺 童话 意大利 意大利童话 外国文学 小说 伊塔洛・卡尔维诺 文学,  0
+1126440, http://book.douban.com/subject/1126440/, 妇女生活, 苏童 妇女生活 小说 中国文学 当代文学 中国当代文学 中国 当代,  0
+1802768, http://book.douban.com/subject/1802768/, 卖场陈列设计, 陈列 卖场陈列设计 设计 视觉营销 服装 营销 vm 随便消遣的入门作品,  1
+1001605, http://book.douban.com/subject/1001605/, 呐喊, 鲁迅 小说 中国文学 呐喊 中国 中国现当代小说 中国现当代文学 文学,  0
+4162706, http://book.douban.com/subject/4162706/, 雍正皇帝（全三册）, 二月河 历史 雍正 历史小说 小说 清朝 政治 中国,  0
+4822246, http://book.douban.com/subject/4822246/, 南瓜汤, 绘本 儿童文学 英国 绘本英国 友谊 儿子读 情绪管理 童书,  0
+4088758, http://book.douban.com/subject/4088758/, 性社会学, 社会学 李银河 性学 盖格农 性社会学 性 文化研究 两性,  0
+2842056, http://book.douban.com/subject/2842056/, Man's Search for Meaning, Psychology 心理学 生命意义 人生 holocaust Frankl,Viktor.E 读书 文化,  0
+2124368, http://book.douban.com/subject/2124368/, 证明与反驳, 数学 思维 逻辑 科学哲学 科普 哲学 拉卡托斯 证明与反驳,  1
+2218216, http://book.douban.com/subject/2218216/, 金庸作品集, 金庸 武侠 经典 武侠小说 小说 金庸作品集 中国文学 文学,  0
+2778719, http://book.douban.com/subject/2778719/, Food and Beverage Management, ,  0
+4934508, http://book.douban.com/subject/4934508/, 我是你流浪过的一个地方, 诗歌 我是你流浪过的一个地方 海桑 现代诗 中国 中国文学 诗 诗集,  0
+5936979, http://book.douban.com/subject/5936979/, 知识分子独白, 南方周末 知识分子独白 随笔 知识分子 杂文 人文（文化+社科+教育） 传媒 散文,  0
+11580501, http://book.douban.com/subject/11580501/, 血色南郊, 血色南郊 京派 小说 顽主精神 怀旧 顽主 中国 中国文学,  0
+1919468, http://book.douban.com/subject/1919468/, 冷血, 杜鲁门·卡波特 小说 美国 悬疑 美国文学 卡波特 冷血 外国文学,  0
+4827219, http://book.douban.com/subject/4827219/, 彼得·林奇的成功投资, 投资 投资理财 彼得林奇 股票 金融 证券 理财 经济,  0
+25811502, http://book.douban.com/subject/25811502/, 柴静×刘瑜：自由从何而来（中国故事）, 刘瑜 柴静 访谈 随笔 社会 人物 思考 政治,  0
+3235685, http://book.douban.com/subject/3235685/, 从威权到民主, 经济学 政治学 吴敬琏 经济 从威权到民主 政治 青木昌彦 社会学,  0
+1241281, http://book.douban.com/subject/1241281/, 计算复杂性导论, 计算理论 计算机科学 计算复杂性 数学 complexity CS 计算机 复杂性,  1
+10599298, http://book.douban.com/subject/10599298/, 传奇许家印, 传记 爱最美,  0
+1230510, http://book.douban.com/subject/1230510/, 概率统计辅导, 概率论 数学,  1
+2298729, http://book.douban.com/subject/2298729/, Calculus Early Transcendentals 5th Ed with CD (Calculus Early Transcendentals 5e (CD included)), 微积分 数学 教材 Mathematics MATH 课本 數學 数学分析,  1
+1189809, http://book.douban.com/subject/1189809/, 没有任何借口全集, 励志 没有任何借口全集 个人管理 管理 个人学习 领导管理职场 读书 ，，学习,  0
+25808222, http://book.douban.com/subject/25808222/, 黄, 安东尼 陪安东尼度过漫长岁月 治愈系 温暖 随笔 治愈 元气小王子~！ 2014,  0
+11631733, http://book.douban.com/subject/11631733/, 美国大学生数学建模竞赛题解析与研究（第1辑）, Modeling 数学建模 , 应用数学 数学 计算机 高数,  1
+5917267, http://book.douban.com/subject/5917267/, GPU高性能编程CUDA实战, CUDA GPU 并行计算 计算机 CUDA入门 编程 计算机科学 Programming,  1
+20392526, http://book.douban.com/subject/20392526/, 乌默它, 马里奥·普佐 教父 小说 美国 外国文学 美国文学 欧美文学 AmericanLiterature,  0
+4901961, http://book.douban.com/subject/4901961/, Web 3.0与Semantic Web编程, 语义网 Semantic Web 本体论 semantic语义网 计算机 ontology 信息,  1
+1436656, http://book.douban.com/subject/1436656/, 寄生獸 (完全版) (Vol. 2), 漫画 岩明均 日本 日本漫画 寄生兽 恐怖 青年漫画 漫畫,  0
+6024021, http://book.douban.com/subject/6024021/, 做不可替代的人, 励志 个人管理 赛斯·高汀 商业 做不可替代的人 创新 美国 营销理论,  0
+25904100, http://book.douban.com/subject/25904100/, 大家01·中日之间, 中日关系 日本文化 日本 大家 日本研究 文化 近代史 阅读,  0
+1850710, http://book.douban.com/subject/1850710/, 街道的美学, 建筑 芦原义信 城市设计 街道 日本 城市 设计 美学,  1
+1151462, http://book.douban.com/subject/1151462/, 与熊共舞, 项目管理 软件工程 风险管理 管理 计算机 软件项目风险管理 软件开发 软件项目管理,  1
+2980812, http://book.douban.com/subject/2980812/, 踮脚张望的时光, 寂地 踮脚张望的时光 绘本 小说 青春 半自传体小说 漫画 童话,  0
+6845416, http://book.douban.com/subject/6845416/, 练摊帝, 创业 励志 传记 中国 小说 青春 职场 时尚,  0
+20284263, http://book.douban.com/subject/20284263/, 夜话港乐, 香港 夜话港乐 音乐 粤语 港乐 公元1874 文化 随笔,  0
+10875960, http://book.douban.com/subject/10875960/, 魔戒, 魔幻 托尔金 英国 奇幻 小说 外国文学 魔戒 J.R.R.Tolkien,  0
+3024038, http://book.douban.com/subject/3024038/, 搞垮巴林银行之后, 金融 心理学 传记 回忆录 金融经济 人物 心理学情绪压力管理 心理,  0
+1100723, http://book.douban.com/subject/1100723/, 系统分析与设计, 软件工程 系统设计 系统分析 软件开发 IT architecture 系统 计算机,  1
+25829434, http://book.douban.com/subject/25829434/, 暗恋·橘生淮南, 八月长安 暗恋 橘生淮南 青春 洛枳 盛淮南 献给青春。 大小姐的书最赞了,  0
+25741241, http://book.douban.com/subject/25741241/, 有多想要，就有多幸福, 很想读，名字很温馨 情感 此生挚爱，有你同行。 生活 恋爱 很实用，很好看 随笔 文字,  0
+24863358, http://book.douban.com/subject/24863358/, 易中天中华史：奠基者, 历史 易中天 易中天中华史 中国 文化 中国历史 历史文化 中国古代史,  0
+2145953, http://book.douban.com/subject/2145953/, 沃尔玛效应, 商业 沃尔玛 经济 管理 消费者心理 经营 全球化思维 经济学,  0
+1028977, http://book.douban.com/subject/1028977/, 玻璃屋顶, 三七 刀尔登 杂文 随笔 玻璃屋顶 邱小刚 文学 杂文随笔,  0
+3062309, http://book.douban.com/subject/3062309/, WPF揭秘, WPF .NET C# 计算机 编程 微软 framework 程序设计,  1
+3745907, http://book.douban.com/subject/3745907/, 算法与数据结构, 数据结构 算法 C 教材,  1
+4249172, http://book.douban.com/subject/4249172/, 金钱统治, 金融 历史 经济 陈雨露 货币 社会学 经济学 金钱,  0
+2056816, http://book.douban.com/subject/2056816/, 艾特熊&赛娜鼠：一首歌, 绘本 艾特熊&赛娜鼠 嘉贝丽·文生 比利时 图画书 2010書目 9月書目 繪本/圖畫書,  0
+6126923, http://book.douban.com/subject/6126923/, 自然光人像摄影指南, 摄影 人像 用光 人像摄影 自然光 艺术 教程 光线,  0
+2294571, http://book.douban.com/subject/2294571/, 从逻辑的观点看, 哲学 逻辑学 语言哲学 蒯因 科学哲学 major 汉译世界学术名著丛书 美国,  0
+2003678, http://book.douban.com/subject/2003678/, 一生的理财计划, 理财 一生的理财计划 经济 投资 家庭理财 投资理财 经济学 管理,  0
+6110500, http://book.douban.com/subject/6110500/, 愛が欲しい愛が欲しい, 田中ボール 耽美 田中 ボール BL 基漫 耽漫 耽美向,  0
+3905455, http://book.douban.com/subject/3905455/, 计算机通信与网络, My教材 教材 网络,  1
+25755874, http://book.douban.com/subject/25755874/, 运动改造大脑, 运动与健康 心理学 运动 思维 科普 跑步 脑 体育,  0
+26043805, http://book.douban.com/subject/26043805/, 你因灵魂被爱, 张爱玲 闫红 传记 最全面、最真实、可读性最强的张爱玲传记 民国 爱情 胡兰成 中国文学,  0
+4952713, http://book.douban.com/subject/4952713/, 国际政治梦工场, 政治 电影 沈旭晖 香港 政治影像 历史 社会学 随笔,  0
+2066883, http://book.douban.com/subject/2066883/, 桐人傳奇 (1), 手塚治虫 漫画 日本漫画 日本 手冢治虫 医学 日本漫畫 Manga,  0
+11581273, http://book.douban.com/subject/11581273/, 减肥这件正经事儿, 减肥这件正经事er 减肥 漫画 减肥这件正经事儿 绘本 粽子么么哒 治愈系 减肥啊减肥,  0
+1442712, http://book.douban.com/subject/1442712/, 伊藤潤二恐怖漫畫精選【15】, 伊藤润二 漫画 日本 恐怖 恐怖漫画 伊藤潤二 日本漫画 至死不渝的愛,  0
+4245441, http://book.douban.com/subject/4245441/, 三个国王的故事, 基督教 信仰 历史 灵修 自我省察 教牧神学 鱼 知道自己是谁,  0
+1790996, http://book.douban.com/subject/1790996/, 一个被放弃的选择, 梁启超 思想史 黄克武 历史 近代史 梁启超政治思想研究 政治 一个被放弃的选择,  0
+4149418, http://book.douban.com/subject/4149418/, 丑皇（上）, 耽美 易人北 小说 耽美小说 BL 古风 丑皇 古代,  0
+1486824, http://book.douban.com/subject/1486824/, 数学与数学人, 数学 传记 陈省身 科普 數學 科学家 紀念,  1
+1626707, http://book.douban.com/subject/1626707/, 心理学与生活, 心理学 心理学与生活 psychology 英文 心理专业书籍 心理 经典 美国,  0
+5919686, http://book.douban.com/subject/5919686/, 官路, 官场小说 官场 政治 小说 姜宗福 我的官样年华 社会 中国,  0
+3196756, http://book.douban.com/subject/3196756/, 读库0803, 读库 张立宪 文化 老六 人文 社会 社科 随笔,  0
+1058811, http://book.douban.com/subject/1058811/, 五代纷争辽金英烈, 历史 童年记忆 历史相关 演义 辽金 五代 初中 想读,  0
+1087939, http://book.douban.com/subject/1087939/, 力学, 物理学,  1
+4143105, http://book.douban.com/subject/4143105/, HTML5, HTML5 web web开发 互联网 HTML html5,css3 编程 技术,  1
+1071597, http://book.douban.com/subject/1071597/, 慢慢微笑, 毛尖 随笔 电影 慢慢微笑 影评 散文 文学 中国,  0
+4087879, http://book.douban.com/subject/4087879/, 电影密码, 电影 马原 电影理论 电影叙事 電影研究 随笔 编剧 课程,  0
+1205775, http://book.douban.com/subject/1205775/, 汤姆叔叔的小屋, 外国文学 美国 小说 汤姆叔叔的小屋 南北战争 名著 外国名著 经典,  0
+3861735, http://book.douban.com/subject/3861735/, How to Cheat in Adobe Flash CS4, Flash CS4 计算机科学 to in How Focal Cheat,  1
+1436745, http://book.douban.com/subject/1436745/, Design Patterns, 设计模式 软件工程 计算机 design Programming 软件开发 Patterns 经典,  1
+19930393, http://book.douban.com/subject/19930393/, 老码识途, 计算机 逆向工程 编程 计算机底层 程序设计 反汇编 汇编 计算机体系结构,  1
+3463292, http://book.douban.com/subject/3463292/, 叔本华美学随笔, 叔本华 哲学 美学 西方哲学 随笔 德国 思考 艺术理论,  0
+1011542, http://book.douban.com/subject/1011542/, 英美概况, 英美概况 学英语 人文·历史·地理 英语 教科书 外语学习 英国 美国,  0
+1547065, http://book.douban.com/subject/1547065/, 帝国的正午, 历史 隋唐五代 赫连勃勃大王 梅毅 中国历史 历史小说 中国史 隋唐,  0
+3351927, http://book.douban.com/subject/3351927/, Tomcat与Java Web开发技术详解, web java 编程 servlet jsp 计算机 tomcat Jaca_web,  1
+5404058, http://book.douban.com/subject/5404058/, 痛并快乐着, 白岩松 随笔 传记 回忆录 新闻人 杂文随笔 中国最有良心的新闻人 新闻,  0
+4812990, http://book.douban.com/subject/4812990/, 成长, 职场 成长 心性修炼 谢耘 励志/心灵 个人管理 励志 人物,  0
+2359365, http://book.douban.com/subject/2359365/, 算法设计与分析导论, 算法 算法与数据结构 计算机 Programming 程序设计 分析 ComputerScience 计算机科学,  1
+20499267, http://book.douban.com/subject/20499267/, 时代正在改变, 张铁志 台湾 社会 民主 政治 理想国 文化 随笔,  0
+3282777, http://book.douban.com/subject/3282777/, Introductory Statistics with R, R 统计 Statistics 统计学 数据分析 数学 Springer statistics,  1
+6052698, http://book.douban.com/subject/6052698/, Holes, 英文原版,  0
+25788147, http://book.douban.com/subject/25788147/, 美人如诗，草木如织, 植物 诗经 文学植物学 草木 古典文学 古典 诗 文学,  0
+4831458, http://book.douban.com/subject/4831458/, 钱不要存银行, 理财 投资 胜间和代 投资理财 钱不要存银行 日本 金融 经济,  0
+4747135, http://book.douban.com/subject/4747135/, 中华帝制的衰落, 历史 魏斐德 海外中国研究 中国近代史 中国历史 近代史 汉学 中国,  0
+2062786, http://book.douban.com/subject/2062786/, 你的船你的海, 职业规划 职场 职业　规划 程社明 成长 管理 励志 你的海，你的船——,  0
+3287786, http://book.douban.com/subject/3287786/, 你好，忧愁, 萨冈 法国 弗朗索瓦丝・萨冈 法国文学 小说 你好,忧愁 外国文学 文学,  0
+1766120, http://book.douban.com/subject/1766120/, 褐色鸟群, 格非 先鋒小說 小说 中国文学 当代文学 褐色鸟群 80年代文学新潮丛书 叙事迷雾,  0
+24869702, http://book.douban.com/subject/24869702/, 千万次摇摆，才能长大成人, 成长 励志 青春 心理学 韩国 金兰都 生活态度 文艺女青年枕边书,  0
+3149497, http://book.douban.com/subject/3149497/, 星空, 沧月 小说 奇幻 星空 科幻 武侠 爱情 玄幻,  0
+1794590, http://book.douban.com/subject/1794590/, 《孙子》十三篇综合研究, 李零 孙子 孙子兵法 国学 历史 谋略 典籍 兵法,  0
+3739970, http://book.douban.com/subject/3739970/, 执行SOA, SOA 6 SOA,执行SOA 开发 思路 技术,  1
+1022582, http://book.douban.com/subject/1022582/, 瞬间收藏家, 绘本 瞬间收藏家 德国 布赫兹文 插画 童话 （德）布赫兹文 布赫兹,  0
+3010746, http://book.douban.com/subject/3010746/, 高级Bash 脚本编程指南, shell linux Bash 编程 bash编程 script Programming Linux,  1
+7067989, http://book.douban.com/subject/7067989/, 龙枪编年史2, 奇幻 龙枪 小说 美国 朱学恒 龙与地下城 魔幻 经典,  0
+6798506, http://book.douban.com/subject/6798506/, 华胥引, 唐七公子 华胥引 古风 言情 小说 奇幻 虐 叶蓁,  0
+3419173, http://book.douban.com/subject/3419173/, 信息架构学, 信息架构 IA 用户体验 专业 管理 技术 UCD 教育技术,  1
+1017979, http://book.douban.com/subject/1017979/, 在中国谁能过上好日子, 陈彤 生活态度 心态 随笔 社会学 生活 未评论 策略篇,  0
+21335108, http://book.douban.com/subject/21335108/, 直观几何（上册）, 数学 几何 希尔伯特 科普 数学科普 经典 科学 數學,  1
+10466763, http://book.douban.com/subject/10466763/, 中国：下一个日本？, 经济 日本 中国 经济学 王国培 采访 宏观经济 衰落,  0
+10862363, http://book.douban.com/subject/10862363/, 本杰明·巴顿奇事, 小说 菲茨杰拉德 奇幻 小说集 外国文学 弗·司各特·菲茨杰拉德 美国 菲兹杰拉德,  0
+3072306, http://book.douban.com/subject/3072306/, 战国时代, 历史 资治通鉴 柏杨 中国史 通鉴 温情与敬意 听XX讲那过去的事~ 司马光,  0
+1754788, http://book.douban.com/subject/1754788/, 星空暗流, 科幻 阿西莫夫 帝国系列 小说 科幻小说 艾萨克·阿西莫夫 美国 银河,  0
+2691145, http://book.douban.com/subject/2691145/, XPath and XPointer, ,  1
+1110321, http://book.douban.com/subject/1110321/, 信息、信任与法律, 张维迎 经济学 法学 社会学 信任 法律 经济 经济　张维迎,  0
+1336616, http://book.douban.com/subject/1336616/, 破解古埃及, 商博良 考古 **台·M貓頭鷹* taiban 古埃及,  0
+3411369, http://book.douban.com/subject/3411369/, The Abolition of Man, C.S.Lewis 宗教 基督教 信仰 英国 社科 电子书 教育,  0
+4584780, http://book.douban.com/subject/4584780/, 考研英语词汇词根+联想记忆法, 考研 英语 新东方 英语词汇 词汇 俞洪敏 教材 绿色看着喜庆,  1
+4289265, http://book.douban.com/subject/4289265/, 如果声音不记得, 落落 如果声音不记得 小说 青春 青春文学 那些生命中温暖而美好的事情 用我的声音记得你 成长,  0
+1361268, http://book.douban.com/subject/1361268/, 朝花夕拾, 亦舒 小说 朝花夕拾 香港 爱情 科幻 师太 言情,  0
+3184542, http://book.douban.com/subject/3184542/, 到奴役之路, 哈耶克 自由主义 殷海光 经济学 政治 政治哲学 经济 Hayek,  0
+6793570, http://book.douban.com/subject/6793570/, 草样年华·壹, 青春 孙睿 草样年华 小说 大学 成长 大学啊… 当代文学,  0
+10483197, http://book.douban.com/subject/10483197/, iOS编程, iOS iOS编程 iPhone开发 编程 Programming 计算机 iphone MACOS,  1
+4199336, http://book.douban.com/subject/4199336/, 百度那些人和事, 百度 互联网 IT 传记 商业 管理 商业管理 经济,  0
+5321859, http://book.douban.com/subject/5321859/, 瘋狂怪醫芙蘭 5, 漫画 猎奇 日本 重口味 日本漫画 木々津克久 木木津克久 黑色,  0
+4042159, http://book.douban.com/subject/4042159/, 诛仙4（修订版）, 诛仙 小说 萧鼎 玄幻 武侠 奇幻 网络小说 中国,  0
+4882091, http://book.douban.com/subject/4882091/, 一个人到世界尽头, 小说 奥地利 托马斯·格拉维尼奇 外国文学 一个人到世界的尽头 一个人走到世界的尽头 奥地利文学 文学,  0
+1692721, http://book.douban.com/subject/1692721/, 像绅士一样生活, 绅士 生活 文化 优雅 英国 贵族 Gentlemen 中国,  0
+1039200, http://book.douban.com/subject/1039200/, 山外的楼, 生活哲学 哲学 生活 中国 小故事,  0
+1048475, http://book.douban.com/subject/1048475/, 迷人的科学风采, 费曼 传记 科普 Feynman Richard·Feynman 人物 物理学 科学哲学与科学史,  0
+4727544, http://book.douban.com/subject/4727544/, 极限投机：投机巨人乔治·索罗斯和他的投机理念风暴, 金融 思考 索罗斯 美国,  0
+3110731, http://book.douban.com/subject/3110731/, 风雅颂, 阎连科 小说 风雅颂 当代文学 中国文学 荒诞 中国 文学,  0
+3071768, http://book.douban.com/subject/3071768/, 地产英雄, 小说 官场 地产 更俗 房地产 中国 职场书 职场小说,  0
+2335789, http://book.douban.com/subject/2335789/, James Blunt all the Lost Souls, james-blunt James Blunt 温柔的男声 Souls 英国 我喜欢 Pop,  0
+3682755, http://book.douban.com/subject/3682755/, 政治科学（第九版）, 政治学 政治 政治科学 罗斯金 政治学入门 政治学教材 国外经典政治学教材 美国,  0
+1009463, http://book.douban.com/subject/1009463/, 茵梦湖, 施笃姆 德国文学 小说 茵梦湖 德国 外国文学 爱情 如梦如诗,  0
+2150586, http://book.douban.com/subject/2150586/, 照相本子, 绘本 幾米 几米 照相本子 台湾 漫画 成长 繪本,  0
+1482413, http://book.douban.com/subject/1482413/, 水平思考, 思维 创新 思维方法 水平思维 水平思考 管理 心理学 思考,  0
+1008636, http://book.douban.com/subject/1008636/, 私人行走, 游记 旅行 随笔 私人行走 散文 闲情 生活 随笔散文,  0
+1020820, http://book.douban.com/subject/1020820/, 超越自己, 刘墉 励志 散文 随笔 超越自己 台湾 成长 人生,  0
+1499888, http://book.douban.com/subject/1499888/, 活学巧用PowerPoint 2003实例入门, ,  1
+1690009, http://book.douban.com/subject/1690009/, Convergence of Probability Measures, 数学 probability 概率 Mathematics math 概率论 研读 概率论7,  1
+3660702, http://book.douban.com/subject/3660702/, 午后阳光, ,  0
+3788013, http://book.douban.com/subject/3788013/, Google Android SDK开发范例大全, Android Google 编程 应用开发 移动平台 sdk 计算机 软件开发,  1
+4244319, http://book.douban.com/subject/4244319/, 他的国, 韩寒 小说 讽刺 他的国 荒诞 中国文学 青春 中国,  0
+1006453, http://book.douban.com/subject/1006453/, 南怀瑾谈历史与人生, 南怀瑾 历史 哲学 文化 国学 思想 人文 杂文,  0
+1083039, http://book.douban.com/subject/1083039/, 创业家, 商业 创业 创业大类 创业管理类 我的实体书,  0
+3545046, http://book.douban.com/subject/3545046/, 风的预谋, 鬼马星 推理 莫兰系列 悬疑 推理小说 小说 中国 风的预谋,  0
+3020041, http://book.douban.com/subject/3020041/, 劳伦斯, 传记 劳伦斯　 劳伦斯 老版三联新知文库 小说 新知文库 新知文库（三联） 月旦人物,  0
+2030662, http://book.douban.com/subject/2030662/, Film as Art, 电影 艺术 理论 电影理论 影人与电影理论 专业相关 arnheim aesthetics,  0
+4847861, http://book.douban.com/subject/4847861/, 浪客行 3, 漫画 井上雄彦 日本 浪客行 日本漫画 井上雄彥 漫畫 0漫画,  0
+1891984, http://book.douban.com/subject/1891984/, 李白诗选, 李白 古典文学 诗歌 诗词 诗集 唐诗 古代诗词 文学,  0
+1044088, http://book.douban.com/subject/1044088/, 北京的传说, 北京 老北京 民俗 传说 故事 人文社科 民间故事 民俗学,  0
+1094870, http://book.douban.com/subject/1094870/, 刘墉精品书坊（红尘卷）, 刘墉 散文 台湾 处世 励志 文学 轻松地读 抓住属于你的那颗小星星,  0
+2884355, http://book.douban.com/subject/2884355/, Tide of Darkness, 魔兽世界 魔兽 小说 暴雪 奇幻 wow 魔幻 魔兽经典,  0
+2172516, http://book.douban.com/subject/2172516/, 5分钟和陌生人成为朋友, 社交 沟通 5分钟和陌生人成为朋友 心理学 沟通与艺术 心理 励志 生活,  0
+1855425, http://book.douban.com/subject/1855425/, 当代英雄, 莱蒙托夫 小说 俄罗斯 俄国文学 外国文学 经典 俄国 多余的人,  0
+1801929, http://book.douban.com/subject/1801929/, 灯火楼台（全三册）, 高阳 胡雪岩 历史小说 小说 传记 历史 灯火楼台 灯火楼台-(全三册),  0
+1918220, http://book.douban.com/subject/1918220/, 性与性格, 心理学 性与性格 哲学 魏宁格 心理 人类社会 性 思想,  0
+2108858, http://book.douban.com/subject/2108858/, 许又新文集, 心理学 许又新 心理治疗 心理咨询 许老 无电子书 心理 待购,  0
+3782078, http://book.douban.com/subject/3782078/, 陸小鳳傳奇（一）金鵬王朝——古龍精品集, 古龙 武侠 陆小凤 小说 武侠小说 花满楼 台湾 中国文学,  0
+3084682, http://book.douban.com/subject/3084682/, 琴帝, 唐家三少 玄幻 琴帝 网络小说 小说 玄幻小说 网络文学 魔幻,  0
+3437246, http://book.douban.com/subject/3437246/, 夏达短篇漫画集(共2册), 夏达 漫画 中国漫画 绘本 少女漫画 中国 同类 暖,  0
+1194500, http://book.douban.com/subject/1194500/, 稳操胜券, 【已购】 科技 博弈论 金苹果,  0
+10580968, http://book.douban.com/subject/10580968/, 无线传感器网络原理与应用, 无限网络 电子 免费 旅行 香格里拉,  1
+1420339, http://book.douban.com/subject/1420339/, 博士的爱情算式, 日本 小说 小川洋子 日本文学 爱情 博士的爱情算式 文学 算式,  0
+1316564, http://book.douban.com/subject/1316564/, 情感的迷惘, 茨威格 小说 外国文学 斯蒂芬・茨威格 奥地利 人性 爱 文学,  0
+1391648, http://book.douban.com/subject/1391648/, 别走我爱你, 青春 董晓磊 别走，我爱你！ 小说 爱情 网络小说 青春文学 图书,0  
+2233654, http://book.douban.com/subject/2233654/, 新概念高中物理读本（第一册）, 物理 必读经典 教育 新概念物理 物理學,  1
+1215403, http://book.douban.com/subject/1215403/, 紫色人形, 毕淑敏 小说 紫色人形 中国文学 震撼人的一些生死之间的故事 文学 感动 江苏文艺出版社,  0
+1956659, http://book.douban.com/subject/1956659/, 紫水云散发, 李碧华 美食文字 美食 香港 散文 随笔 饮食档案 李碧華,  0
+3030126, http://book.douban.com/subject/3030126/, MATLAB实用教程, Matlab 数学 学术 工具书 技术宅 计算机,  1
+1458341, http://book.douban.com/subject/1458341/, 禁斷戀愛, 藤原薰 漫画 日本 日本漫画 吸血少女 禁断恋爱 少女漫画 漫畫,  0
+2250751, http://book.douban.com/subject/2250751/, Film Adaptation, film 改编 電影,  0
+1916809, http://book.douban.com/subject/1916809/, Almodovar on Almodovar, 西班牙 電影 auteur 传记 西班牙电影 阿尔莫多瓦,  0
+1093847, http://book.douban.com/subject/1093847/, JAVA实例技术手册, Java example java program 专业 实例,  1
+2294111, http://book.douban.com/subject/2294111/, 揺れるイントゥ・ザ・ブルー, 轻小说 全金属狂潮 賀東招二 日本 FMP 科幻 军事 贺东招二,  0
+1881630, http://book.douban.com/subject/1881630/, Access2003数据库开发典型范例, 12222 计算机,  1
+1519766, http://book.douban.com/subject/1519766/, 美国海军特种作战部队  海豹在行动, ,  0
+3105649, http://book.douban.com/subject/3105649/, 反正算我倒楣, 耽美 阿七 搞笑 小说 BL 耽美小说 腐 bl小说,  0
+1013871, http://book.douban.com/subject/1013871/, 天空飞猪, 绘本 麦兜 谢立文 香港 麦家碧 漫画 麦兜_麦唛 童话,  0
+2698538, http://book.douban.com/subject/2698538/, 夜上海, 金子 民国 言情 小说 夜上海 旧上海 爱情 晋江,  0
+1488185, http://book.douban.com/subject/1488185/, 最蓝的眼睛, 托妮·莫里森 最蓝的眼睛 小说 美国文学 美国 诺贝尔文学奖 外国文学 人性,  0
+1443561, http://book.douban.com/subject/1443561/, 穆旦译文集(8卷本), 查良铮 穆旦 诗歌 翻译 外国文学 文学 诗 普希金,  0
+1169440, http://book.douban.com/subject/1169440/, 散手道手搏精义/实用散手道教程, 武术,  0
+1585590, http://book.douban.com/subject/1585590/, 浪漫, 其它 爱情,  0
+1912518, http://book.douban.com/subject/1912518/, 卡夫卡, 卡夫卡 传记 人物传记 外国文学 英国 文学 默里 德国,  0
+1231212, http://book.douban.com/subject/1231212/, 常微分方程, 数学 常微分方程 Arnol'd ODE Mathematics 教材 math 數學,  1
+1924524, http://book.douban.com/subject/1924524/, 武艺二书, 宫本武藏 日本 兵法 柳生宗矩 剑道 武术 文化研究 武艺二书,  0
+1084720, http://book.douban.com/subject/1084720/, 傅雷全集, 傅雷 经典 巨匠 翻譯 文学 外国文学 翻译 文化,  0
+1500324, http://book.douban.com/subject/1500324/, 线性代数复习与考研辅导, ,  1
+1886637, http://book.douban.com/subject/1886637/, 一万个世界之谜, 科普 科学 厚重 启蒙 大部头 天文物理 少儿读物,  0
+3303218, http://book.douban.com/subject/3303218/, 上流女孩当如是, 上流女孩当如是 困困 三联 随笔 时尚 女子 散文随笔 文化,  0
+3396323, http://book.douban.com/subject/3396323/, ハニーベイビー, 山縣聰美 やまがたさとみ 漫画 耽美 日本 BLコミック BL 日本漫画,  0
+3139211, http://book.douban.com/subject/3139211/, 天上天下(14), 漫画 大暮維人 天上天下 日本 日本漫画 大暮维人 热血 暴力,  0
+1016710, http://book.douban.com/subject/1016710/, 我的另一半, 梁静茹 绘本 我的另一半 台湾 艺人作品 温馨小品 fish 圖文書,  0
+6085285, http://book.douban.com/subject/6085285/, 亲爱的，我们都需要一些秘密, 生活 秦筝 随笔 女性,  0
+1436466, http://book.douban.com/subject/1436466/, 天使不在线, 小说 网络小说 天使不在线 网络 网络文学 社会空虚 社会责任 生活,  0
+1203103, http://book.douban.com/subject/1203103/, 浮士德, 歌德 外国文学 浮士德 德国 诗歌 诗剧 经典 外国名著,  0
+1059154, http://book.douban.com/subject/1059154/, 牛顿传, 传记 牛顿 科普 传记·回忆录 科学家 科学史 科学人文 a,  0
+3166846, http://book.douban.com/subject/3166846/, 夜刀神使(06), 奥瀬サキ 漫画 志水アキ 青年向 志水明 日本漫画 日本 我爱你不爱我,  0
+2077945, http://book.douban.com/subject/2077945/, Visual C#.NET技术内幕, C# asp.net visual 计算机技术 programming 专业书籍 计算机 软件,  1
+1963318, http://book.douban.com/subject/1963318/, The Implementation of Functional Programming Languages, 计算机语言 函数式 fp 函数式编程 计算机科学 编译原理 Haskell compiler,  1
+2031890, http://book.douban.com/subject/2031890/, 以交易为生, 投资 股票 金融 交易 投机 技术分析 心理学 证券,  0
+1864849, http://book.douban.com/subject/1864849/, 小S之怀孕日记, 小S 小S之怀孕日记 台湾 徐熙娣 随笔 生活 怀孕 日记,  0
+1780016, http://book.douban.com/subject/1780016/, Principles of Data Mining (Adaptive Computation and Machine Learning), 数据挖掘 datamining MIT 机器学习 textbook 统计 模式识别 Statistics,  1
+1365601, http://book.douban.com/subject/1365601/, The Innovator's Dilemma, innovation 管理 创新 商业 创业 business 商业管理 经济管理,  0
+4753667, http://book.douban.com/subject/4753667/, 西方经济史探索, 历史 经济 经济学 厉以宁 美国 英国,  0
+3882368, http://book.douban.com/subject/3882368/, 论语•金刚经•道德经, 古典文学 g qew s sfsdf ◎未来书柜存货单◎ 佛经 军政史哲,  0
+3547613, http://book.douban.com/subject/3547613/, In Search of Lost Time, Marcel·Proust 外国文学 (English) 好的译本 小说 最爱没有之一 法国作家 读不下去,  0
+26220250, http://book.douban.com/subject/26220250/, PostgreSQL服务器编程, 数据库,  1
+1463125, http://book.douban.com/subject/1463125/, The Mind Map Book, 思维导图 思维 思维方法 心理学 学习 Mind 管理 mindmap,  0
+1940734, http://book.douban.com/subject/1940734/, 太阳雨, 明琲 小说 台湾 网络小说 言情,  0
+1854879, http://book.douban.com/subject/1854879/, 智慧金块, 奥修 灵修 哲学 osho 心理学 格言 禅 印度,  0
+1091412, http://book.douban.com/subject/1091412/, 个体软件过程, 软件工程 PSP 管理 方法论 知识管理 时间管理 经典 软件过程,  1
+1867943, http://book.douban.com/subject/1867943/, 情感設計, 设计 情感设计 交互设计 design 设计心理学 用户体验 工业设计 情感化设计,  1
+1036416, http://book.douban.com/subject/1036416/, 岭南本草古籍三种, D 格物 跳皮筋就像心臟,  0
+7007781, http://book.douban.com/subject/7007781/, 一只鸟的选择, 小说 加拿大 外国文学 伊恩·里德 生活 80后 加拿大文学 趁一切还来得及,  0
+3217943, http://book.douban.com/subject/3217943/, The art and theory of dynamic programming, Volume 130, 动态规划 计算机科学 算法 DP 算法&数学 Theory The Programming,  1
+3346053, http://book.douban.com/subject/3346053/, 四书道贯, 陈立夫 国学 四书 儒家 中国思想史 中国 历史 文学,  0
+11592378, http://book.douban.com/subject/11592378/, So Good They Can't Ignore You, 自我管理 个人提升 成长 斯考特·杨 心理学 职业 社会学 职场,  0
+3071317, http://book.douban.com/subject/3071317/, 此心无垠（全2册）, 穿越 此心无垠 言情 小说 无非由 爱情 网络小说 穿越小说,  0
+2212066, http://book.douban.com/subject/2212066/, 100万只猫, 绘本 100万只猫 美国 猫 儿童文学 图画书 繪本 童话,  0
+1969390, http://book.douban.com/subject/1969390/, Groovy Programming, groovy java programming 开发技术和语言,  1
+24390228, http://book.douban.com/subject/24390228/, Python in Practice, Python 计算机 编程 程序设计 Practice Pattern Concurrency 软件开发,  1
+2985334, http://book.douban.com/subject/2985334/, EOS王朝, 摄影 佳能 EOS 赵嘉 器材 摄影器材 Canon photography,  0
+4818166, http://book.douban.com/subject/4818166/, G少年冬天的战争, 石田衣良 池袋西口公园 日本 小说 日本文学 推理 青春 G少年冬天的战争,  0
+4742843, http://book.douban.com/subject/4742843/, Beginning iPhone and iPad Web Apps, iphone iPad WebDev web HTML5 Mobile WebApp 还没看，怎么评价,  1
+1813413, http://book.douban.com/subject/1813413/, 演化博弈论, 博弈论 经济学 经济 演化博弈论 演化 行为、博弈 路径依赖 科研,  1
+7067934, http://book.douban.com/subject/7067934/, 打工旅行, 旅行 打工旅行 梦想 新西兰 游记 我买过最贵的是梦想 旅游文学 愿望清单,  0
+1919324, http://book.douban.com/subject/1919324/, 散花女俠（二冊）, 梁羽生 武侠 小说 武俠 武侠小说 香港 读书时间：大学 武侠-中国,  0
+1925110, http://book.douban.com/subject/1925110/, C in a Nutshell, c C 编程 O'Reilly Programming nutshell C/C++ 程序员,  1
+3190177, http://book.douban.com/subject/3190177/, 少年犯之七人 1, 漫画 日本 柿崎正澄 日本漫画 安部讓二 青年向 少年犯之七人 青年漫画,  0
+1365310, http://book.douban.com/subject/1365310/, Choke, ChuckPalahniuk 美国 小说 Palahniuk Chuck_Palahniuk 美国文学 美国小说 Chuck,  0
+3527545, http://book.douban.com/subject/3527545/, 论自由, 哲学 政治学 严复 自由 社会学 政治哲学 群己权界论 政治,  0
+2245351, http://book.douban.com/subject/2245351/, 爱女儿爱爸爸, 成长 育儿 儿童教育 教育,  0
+5388298, http://book.douban.com/subject/5388298/, 心智、大脑与计算机, 认知科学 心理学 计算机 哲学 智能 心灵哲学 神经科学 脑科学,  1
+1237561, http://book.douban.com/subject/1237561/, 椭圆与抛物型方程引论, 偏微分方程 数学 PDE 科学出版社 方程 教材 各国各家，math.。 其余方程5,  1
+11619235, http://book.douban.com/subject/11619235/, 爱与意志, 心理学 罗洛·梅 哲学 美国 小说 爱情 存在主义 2012,  0
+5295745, http://book.douban.com/subject/5295745/, 蒙古往事, 蒙古 小说 历史 冉平 成吉思汗 茅盾文学奖 中国文学 蒙古往事,  0
+3618849, http://book.douban.com/subject/3618849/, 网页设计解析, 网页设计 设计 网页设计解析 web开发 Web 互联网 计算机 网页,  1
+3232387, http://book.douban.com/subject/3232387/, Crowdsourcing, crowdsourcing 网络 Web 商业 2.0 2010 business_model 企業,  1
+3442371, http://book.douban.com/subject/3442371/, 世界时间与东亚时间中的明清变迁（下卷）, 海外中国研究 历史 明清 明清史 司徒琳 社会史 汉学 中国,  0
+3926699, http://book.douban.com/subject/3926699/, 情色之花, 法国 索莱尔斯 植物 法国文学 随笔 外国文学 文学 艺术,  0
+3576025, http://book.douban.com/subject/3576025/, 数据结构基础, 数据结构 C++ 数据结构与算法 计算机技术 计算机基础 计算机 考研 算法,  1
+3668091, http://book.douban.com/subject/3668091/, Introduction to Biosemiotics, the,  1
+4292159, http://book.douban.com/subject/4292159/, 老北京那些事儿, 北京 历史 北京历史 老北京 中国历史 民俗 文化 小说,  0
+2058000, http://book.douban.com/subject/2058000/, 股市赢家, 股票 投资 侯健 价值投资 证券 股市赢家 股市 消遣,  0
+5990212, http://book.douban.com/subject/5990212/, 隱形怪物, 恰克·帕拉尼克 小说 美国 ChuckPalahniuk Chuck_Palahniuk 美国文学 外国文学 2011,  0
+6864195, http://book.douban.com/subject/6864195/, eva re-take, 漫画 同人 EVA 日本 日本漫画 漫畫 科幻 18禁,  0
+1313445, http://book.douban.com/subject/1313445/, 正音, 英语 美语发音 口语 英语学习 学习 英语发音 发音 工具书,  1
+1221351, http://book.douban.com/subject/1221351/, 现代世界中的数学, 数学 科普 通俗数学名著译丛 科学 数学科普 经典 文化 方法论,  1
+1458193, http://book.douban.com/subject/1458193/, Cipher 1, 漫画 成田美名子 双星记 日本漫画 日本 经典 少女漫画 动漫,  0
+1047927, http://book.douban.com/subject/1047927/, 郑渊洁十二生肖童话（12册）, 郑渊洁 童话 12生肖 儿童文学 童年 经典 中国 小说,  0
+3084855, http://book.douban.com/subject/3084855/, 星辰变1, 玄幻 星辰变 我吃西红柿 网络小说 小说 玄幻小说 奇幻 秦羽,  0
+2240552, http://book.douban.com/subject/2240552/, Next Generation Java Testing, 测试 java test programming Java TestNG 计算机 技术,  1
+3586999, http://book.douban.com/subject/3586999/, 数学哲学, 数学 哲学 数学哲学 科普 科学哲学 科学 西方数学文化理念传播译丛 复旦大学出版社,  1
+3860536, http://book.douban.com/subject/3860536/, 月老。愛，九把刀, 九把刀 爱情 小说 台湾 月老 青春 感动 纸上的时光,  0
+1885331, http://book.douban.com/subject/1885331/, 二十世纪的历史学, 历史 史学理论 伊格尔斯 史学史 后现代 历史学 何兆武 历史研究,  0
+1865210, http://book.douban.com/subject/1865210/, 男生贾里女生贾梅, 儿童文学 秦文君 小说 童年 中国 中国文学 童心 青春,  0
+1428691, http://book.douban.com/subject/1428691/, GON, 漫画 阿贡 田中政志 日本漫画 日本 动物 经典 记忆,  0
+1316443, http://book.douban.com/subject/1316443/, 厄舍府的崩塌, 爱伦·坡 小说 厄舍府的崩塌 美国 惊悚 美国文学 外国文学 爱伦坡,  0
+1831909, http://book.douban.com/subject/1831909/, 电路分析基础（上册）, 电路分析 教材 电子技术基础 电子工程 电子 大学课本 电院大平台 工程技术,  1
+1796648, http://book.douban.com/subject/1796648/, 一炉烟火, 刘绍铭 散文 散文随笔 一炉烟火 随笔 文化 中国文学 杂谭杂记,  0
+4002219, http://book.douban.com/subject/4002219/, 虛軸少女 RESIN CAST MILK 01, 轻小说 藤原祐 虚轴少女 日本 輕小說 椋本夏夜 小说 超體系,  0
+1610240, http://book.douban.com/subject/1610240/, Computers & Typesetting, Volume B, tex knuth Donald God TeX the 计算机 高德纳,  1
+4286212, http://book.douban.com/subject/4286212/, 目击者, 摄影 纪实 新闻 新闻摄影 摄影画册 摄影师 评论 影集,  0
+1160332, http://book.douban.com/subject/1160332/, 大学数学, 数学 教材 代数 大学教材 线性代数 购买,  1
+1230489, http://book.douban.com/subject/1230489/, Microsoft Visual C++.NET技术内幕（第6版）, C++ .Net vc Windows 计算机 programming 技术内幕 编程,  1
+1770804, http://book.douban.com/subject/1770804/, The World Is Flat, Globalization Thomas 经济学 Friedman 经济 社会文明 必读 Thomas_Friedman,  0
+1026904, http://book.douban.com/subject/1026904/, 图雅的涂鸦, 图雅 杂文 网络文学 图雅的涂鸦 一个有趣的人 小说 随笔 文学,  0
+1856498, http://book.douban.com/subject/1856498/, 黑郁金香, 大仲马 法国 小说 外国文学 名著 法国文学 黑郁金香 文学,  0
+2331297, http://book.douban.com/subject/2331297/, 龙卧紫禁城, 帝皇 故宫 明清 历史,  0
+1894013, http://book.douban.com/subject/1894013/, 人的现象, 哲学 德日进 人类学 思想 宇宙 思想史 0.人类学 人类学·社会学,  0
+4727471, http://book.douban.com/subject/4727471/, The Great Masters of Italian Art, 美术史,  0
+1461768, http://book.douban.com/subject/1461768/, Programming Python, Second Edition with CD, Python gui in-depth internet language programming 程序设计语言 计算机科学, 1 
+1433492, http://book.douban.com/subject/1433492/, The Art of Project Management, 项目管理 PM 管理 management 软件开发 O'Reilly project 设计,  1
+4106876, http://book.douban.com/subject/4106876/, 张其成全解周易, 周易 哲学 易经 张其成 大智慧 国学 经典 易学,  0
+2329561, http://book.douban.com/subject/2329561/, 路遥纪念集, 路遙 回忆 路遥 人物 散文,  0
+3278238, http://book.douban.com/subject/3278238/, 周代城邦, 先秦史 杜正胜 历史 杜正勝 先秦 中国研究 中國上古史 早期中国文明,  0
+2234982, http://book.douban.com/subject/2234982/, 德语阅读教程1, 德语 百舌 教材 德语教材 德语德国 德语学习 大二 关注,  1
+1388902, http://book.douban.com/subject/1388902/, Peter Paul Rubens, 1577-1640, Rubens 德国 美术,  0
+2230564, http://book.douban.com/subject/2230564/, 多瑙河, 多瑙河 欧洲 旅行 游记 红石 文化 旅行+地理 图文书,  0
+1087505, http://book.douban.com/subject/1087505/, 十日谈, 外国文学 薄迦丘 意大利 小说 十日谈 意大利文学 文学 经典,  0
+1050340, http://book.douban.com/subject/1050340/, 噩梦营之旅.邻屋幽灵, 鸡皮疙瘩 小说 美国 R.L.斯坦 儿童文学 恐怖 恐怖小说 魔幻小说,  0
+1006199, http://book.douban.com/subject/1006199/, 在北大听讲座（第七辑）, 讲座 北大 思想 哲学 视野 在北大听讲座 人生 小发扬,  0
+2178473, http://book.douban.com/subject/2178473/, 世界古代神话和传说, 历史 德国 神话 z姐 传说 古希腊 古罗马 杂,  0
+3132473, http://book.douban.com/subject/3132473/, 家, 巴金 中国文学 小说 激流三部曲 封建 经典 家 名著,  0
+1754862, http://book.douban.com/subject/1754862/, 政治哲学导论, 政治哲学 政治学 哲学 政治法律理论 政治哲学导论 政治 政治哲学教材 英国,  0
+1868698, http://book.douban.com/subject/1868698/, 为什么读经典, 卡尔维诺 意大利 外国文学 文学 为什么读经典 伊塔洛·卡尔维诺 读书 经典,  0
+1509247, http://book.douban.com/subject/1509247/, 数字逻辑, 教材 数字逻辑 cs 大学一泡无 计算机,  1
+2340705, http://book.douban.com/subject/2340705/, 新世纪EVANGELION福音战士PHOTO FILE“eve”, 画集 EVA —原画集と公式书と资料设定集— 擦读作品 日本 电子书 艺学作品 貞本義行,  0
+2378202, http://book.douban.com/subject/2378202/, 歪曲的枢纽, 约翰·狄克森·卡尔 推理 美国 古典推理文库 推理小说 密室 小说 不可能犯罪,  0
+1436178, http://book.douban.com/subject/1436178/, 复旦诗社社长诗选, 诗歌 一任阶前点滴到天明,  0
+1071722, http://book.douban.com/subject/1071722/, 叶卡特琳娜二世传, 传记 俄国 历史 人物传记 人物 西方文学 女性 励志/智慧,  0
+1099531, http://book.douban.com/subject/1099531/, 丘吉尔, 传记 人物传记 二战 丘吉尔 英国 Churchill 人物 励志,  0
+3901450, http://book.douban.com/subject/3901450/, 罪恶天使, 推理 午晔 中国 原创推理 推理小说 国内推理 推理书系 推理书系原创系列,  0
+1012389, http://book.douban.com/subject/1012389/, 华山论贱, 无厘头 华山论贱 黑色幽默 杂七杂八 幽默 贱 有趣 扯淡強迫症,  0
+1060784, http://book.douban.com/subject/1060784/, 旧闻杂忆, 回忆录 旧闻杂忆 历史 散文 清华 现当代 纪实 近代报业,  0
+6813696, http://book.douban.com/subject/6813696/, 什么是插画设计, 插画 设计 插画设计 艺术 artbook 教程 藝術 课件（素材书）,  1
+1939715, http://book.douban.com/subject/1939715/, 非常人, 历史 中国历史 细碎的历史 文化 人物 非常人 钩沉 李异鸣,  0
+2182162, http://book.douban.com/subject/2182162/, 玉观音-海岩文集, 海岩 小说 玉观音 中国文学 当代 爱情 文学 海岩文集,  0
+3651150, http://book.douban.com/subject/3651150/, 鲍鹏山新说《水浒》, 鲍鹏山 水浒传 经典解读 文学解析 中国文学 水浒 百家讲坛 文学,  0
+1042633, http://book.douban.com/subject/1042633/, 梦也何曾到谢桥, 叶广芩 小说 京味 中国文学 当代文学 梦也何曾到谢桥 家族 中国,  0
+3809428, http://book.douban.com/subject/3809428/, 盜墓筆記之9, 盗墓笔记 南派三叔 盗墓 小说 悬疑 精彩。 中国 9,  0
+6744253, http://book.douban.com/subject/6744253/, 小说病人, <小说病人> 青春文学 Zer零 短篇小说 喜欢 土产 杂志,  0
+1159825, http://book.douban.com/subject/1159825/, 世界动物大图集, 动物 科普 Childhood-Memory 图鉴 小学 童年 >读科普 生物,  0
+4144066, http://book.douban.com/subject/4144066/, 江山（一）, 穿越 墨武 网络小说 小说 隋唐争霸 历史 江山 隋唐,  0
+1878980, http://book.douban.com/subject/1878980/, 语言教学中的语用学, 语言学 语用和修辞 语用学,  1
+2052392, http://book.douban.com/subject/2052392/, 中西童话研究, 0.童书理论 儿童文学理论 语音研究 语言学 童话 真的想看看 理论 教育,  1
+3191838, http://book.douban.com/subject/3191838/, 伟大的字母, 语言学 文化 历史 语言 字母 西方 英语 文字学,  1
+1243615, http://book.douban.com/subject/1243615/, 英语语言文化史, 语言学 英语 语言 Linguistics 人文 语言史 英語史 語言學,  1
+1030542, http://book.douban.com/subject/1030542/, 罗马的遗产, 历史 古罗马 罗马 文化 人文 文化史 古典学 思想史,  0
+1127992, http://book.douban.com/subject/1127992/, 祝你顺利, 德语 教材 德语教学 中国国际广播出版社 1989 语言 视听 我有的书,  1
+1111297, http://book.douban.com/subject/1111297/, 音系学通解, 音系学 语言学 传记&回忆&书信&日记&年谱&评传 工具书 泛 语音 语音学 越来越不懂,  1
+1681375, http://book.douban.com/subject/1681375/, 语义论, 语言学 工具书 语义和词汇 语义学 语义论,  1
+2250965, http://book.douban.com/subject/2250965/, 德语与德国文化, 德语 人文 参考资料 德国 文化 马桂琪,  0
+1241587, http://book.douban.com/subject/1241587/, 话语分析入门, 话语分析 语言学 传播 toc话语分析 读过其中几篇 杨信彰 普通语言学 文化研究,  1
+1114262, http://book.douban.com/subject/1114262/, 汉字传播史, 文字 漢字 历史 语言学 汉字 歷史 朝鮮 日本,  1
+1086988, http://book.douban.com/subject/1086988/, 现代汉语句子, 现代汉语 语言学 语法 首图 语法研究 语法理论 汉语语法 教材,  1
+1162975, http://book.douban.com/subject/1162975/, 自学上海话, 上海话 学习 fh 方言 语言学 语言文字,  1
+1269630, http://book.douban.com/subject/1269630/, 论语言发声, 语音学 语言学 发声 孔江平 实验语音学 汉语 语音研究 工具书,  1
+2108318, http://book.douban.com/subject/2108318/, 汉语虚词15讲, 语言学 应用语言学 華語教學,  1
+3149224, http://book.douban.com/subject/3149224/, Language Acquisition, Textbook 应用语言学 心理学 语言学,  1
+1491537, http://book.douban.com/subject/1491537/, 近代中国社会的新陈代谢, 历史 中国近代史 陈旭麓 近代史 社会 中国历史 近代中国 近世变迁,  0
+3120198, http://book.douban.com/subject/3120198/, 华人本土心理学（下）, 心理学 本土心理学 社会心理学 杨国枢 中国 本参 未有 华人本土心理学,  0
+1268016, http://book.douban.com/subject/1268016/, 现代汉语词汇研究, 语言学 词汇学 学术专著 音韵学 语义和词汇 经典 现代语言 现代汉语词汇研究,  1
+1330348, http://book.douban.com/subject/1330348/, 超弦的音响, 科普 超弦 物理学 科技 理论物理 弦学 小布的自然 小布的数理学,  1
+3422617, http://book.douban.com/subject/3422617/, MATLAB神经网络应用设计, 神经网络 ANN matlab 计算机 心理学 软件 -数学建模-, 1 
+4086800, http://book.douban.com/subject/4086800/, 陈寅恪集, 陈寅恪 历史 国学 陈寅恪集 文化 生活·读书·新知三联书店 学术 三联,  0
+1316582, http://book.douban.com/subject/1316582/, 今宵酒醒何處, 蒋勋 蔣勳 散文 随笔 现货 爾雅 港台 台@J蔣勳,  0
+24383489, http://book.douban.com/subject/24383489/, More than Nature Needs, 人类进化 认知科学 语言学 史前史 想读的书,  0
+4884114, http://book.douban.com/subject/4884114/, 海外寻奇, 收藏 杂文 艺术收藏,  0
+3335642, http://book.douban.com/subject/3335642/, Harry Potter and the Chamber of Secrets, HarryPotter 英文原版 魔幻 J.K.Rowling 英文版 哈利波特 英国 英文原著,  0
+2774274, http://book.douban.com/subject/2774274/, The European Economy since 1945, 经济史 economics Economics RL@LSE history 历史 欧洲史,  0
+1559544, http://book.douban.com/subject/1559544/, 古代字体论稿, 书法 启功 字体 汉字 文字学 古代字体论稿 字体设计 文化,  1
+6811041, http://book.douban.com/subject/6811041/, 三国谈心录, 历史 三国 随笔 金性尧 小骚书 魏晋南北朝史 秦汉史 ｜魏晋南北朝史｜,  0
+1717386, http://book.douban.com/subject/1717386/, 编辑校对实用手册, 工具书 编辑出版 编辑 校对 出版 編輯 中国 语文,  0
+19899528, http://book.douban.com/subject/19899528/, Two Billion Eyes, 海外中国研究 传播学 CCTV 英语 政治学 政治 新闻学 英文原版,  0
+1024690, http://book.douban.com/subject/1024690/, 悬浮在空中的吻, 张小娴 散文 悬浮在空中的吻 爱情 随笔 香港 小说 文学,  0
+1112787, http://book.douban.com/subject/1112787/, 富家女, 席绢 言情 小说 富家女 台湾 台湾言情 言情小说 席娟,  0
+3235084, http://book.douban.com/subject/3235084/, 科学知识图谱, 科学计量学 知识图谱 方法学 科普 视觉化 绝伦的创造和解决方案 管理 社会学,  0
+10761493, http://book.douban.com/subject/10761493/, 销售圣经, 销售,  0
+1204798, http://book.douban.com/subject/1204798/, 徐志摩诗全集, 诗歌 徐志摩 中国现代文学 诗集。 徐志摩诗全集 中国 诗词 诗,  0
+6427478, http://book.douban.com/subject/6427478/, 刘氏女, 章诒和 小说 文革 中国文学 中国 犯人 历史 广西师范大学出版社,  0
+2971734, http://book.douban.com/subject/2971734/, 一把雨伞给这天用, 一把雨伞给这天用 德国 小说 威廉-格纳齐诺 外国文学 生命的质感 碎裂思想 文学,  0
+5377694, http://book.douban.com/subject/5377694/, Feathers for Phoebe, ,  0
+1082730, http://book.douban.com/subject/1082730/, 圣经的故事(全彩珍藏本), 房龙 历史 人文 宗教 哲学 文化 社科 宽容,  0
+1906854, http://book.douban.com/subject/1906854/, The Ruby Way, ruby programming Ruby 计算机 Programming,  1
+1001112, http://book.douban.com/subject/1001112/, 新编高中文言文助读, 文言文 辅导书 高中 中学 新编高中文言文助读 学习 杨振中 暑假作业,  1
+3059114, http://book.douban.com/subject/3059114/, JBoss in Action, jboss server 2010 Programming programming web 计算机,  1
+2139043, http://book.douban.com/subject/2139043/, WILD ADAPTER 疾暴执行部 01, 峰仓和也 漫画 峰倉かずや 日本 日本漫画 耽美 久保时 腐向,  0
+2988247, http://book.douban.com/subject/2988247/, “文学少女”と慟哭の巡礼者, 轻小说 野村美月 文学少女 日本 文学少女系列 小说 “文学少女”と慟哭の巡礼者 輕小說,  0
+1090190, http://book.douban.com/subject/1090190/, 儿科学, 医学 儿科学,  1
+1766731, http://book.douban.com/subject/1766731/, 绝望, 纳博科夫 弗拉基米尔·纳博科夫 小说 外国文学 绝望 美国 文学 Nabokov,  0
+1061710, http://book.douban.com/subject/1061710/, 看清你的思维图谱, 思维 思维图谱 思维导图 思维方法 心理学 看清你的思维图谱 思考方法 方法,  0
+3272675, http://book.douban.com/subject/3272675/, 黄昏色的咏使 03, 轻小说 細音啓 日本 奇幻 黄昏色的咏使 輕小說 细音启 黄昏色的詠使,  0
+3036570, http://book.douban.com/subject/3036570/, 绣花大盗, 古龙 武侠 小说 武侠小说 台湾 陆小凤 绣花大盗 武仙侠玄奇神,  0
+1419705, http://book.douban.com/subject/1419705/, 剑桥五重奏, 哲学 人工智能 科普 AI 剑桥五重奏 计算机 学术 CS,  1
+6734022, http://book.douban.com/subject/6734022/, Barry the Fish with Fingers, 童书 绘本,  0
+4125665, http://book.douban.com/subject/4125665/, Deutsch Direki Beginning (45290), Deutsch german,  0
+1039423, http://book.douban.com/subject/1039423/, 且介亭杂文, 鲁迅 杂文 且介亭杂文 文学 中国文学 中国 中国现代文学 散文,  0
+1884459, http://book.douban.com/subject/1884459/, 生活中的博弈论, 博弈论 经济 社科 博弈 生活 个人修炼 经管 经济学,  0
+1594561, http://book.douban.com/subject/1594561/, 普通语言学教程:1910-1911索绪尔第三度讲授, 语言学 索绪尔 齐·语言学名家译丛（湖南教育出版社） 结构主义 符号学 社会学 普通语言学教程-索绪尔3 工具书,  1
+1084975, http://book.douban.com/subject/1084975/, 巴黎圣母院, 雨果 外国文学 法国 名著 小说 法国文学 文学 经典,  0
+3520727, http://book.douban.com/subject/3520727/, 贵族, 天籁纸鸢 吸血鬼 言情 小说 贵族 晋江 血族 网络小说,  0
+1332398, http://book.douban.com/subject/1332398/, 自私的基因, 科普 基因 道金斯 生物学 心理 科学 自然科学 生命,  0
+3880511, http://book.douban.com/subject/3880511/, Problems in Quantitative Linguistics 1, QL linguistics quantitative 计量语言学,  1
+3200268, http://book.douban.com/subject/3200268/, Statistik für Sprachwissenschaftler, ,  1
+1044511, http://book.douban.com/subject/1044511/, 青春前期, 蒋方舟 小说 青春 儿童小说 童年 大陆 中国文学 舟仔,  0
+1227828, http://book.douban.com/subject/1227828/, 老舍画说北京, 老舍 北京 散文随笔杂文 摘 北京故事 边看边哭 有关城市 文学,  0
+1119810, http://book.douban.com/subject/1119810/, 半生缘, 张爱玲 小说 爱情 半生缘 中国文学 中国 现代文学 悲凄,  0
+1749620, http://book.douban.com/subject/1749620/, 丁兆庆漫画选, 漫画 中澳 当代,  0
+5968432, http://book.douban.com/subject/5968432/, You Are Your Own Gym, 健身 health body-building 英文原著 健康 运动 英语 美国,  0
+5341883, http://book.douban.com/subject/5341883/, 分布式控制系统, 学术 工业IT 控制,  1
+4726769, http://book.douban.com/subject/4726769/, 生物计算, Bioinformatics bio bioinformatics mark1,  1
+2254524, http://book.douban.com/subject/2254524/, Struts2权威指南, Struts2 Java Web 编程 j2ee 李刚 javaee struts,  1
+1693626, http://book.douban.com/subject/1693626/, Positioning, marketing 市场营销 商业 positioning 英语 广告 金融 营销,  0
+3800406, http://book.douban.com/subject/3800406/, 千门6· 千门之圣, 武侠 方白羽 千门 小说 智侠 大陆新武侠 新武侠 中国,  0
+3321784, http://book.douban.com/subject/3321784/, 突围, 改革开放 历史 李岚清 回忆录 中国 政治 经济 社会,  0
+2621924, http://book.douban.com/subject/2621924/, Mind Design II, 人工智能 哲学 AI 心理学 哲学逻辑 心灵哲学 思维 文集,  1
+1803862, http://book.douban.com/subject/1803862/, 概率论基础教程, 数学 概率论 概率 机械工业出版社 华章数学译丛 mathematics 数据分析 经典,  1
+2221905, http://book.douban.com/subject/2221905/, 数学与艺术, 数学 艺术 科普 美学 文化 计算机 蓓蓓 科学普及,  1
+1478438, http://book.douban.com/subject/1478438/, Beyond Good and Evil, 哲学 尼采 FriedrichNietzsche 经典 政治学 philosophy Philosophy 英文,  0
+5288461, http://book.douban.com/subject/5288461/, 电影理论与批评辞典, 电影理论 电影 工具书 法国 艺术 Jacques_Aumont 文艺理论 电影学,  0
+4165674, http://book.douban.com/subject/4165674/, 台湾故事会, 台湾 社会 轶事 邓志鸿 小故事 随笔 文化研究 美丽岛,  0
+5272355, http://book.douban.com/subject/5272355/, 佛教在印度, 佛教 高振农 社科院 宗教 历史 印度佛教 佛教·印度佛教 中国,  0
+4758243, http://book.douban.com/subject/4758243/, 一册通晓-图解心理学入门, 心理学 图解心理学 入门 日本 心理学入门 心理 图解 大村政男,  0
+1012180, http://book.douban.com/subject/1012180/, 表演学, 表演 戏剧 表演学 依特金 美国 教材 心理学 电影,  0
+10955948, http://book.douban.com/subject/10955948/, 昆仑前传·铁血天骄, 武侠 凤歌 小说 昆仑 武侠小说 新武侠 武侠小说-新武侠-凤歌-昆仑(新) 中国,  0
+1836441, http://book.douban.com/subject/1836441/, 模拟电子技术基础, 模电 教科书 教材 模拟电子 电子电路 电子 电子信息工程 电路,  1
+3234664, http://book.douban.com/subject/3234664/, 把你的照片换成钱, 摄影 图片库 图片库摄影师的生存之道 市场 创造财富 自由摄影师 把你的照片换成钱 时间太极,  0
+3881746, http://book.douban.com/subject/3881746/, 事关良心, 科幻 詹姆斯·布利什 宗教 美国 科幻小说 小说 世界科幻大师丛书 文学,  0
+10602314, http://book.douban.com/subject/10602314/, 放下一切去旅行, 旅行 旅行的意义 洒脱的生活态度 遇见未知的自己 游记 随性 积极的人生观念 生活,  0
+24529146, http://book.douban.com/subject/24529146/, 常远新托福口语真经, 托福 口语,  1
+5370365, http://book.douban.com/subject/5370365/, 文本挖掘原理, 文本挖掘 数据挖掘 TextMining 聚类分析 数据分析 2010 计算机科学 计算机,  1
+1413586, http://book.douban.com/subject/1413586/, Word and Object, 哲学 分析哲学 quine 语言学 逻辑 语言哲学 蒯因 英语原版,  1
+3571550, http://book.douban.com/subject/3571550/, 小團圓, 张爱玲 小团圆 小说 張愛玲 中国文学 遗作 文学 中國文學,  0
+1485576, http://book.douban.com/subject/1485576/, 诺贝尔, ,  0
+3266348, http://book.douban.com/subject/3266348/, 我自己的世界, 格雷厄姆·格林 传记 我自己的世界 英国 英国文学 外国文学 GrahamGreene 自传,  0
+3573668, http://book.douban.com/subject/3573668/, 秘密的法则, 法则 励志 心理学 秘密 潜意识 心理 秘密的法则 那谁的托,  0
+5933714, http://book.douban.com/subject/5933714/, Handbook of Logic and Language, Second Edition, 语义学 语言学 nemlophics 句法,  1
+1438525, http://book.douban.com/subject/1438525/, 浮世绘的故事, 浮世绘 日本 艺术 绘画 日本文化 文化 美术 民间,  0
+1469443, http://book.douban.com/subject/1469443/, Perfume, perfume 外国文学 英文 感官 谋杀 小说 英文原版 极端小说,  0
+1092185, http://book.douban.com/subject/1092185/, 隐喻, 英语 语法 工具书 语言学 英语学习 English linguistics 外国语语法,  1
+3273210, http://book.douban.com/subject/3273210/, 澳洲拓殖记, 历史 澳大利亚 探险 沃特金·坦奇 国家 澳洲拓殖记 艺术 英国文学,  0
+3931459, http://book.douban.com/subject/3931459/, GRE词汇精选, GRE 词汇 英语 新东方 外语学习 语言 语言考试 认知守中相关,  1
+4758385, http://book.douban.com/subject/4758385/, 要么拯救世界，要么滚回家！[英汉对照], 绘本 职场 创意 漫画 思维 职业规划 美国 商业智慧,  0
+1084079, http://book.douban.com/subject/1084079/, 少年天子, 历史小说 茅盾文学奖 凌力 小说 历史 少年天子 中国文学 中国,  0
+3054335, http://book.douban.com/subject/3054335/, 醉, 散文 醉生梦死 文学 中国 随笔 [以酒之名] 美学 美,  0
+4243427, http://book.douban.com/subject/4243427/, 大爭之世 卷一：公子慶忌, 月关 网络小说 穿越 架空历史 小说 历史 网络文学 长文,  0
+3003470, http://book.douban.com/subject/3003470/, 另一个，同一个, 博尔赫斯 诗歌 阿根廷 外国文学 诗 阿根廷文学 诗集 文学,  0
+1767050, http://book.douban.com/subject/1767050/, How To Think Like Leonardo Da Vinci, 达芬奇 思维方式 英文版 潜能开发 思维 心理学 文学 有声书,  0
+1828598, http://book.douban.com/subject/1828598/, Faust, (English) Classics Humanities 外国文学 德国 德语文学,  0
+4000613, http://book.douban.com/subject/4000613/, 蒙田, 一個法國紙幣上的人, **台·H海鴿文化* E Montaigne,Michel_De 文学研究 （港台版）,  0
+1988591, http://book.douban.com/subject/1988591/, 世界史-古代卷, 历史 世界史 中世纪 历史学 古典,  0
+1536941, http://book.douban.com/subject/1536941/, 教育学, 教育学 教材 教育 考研 教师证 高等教育学阅读 专业 私藏,  0
+4001508, http://book.douban.com/subject/4001508/, 若是爱已成伤, 靡宝 言情 小说 通灵少女 玄幻 若是爱已成伤 爱情 网络文学,  0
+1874944, http://book.douban.com/subject/1874944/, Rammstein, Rammstein 摇滚,  0
+3184339, http://book.douban.com/subject/3184339/, 华丽家族：六朝陈郡谢氏家传, 历史 魏晋南北朝 传记 华丽家族：六朝陈郡谢氏家传 门阀世家 六朝文化 家族 文化,  0
+3333475, http://book.douban.com/subject/3333475/, Fashionable Technology: The Intersection of Design, Fashion, Science, and Technology, ExtensiveReading 设计 英文 时尚 圖畫書 wearableTech wearable newMedia,  0
+1358340, http://book.douban.com/subject/1358340/, The Second Self, 心理学 网络传播 computer 设计 计算机 自我认同 网络 电子书,  1
+1456597, http://book.douban.com/subject/1456597/, 她的二三事, 亦舒 她的二三事 小说 香港 爱情 言情 师太 中国文学,  0
+1853632, http://book.douban.com/subject/1853632/, Cybernetics, Second Edition, 控制论 wiener Cybernetics 科普 小布的认知科学 电子 系统科学 认知（综合）,  1
+1868028, http://book.douban.com/subject/1868028/, 亚当的苹果, 沐童 小说 青春 大学生活 亚当的苹果 80后 寂寞小说 中国当代文学,  0
+1512169, http://book.douban.com/subject/1512169/, 玄幻系列之-上帝之谜, 黄易 玄幻 小说 玄幻小说 上帝之谜 科幻小说 黃易 黄易经典,  0
+2019879, http://book.douban.com/subject/2019879/, Visual Studio Team System软件工程实践, 软件工程 VSTS MSF 图书 软件开发 项目管理 软件工程,管理 网站架构,  1
+1230202, http://book.douban.com/subject/1230202/, 现代编译程序实现, 编译原理 compiler Java 计算机 程序设计 已购 部分精度 编译链接装载,  1
+1943709, http://book.douban.com/subject/1943709/, 互联网的变革, web2.0 互联网 web2.0_技术 用户体验 理念 网络,web2.0 网络体系 产品设计,  1
+1756511, http://book.douban.com/subject/1756511/, 2000 Reasons to Hate the Millennium, ,  1
+1146304, http://book.douban.com/subject/1146304/, 日光流年, 阎连科 小说 日光流年 超现实主义 中国文学 当代文学 中国 文学,  0
+3274182, http://book.douban.com/subject/3274182/, 莲花, 安妮宝贝 莲花 小说 旅行 文学 爱情 安妮 中国,  0
+1427761, http://book.douban.com/subject/1427761/, 性与理性, 法学 波斯纳 理查德·A·波斯纳 性 法理 社会学 法哲学 法律,  0
+20516441, http://book.douban.com/subject/20516441/, 美术、神话与祭祀, 张光直 考古 艺术 历史 考古学 美术、神话与祭祀 宗教 艺术史,  0
+2149444, http://book.douban.com/subject/2149444/, 哲学, 哲学 费恩 英国 学术思想引进 小布的哲学 欧美 藏书 通识,  0
+2139204, http://book.douban.com/subject/2139204/, 天使坠落的城市, 天使坠落的城市 威尼斯 约翰·伯兰特 外国文学 小说 游记 宗教 美国,  0
+2306166, http://book.douban.com/subject/2306166/, 飞去的候鸟, 摄影 侯登科 纪实 飞去的候鸟 麦客 艺术 侯登科飞去的候鸟 人物,  0
+4999411, http://book.douban.com/subject/4999411/, 数据挖掘原理与应用, 数据挖掘 Analysis SQL2008 Oracle,  1
+1456207, http://book.douban.com/subject/1456207/, Coldplay - X and Y, XandY coldplay/主唱 要 英伦 花的姿态 最经典的 coldplay; britpop,  0
+3570406, http://book.douban.com/subject/3570406/, うさぎドロップ(1)/白兔糖1/usagi-drop1, 漫画 宇仁田ゆみ 日本 治愈系 白兔糖 日本漫画 少女漫画 漫畫,  0
+3208676, http://book.douban.com/subject/3208676/, MATLAB函数速查手册, Matlab 算法 计算机 编程 凡同时同 工程技术 控制工程 数学,  1
+2311298, http://book.douban.com/subject/2311298/, 校雠通义通解, 文献学 章学诚 校讎學 王重民 文獻學 章學誠 古典 古代文学,  0
+4104021, http://book.douban.com/subject/4104021/, 我的人生“狠”字当头, 传记 商业 人物传记 皮肯斯 石油 投资 我的人生“狠”字当头 商业经营,  0
+1018571, http://book.douban.com/subject/1018571/, 校雠广义:目录编, 文献学 程千帆 目录学 校雠广义 目錄 文獻學 国学 校雠廣義,  0
+3867911, http://book.douban.com/subject/3867911/, 黑白摄影, 摄影 黑白摄影,  0
+1263942, http://book.douban.com/subject/1263942/, 欧洲音乐地图, 音乐 欧洲 古典 古典音乐 "欧洲音乐地图" 地图 历史 音乐笔记,  0
+1487700, http://book.douban.com/subject/1487700/, 让孩子出类拔萃, 家庭教育 早教,  0
+3882358, http://book.douban.com/subject/3882358/, 王力《古代汉语》同步辅导与练习（配第一册/第二册）, 古代漢語 古代汉语 汉语 古代 国学 教材 考研 语言学,  1
+1961178, http://book.douban.com/subject/1961178/, 价值论, ,  0
+1375820, http://book.douban.com/subject/1375820/, Sketch for a Theory of the Emotions  情感理论梗概, 萨特 薩特 现象学 法国 情感理论 情感 存在主义 大学四年级,  0
+1627126, http://book.douban.com/subject/1627126/, 数字逻辑电路, ,  1
+10356665, http://book.douban.com/subject/10356665/, Study Guide for Macroeconomics, ,  1
+1965829, http://book.douban.com/subject/1965829/, 叶姆斯列夫语符学文集, 语言学 语符学 结构主义 符号学 齐·语言学名家译丛（湖南教育出版社） 语言学理论 语言 罗兰·巴特,  1
+2264516, http://book.douban.com/subject/2264516/, Kripke, 哲学 哲學 0 autKripke 邏輯 邏輯學,  0
+10866986, http://book.douban.com/subject/10866986/, 托福词汇精选, 英语 TOEFL 工具书 教材 词汇,  1
+1394365, http://book.douban.com/subject/1394365/, 教養的迷思, 心理学 教育 育儿 儿童教育 教育學 社会学 茱蒂.哈里斯 芒格推荐,  0
+6059060, http://book.douban.com/subject/6059060/, 烙印戰士 31, 漫画 三浦建太郎 三浦健太郎 日本漫画 日本 剑风传奇 奇幻 青年漫画,  0
+1842904, http://book.douban.com/subject/1842904/, 圣像, 悬疑 小说 宗教 推理 奥尔森 美国 历史 圣像,  0
+1807667, http://book.douban.com/subject/1807667/, 上海在失眠, 谁谁谁 上海 职场 白领 都市 生活 小说 消遣书,  0
+1905977, http://book.douban.com/subject/1905977/, Structure in Fives, 1st 5002 Communication Management Organization essay 组织设计,  0
+25806449, http://book.douban.com/subject/25806449/, 中西风马牛（修订版）, 电影 艺术 后浪 电影有关 社会&政治&历史 吴迪 电影学院 2014,  0
+4263012, http://book.douban.com/subject/4263012/, 邁向另一個國度, 森山大道 攝影 日本 摄影 随笔 Photography 艺术 日本文学,  0
+4399750, http://book.douban.com/subject/4399750/, Satoshi Kon, 今敏 动画 日本 電影 AndrewOsmond hkbu 传记,  0
+4036060, http://book.douban.com/subject/4036060/, 腐女801, 绘本 日本 腐女801 漫画 腐 腐女 宅 耽美,  0
+1824256, http://book.douban.com/subject/1824256/, 破阵子·龙吟, 武侠 飘灯 茗剑传奇 小说 苏旷 破阵子·龙吟 武侠小说 中国,  0
+3142174, http://book.douban.com/subject/3142174/, 草样年华, 孙睿 小说 青春文学 青春 草样年华 80后 草样年华1 青春小说,  0
+24834723, http://book.douban.com/subject/24834723/, 做更自信的自己, 自信 正能量 励志 心理学 交流 支持性的友谊 接受 面对,  0
+1823805, http://book.douban.com/subject/1823805/, Combinatorial Optimization, 算法 数学 组合数学 优化 algorithm 计算机科学 optimazation combinatorial,  1
+1226367, http://book.douban.com/subject/1226367/, 现代性的哲学话语, 哈贝马斯 哲学 现代性 法兰克福学派 社会学 文化理论 思想史 社会理论,  0
+1150638, http://book.douban.com/subject/1150638/, Intel微处理器结构、编程与接口, intel 汇编语言 Computer.Architecture CPU 编程语言 计算机,  1
+2113514, http://book.douban.com/subject/2113514/, 流星屿, 白芸 耽美 小说 BL 耽美小说 BL小说 现代 威向,  0
+1131922, http://book.douban.com/subject/1131922/, 股市操练大全（第4册）, 股票 投资 股市操练大全 金融 技术分析 理财 股市 投资学,  1
+1157474, http://book.douban.com/subject/1157474/, 思想的天鹅, 林清玄 散文 随笔 台湾 哲言 人生 玄妙 文学,  0
+2353103, http://book.douban.com/subject/2353103/, 怪奇四十面相, 江户川乱步 推理 日本 小说 侦探小说 侦探 日本文学 怪人四十面相,  0
+20509853, http://book.douban.com/subject/20509853/, 深夜特急, 旅行 泽木耕太郎 日本 游记 随笔 深夜特急 *上海译文出版社* 上海译文出版社,  0
+19950854, http://book.douban.com/subject/19950854/, Integrated Chinese Part 1 Level 1  Text in Simplified Version, 3,  0
+2971885, http://book.douban.com/subject/2971885/, どうしようもないけれど 1, 夏目イサク 漫画 BL 耽美 耽美漫画 日本 BL漫画 BLコミック,  0
+3795567, http://book.douban.com/subject/3795567/, 丑小鸭, 广告 创意 奥美 设计 广告创意 广告那点事 design 廣告,  0
+3056877, http://book.douban.com/subject/3056877/, 使女的故事, 玛格丽特·阿特伍德 小说 反乌托邦 加拿大 外国文学 女性 阿特伍德 科幻,  0
+1184925, http://book.douban.com/subject/1184925/, 小黑马的故事, 儿童文学 三年级 童年的书 袁静,  0
+5913460, http://book.douban.com/subject/5913460/, 鬼恋, 小说 徐讦 文学 徐訏 中国 现当代 现代文学 现代,  0
+1210286, http://book.douban.com/subject/1210286/, 属于那个叛逆的年代, 刘轩 成长 属于那个叛逆的年代 随笔 刘墉 励志 台湾 人生,  0
+1073384, http://book.douban.com/subject/1073384/, 复杂性中的思维, 复杂 复杂系统 科学 思维 哲学 系统科学 科学哲学 科普,  0
+3596379, http://book.douban.com/subject/3596379/, 孤独的诗性, 文化 沈从文 历史 文化研究 文艺理论 沈从文研究,  0
+1105180, http://book.douban.com/subject/1105180/, 四个半朋友和机警的花园陶俑, 儿童文学 约阿希姆·弗里德里希 小说 德国 外国文学 童年回忆 推理 德国文学,  0
+1982043, http://book.douban.com/subject/1982043/, 绞刑架下的报告, 外国文学 小说 伏契克 革命 纪实文学 革命小说 集 随笔,  0
+1688584, http://book.douban.com/subject/1688584/, 定量考古学, 考古学 科技考古 方法论 定量 统计 考古 教材 好教材,  0
+1180098, http://book.douban.com/subject/1180098/, 恐怖宠物店(7), 漫画 秋乃茉莉 恐怖宠物店 日本 日本漫画 D伯爵 人性 漫畫,  0
+1145984, http://book.douban.com/subject/1145984/, 坐庄, 小说 股票 操盘手 听书 金融 当代文学 坐庄 中国,  0
+3534780, http://book.douban.com/subject/3534780/, 這是愛, 麥兜 謝立文 繪本 香港 绘本 麥家碧 这是爱 2009,  0
+5993385, http://book.douban.com/subject/5993385/, 顶级销售的25堂课, 销售 营销 2011 Sales,  0
+10774732, http://book.douban.com/subject/10774732/, 藏语简志, 藏语 描写主义时代 民族語 藏語,  0
+4231279, http://book.douban.com/subject/4231279/, 黑暗之旅, 法律 法律史 政治哲学 神话 文化 法学 历史 哲学,  0
+11609984, http://book.douban.com/subject/11609984/, Ruby and MongoDB Web Development Beginner's Guide, Ruby MongoDB 程序设计 Web 软件开发 计算机科学 科学 programming,  1
+1024030, http://book.douban.com/subject/1024030/, 本田兵法, 管理 企业管理 公司客户 日本 企业,  0
+10524279, http://book.douban.com/subject/10524279/, 炉边话明史, 历史 随笔 金性尧 历史与记忆 ｜明清史｜ 大家史说 中国历史 （中国文学）,  0
+1041028, http://book.douban.com/subject/1041028/, 社会研究方法教程（重排本）, 社会学 社会研究方法 研究方法 袁方 教材 传播学 考研 社会调查,  0
+6760370, http://book.douban.com/subject/6760370/, Reamde, 科幻 小说 NealStephenson 赛博朋克 计算机科学 科技惊悚 游戏 文化,  0
+3886810, http://book.douban.com/subject/3886810/, 厄瓜多尔, 诗歌 亨利·米肖 法国 外国文学 诗 法国文学 Henri_Michaux 文学,  0
+2996031, http://book.douban.com/subject/2996031/, 上海女性, 王安忆 散文 上海 上海女性 中国文学 文学 当代 中国,  0
+1429829, http://book.douban.com/subject/1429829/, 逻辑哲学, 哲学 逻辑学 逻辑 逻辑哲学 分析哲学 西方哲学 英美哲学 清楚全面,  0
+2338827, http://book.douban.com/subject/2338827/, 符号计算系统Maple教程, Maple pdf 符号计算,  1
+3081812, http://book.douban.com/subject/3081812/, Excel高效办公, excel Excel高效办公:学校管理 home office 工具书 计算机,  1
+3036693, http://book.douban.com/subject/3036693/, 汉语音韵讲义, 音韵学 语言学 音韻學 小学 音韵 汉语言文字学 小學類 钟狗推荐。,  1
+2160901, http://book.douban.com/subject/2160901/, 国际海洋环境制度导论, 海洋战略 环境外交 环境政治,  0
+2403248, http://book.douban.com/subject/2403248/, Sociolinguistics, 社会语言学 语言学 工具书 教材 语言与社会,  1
+3805407, http://book.douban.com/subject/3805407/, 美国走着瞧, 旅行 美国 游记 许崧 幽默 随笔 有关旅行。 旅游,  0
+1146446, http://book.douban.com/subject/1146446/, 金融数学, 金融 金融数学 数学 经济 finance 教材 金融学 经济学,  1
+1802292, http://book.douban.com/subject/1802292/, 国际视觉设计, 设计 design 平面设计 视觉设计 艺术 国际 設計 搬砖手册,  1
+5944680, http://book.douban.com/subject/5944680/, 大家手笔, 南方周末 文集 随笔 时评 大家手笔 大家手筆 散文随笔杂文 内地,  0
+3575882, http://book.douban.com/subject/3575882/, 时间箭, 小说 英国 马丁·阿米斯 外国文学 奇幻 时间箭 英国文学 布克奖,  0
+10745599, http://book.douban.com/subject/10745599/, A Concise Introduction to Logic, 逻辑 逻辑学 CriticalThinking 邏輯 通識 科普 科学人文 数据处理,  1
+1118983, http://book.douban.com/subject/1118983/, 爱从未离开你(87篇发现美丽的清新故事), 心灵鸡汤 励志 成长 感悟 随笔 美国 小说 吴淡如,  0
+3289722, http://book.douban.com/subject/3289722/, 克鲁格曼的预言, 经济学 克鲁格曼 经济 保罗克鲁格曼 宏观经济 美国 金融 言论，在政治背后隐藏着什么？,  0
+1018022, http://book.douban.com/subject/1018022/, 中国当代文学史史料选(1945-1999上下), 史料 当代文学 洪子诚 现当代文学 中國現當代文學 考试 考研 理论书,  0
+3434743, http://book.douban.com/subject/3434743/, 尊严不是无代价的, 历史 萨苏 抗日战争 军事 日本 中国历史 抗战 二战,  0
+1873319, http://book.douban.com/subject/1873319/, 凡·高的遗言, 推理 凡高 艺术 日本 梵高 凡·高的遗言---赝画中隐藏的自杀真相 小林英树 日本文学,  0
+1192422, http://book.douban.com/subject/1192422/, 民国名媛, 民国 人物 民国名媛 传记 历史 历史人物传记 梦里的那个年代 那个年代,  0
+2006485, http://book.douban.com/subject/2006485/, 认识精神疾病, 健康,  0
+1225529, http://book.douban.com/subject/1225529/, 北极探险, 哈尔罗杰历险记 探险 小说 童年 儿童文学 威勒德·普赖斯 英国 冒险,  0
+24843469, http://book.douban.com/subject/24843469/, 宋词中的大宋, 宋词 文化 历史 全力推荐，不得不读 看着目录就想读 非常好看 散文随笔 好奇系列,  0
+6862118, http://book.douban.com/subject/6862118/, 学习XNA游戏编程（中文版）, XNA 游戏编程 编程 游戏 技术 近期 软件开发 计算机科学,  1
+5349539, http://book.douban.com/subject/5349539/, The Complete Works of William Shakespeare, CambridgeClassics,  0
+1427300, http://book.douban.com/subject/1427300/, 人生之体验, 唐君毅 哲学 人生 新儒家 新儒学 心灵 心灵自由 中国,  0
+3865865, http://book.douban.com/subject/3865865/, A：不在现场, 苏·格拉芙顿 推理 午夜文库 美国 字母系列 苏·格拉夫顿 推理小说 小说,  0
+6047750, http://book.douban.com/subject/6047750/, MATLAB语言常用算法程序集, MATLAB 算法 matlab 数学 编程,  1
+7710532, http://book.douban.com/subject/7710532/, Die Theorie Des Romans, 卢卡奇 哲学,  0
+6011901, http://book.douban.com/subject/6011901/, 三毛全集（全11册）, 三毛 这样一个神奇女子 三毛~~旅行~~美好~~向往~~ 随笔 散文 台湾 经典 中国文学,  0
+1983031, http://book.douban.com/subject/1983031/, 大奥 (第1巻), 吉永史 漫画 大奥 日本 日本漫画 男女逆转 耽美 よしながふみ,  0
+1012592, http://book.douban.com/subject/1012592/, 马桥词典, 韩少功 小说 当代文学 马桥词典 中国文学 语言 中国 文学,  0
+1799711, http://book.douban.com/subject/1799711/, 市场研究与应用, 市场研究 刘德寰 商业 市场 专业 toRead 用户体验 企管,  0
+1472237, http://book.douban.com/subject/1472237/, Tuesday, 绘本 美国 繪本 DavidWiesner 儿童文学 想象力 图画书 童书,  0
+4848383, http://book.douban.com/subject/4848383/, 谁为伊斯兰讲话, 宗教 伊斯兰 穆斯林 伊斯兰教 政治 历史 美国 约翰.L.埃斯波西托,  0
+20382322, http://book.douban.com/subject/20382322/, 午門囧事, 搞笑 穿越 言情 小说 架空历史 闲书与故事,  0
+2042638, http://book.douban.com/subject/2042638/, 大师和玛加丽塔, 布尔加科夫 俄罗斯 小说 魔幻现实主义 外国文学 俄国文学 大师和玛加丽塔 文学,  0
+11748179, http://book.douban.com/subject/11748179/, Change, Chance and Optimality, 历史语言学 音系学,  0
+1940542, http://book.douban.com/subject/1940542/, 上海魔术师, 虹影 小说 上海魔术师 上海 中国文学 女性 当代 中国,  0
+1448877, http://book.douban.com/subject/1448877/, 人类学的四个讲座, 人类学 谣言 理论 文化 身体 人类社会 人文社会 社科,  0
+1118770, http://book.douban.com/subject/1118770/, Frankenstein, MaryShelly 小说 科幻 英国 英国文学 Gothic 外国文学 原版,  0
+1236374, http://book.douban.com/subject/1236374/, 汉语语法化的历程, 语言学 语法化 石毓智 汉语语法 语法 语法史 论文集 vuhue,  1
+10773867, http://book.douban.com/subject/10773867/, 质量效应1-3套装, 科幻 科幻小说 小说 美国 质量效应 游戏 内容一般，翻译有史以来最烂！！！ 进化,  0
+1648758, http://book.douban.com/subject/1648758/, 百代百年重修旧好(CD), 李香兰 电子艺术 音乐 刘野 周璇 电子,  0
+1765938, http://book.douban.com/subject/1765938/, Algorithms on Strings, Trees and Sequences, 算法 Algorithm 字符串 计算机科学 数据结构 Programming 计算机 树,  1
+1939451, http://book.douban.com/subject/1939451/, 哀豔是童年, 胡淑雯 台湾 哀豔是童年 小说 女性 台湾文学 台灣 小說,  0
+3191334, http://book.douban.com/subject/3191334/, 宋词赏析, 沈祖棻 诗词 古典文学 宋词赏析 中国古典文学 宋词 中国古典 词,  0
+2761281, http://book.douban.com/subject/2761281/, Daughter of the Drow, 卓尔 奇幻 幻想和悬疑,  0
+1777590, http://book.douban.com/subject/1777590/, The Stars My Destination, 科幻 阿尔弗雷德·贝斯特 美国 小说 经典 小說 外国文学 史诗式,  0
+3027048, http://book.douban.com/subject/3027048/, 今昔物语集（全两册）, 日本 日本文学 今昔物语集 日本古典文学 文学 古典 志怪小说 今昔物语,  0
+11600027, http://book.douban.com/subject/11600027/, 大仲马美食词典, 美食 大仲马 法国 饮食 文化 法国文学 外国文学 吃,  0
+1867081, http://book.douban.com/subject/1867081/, Pthreads Programming, Pthreads 多线程 GNU/Linux 线程 并行 multithreads 计算机 并行程序设计,  1
+1179869, http://book.douban.com/subject/1179869/, 西洋古玩价格指南, 艺术 艺术史,  0
+6712407, http://book.douban.com/subject/6712407/, 巴黎评论·作家访谈Ⅰ, 巴黎评论 外国文学 谈话录 文学 文学评论 访谈 文学批评 评论,  0
+2146998, http://book.douban.com/subject/2146998/, 死亡筆記本10, 小畑健 漫画 日本 日本漫画 死亡笔记 死亡筆記 推理 漫畫,  0
+2074899, http://book.douban.com/subject/2074899/, 批判于丹, 中国文学 未看完 论语 文史哲 烂书,  0
+10607959, http://book.douban.com/subject/10607959/, 勇闯中域-斗破苍穹-19, 斗破苍穹 玄幻 天蚕土豆 小说 网络小说 中国 奇幻 网络,  0
+5284696, http://book.douban.com/subject/5284696/, 女人的重建, 女性 心理学 心灵，成长。 女人的重建 路易斯海 自我帮助 心理 女性心理学,  0
+25756436, http://book.douban.com/subject/25756436/, 朱熹错了——评朱注四书, 国学 傅佩荣 哲学 儒学 历史 文化,  0
+2273928, http://book.douban.com/subject/2273928/, 和尚·博客, 佛学 学诚法师 宗教 佛教 佛 文化 佛法 读字,  0
+1731484, http://book.douban.com/subject/1731484/, 美丽与政治, 传记 季莫申科 人物传记 美丽与政治(乌克兰女政治家季莫申科) 美丽与政治 乌克兰 政治 尤莉亚,  0
+20444472, http://book.douban.com/subject/20444472/, 经营的本质, 管理 经营 陈春花 经营管理 商业 本质 经管 经济,  0
+3301034, http://book.douban.com/subject/3301034/, 程序设计基础, ***** 教材 计算机,  1
+20413734, http://book.douban.com/subject/20413734/, 寂寞是一种清福, 梁实秋 随笔 散文 寂寞是一種清福 意趣 人生 梁實秋 札記,  0
+3289474, http://book.douban.com/subject/3289474/, 奥巴马：我的总统梦, 传记 奥巴马 总统传记 美国 名人传记 电子书 大学 非洲,  0
+3606570, http://book.douban.com/subject/3606570/, 鹤唳华亭, 言情 小说 鹤唳华亭 雪满梁园 古言 晋江 架空 古代,  0
+10533405, http://book.douban.com/subject/10533405/, 野外生存技巧, ,  0
+1457995, http://book.douban.com/subject/1457995/, Journals, KurtCobain 摇滚 Kurt 音乐 传记 Cobain nirvana 美国,  0
+3116335, http://book.douban.com/subject/3116335/, 现代汉语属性范畴研究, 古文字 工具书 语言学 音韵学 齐·汉语史与中国古典文献学研究丛书（巴蜀书社）,  1
+1780658, http://book.douban.com/subject/1780658/, Wise Blood, Literature 美国文学 美国 小说 英文原版书 美国作家 English 道德,  0
+1092098, http://book.douban.com/subject/1092098/, UML参考手册, UML 软件工程 建模 重读大学计划 软件设计 软件开发 软件 编程开发,  1
+3519216, http://book.douban.com/subject/3519216/, 姑妄集, 张鸣 随笔 历史 杂文 历史周边 时评 教育 浙江人,  0
+1283357, http://book.douban.com/subject/1283357/, 汽车城, 阿瑟.黑利 阿瑟·黑利 小说 外国文学 外国小说 美国 社会学 文学,  0
+1066226, http://book.douban.com/subject/1066226/, 感悟人生, 林语堂 感悟人生 随笔 传记 感悟 人文 闲读 三十年代,  0
+2077417, http://book.douban.com/subject/2077417/, 数理逻辑, 数理逻辑 逻辑 数学 汪芳庭 计算机 k rr 逻辑学,  1

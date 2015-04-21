@@ -74,7 +74,7 @@ class login():
             print session
             raise web.seeother('/')
        
-class logout():
+class logout(): 
     def GET(self):
         try:
             session.logged_in = False
