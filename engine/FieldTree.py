@@ -45,6 +45,7 @@ class FieldTree(object):
 		u'数据结构':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
 		u'网络':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
 	}
+
 	field_nodes = []
 
 	def __init__(self, input_tree):
@@ -79,7 +80,7 @@ class FieldTree(object):
 		return self.vector
 
 	def insertBook(self, book):
-		lowest_tag = []
+		lowest_node = []
 		lowest_lev = 0
 		for tag in [t['name'] for t in book['tags']]:
 			if tag not in FieldTree.fields:
@@ -88,7 +89,14 @@ class FieldTree(object):
 			# idx = self.getNodeIdx(tag)
 			# if not idx:
 			# 	continue
-			# self.field_nodes[idx]
+			# node = self.field_nodes[idx]
+
+			## 获得最低层次node
+			# if node.level > lowest_lev:
+			# 	lowest_lev = nodel.level
+			# 	lowest_idx = [idx]
+			# elif node.level == lowest_lev:
+			# 	lowest_tag.append(idx)	
 
 			## 获得最低层次
 			tag_lev = FieldTree.fields[tag]['level']
@@ -131,11 +139,16 @@ class FieldTree(object):
 class FieldNode(object):
 	"""docstring for FieldNode"""
 	
-	def __init__(self, tagname):
-		tags = tagname.split('`')
+	def __init__(self, taglist):
+		self.tags = [t.lower() for t in taglist.split('`')]
+		self.name = self.tags[0]
 		self.level   = 0
 		self.parents = set()
 		self.books   = []
+
+	def match(self, tagname):
+		if tagname.lower() in self.tags:
+			return True
 
 	def isParenting(self, node):
 		pass
