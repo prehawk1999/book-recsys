@@ -3,169 +3,164 @@ from book_recsys import *
 
 
 FIELDS = {
-	u'计算机`计算机科学`计算机技术':{ # 1
-		u'程序设计`编程`程序开发`编程语言`programming':{
-			u'c`c++`c/c++`c语言':{
-				u'stl':{},
-				u'c`c++`c/c++`c语言':{},
+	u'计算机`计算机科学`计算机技术':{ # 0
+		u'程序设计`编程`程序开发`编程语言`programming':{#3
+			u'c/c++`c`c++`c语言':{#9
+				u'stl':{},#10
+				u'c/c++`c`c++`c语言':{},#11
 			},
-			u'java':{
-				u'j2ee':{},
-				u'java':{},
+			u'java':{#6
+				u'j2ee':{},#7
+				u'java':{},#8
 			},
-			u'python':{
-				u'python':{},
+			u'python':{#4
+				u'python':{},#5	
 
 			}								
 		},
-		u'网络':{
+		u'网络`network':{#12
 
 		},
-		u'算法':{
+		u'算法`algorithm':{#2
 
 		},
-		u'数据结构':{
+		u'数据结构':{#1
 
 		},
 	}
 }
 
-
-class FieldTree(object):
-	"""docstring for FieldTree"""
-
-	fields = {
-		u'计算机':{'level':1, 'parents':set(), 'books':[]},
-		u'编程':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-		u'C/C++':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
-		u'STL':{'level':4, 'parents':set((u'C/C++', u'编程', u'计算机')), 'books':[]},
-		u'java':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
-		u'J2EE':{'level':4, 'parents':set((u'java', u'编程', u'计算机')), 'books':[]},
-		u'算法':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-		u'数据结构':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-		u'网络':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-	}
-
-	field_nodes = []
-
-	def __init__(self, input_tree):
-		self.vector = {}
-
-	def getNodeIdx(self, tagname):
-		for fn in self.field_nodes:
-			if fn.match(tagname):
-				return field_nodes.index(fn)
-
-	def _getLevel(self, tagname):
-		if tagname not in FieldTree.fields:
-			return 
-		return FieldTree.fields[tagname]['level']
-
-	# return None if a and b not in a branch, 1 if a is 1level lower than b, -1 if b is 1level lower than a.
-	def _getBranchLoc(self, a, b):
-		if a not in FieldTree.fields or b not in FieldTree.fields:
-			return 
-		alev = self._getLevel(a)
-		blev = self._getLevel(b)
-		if alev == blev:
-			return
-		elif alev > blev:
-			if b in FieldTree.fields[a]['parents']:
-				return alev - blev
-		else:
-			if a in FieldTree.fields[b]['parents']:
-				return alev - blev
-
-	def getVector(self):
-		return self.vector
-
-	def insertBook(self, book):
-		lowest_node = []
-		lowest_lev = 0
-		for tag in [t['name'] for t in book['tags']]:
-			if tag not in FieldTree.fields:
-				continue
-			logging.debug('book tag:%s' % tag)
-			# idx = self.getNodeIdx(tag)
-			# if not idx:
-			# 	continue
-			# node = self.field_nodes[idx]
-
-			## 获得最低层次node
-			# if node.level > lowest_lev:
-			# 	lowest_lev = nodel.level
-			# 	lowest_idx = [idx]
-			# elif node.level == lowest_lev:
-			# 	lowest_tag.append(idx)	
-
-			## 获得最低层次
-			tag_lev = FieldTree.fields[tag]['level']
-			if tag_lev > lowest_lev:
-				lowest_lev = tag_lev
-				lowest_tag = [tag]
-			elif tag_lev == lowest_lev:
-				lowest_tag.append(tag)
-			
-			## 累加vector
-			if tag in self.vector:
-				self.vector[tag] += 1
-			elif len(self.vector) == 0:
-				self.vector[tag] = 1
-				logging.debug(u'获取第一个标签: %s'%tag)
-			else:
-				_isnewvec = False
-				for pre_tag in self.vector.items():
-					ret = self._getBranchLoc(tag, pre_tag[0])
-					logging.debug('-=- compare tag:%s and pre_tag:%s' % (tag, pre_tag[0]))
-					if not ret:
-						_isnewvec = True
-						continue
-					if ret > 0:
-						_isnewvec = True
-						del self.vector[pre_tag[0]]
-						logging.debug('get same branch tag: %s, delete old branch tag: %s' % (tag, pre_tag[0]))
-					else:
-						_isnewvec = False
-						logging.debug('skip same branch high level tag:%s'%tag)
-				if _isnewvec:
-					self.vector[tag] = 1
-
-
-		# 分类书籍到节点标签
-		for tag in lowest_tag:
-			logging.debug('CLASSIFY book:%s TO lowest_tag:%s'% (book['title'], tag) )
-			FieldTree.fields[tag]['books'].append(book)
-
 class FieldNode(object):
 	"""docstring for FieldNode"""
 	
-	def __init__(self, taglist):
+	def __init__(self, taglist, level, parents):
 		self.tags = [t.lower() for t in taglist.split('`')]
 		self.name = self.tags[0]
-		self.level   = 0
-		self.parents = set()
+		self.level   = level
+		self.parents = parents
 		self.books   = []
 
 	def match(self, tagname):
 		if tagname.lower() in self.tags:
 			return True
 
-	def isParenting(self, node):
-		pass
-
 	# a.getBranchLoc(b), return None if a b not in same branch, return 1 if a is one level deeper than b.
 	def getBranchLoc(self, node):
 		lev = self.level - node.level
-		if lev > 0:
-			if not node.isParenting(self):
-				return
-			else:
+		if lev == 0:
+			return
+		elif lev > 0:
+			if node in self.parents:
 				return lev 
 		else:
-			if not self.isParenting(node):
-				return
-			else:
+			if self in node.parents:
 				return lev
+
+class FieldTree(object):
+	"""docstring for FieldTree"""
+
+	# fields = {
+	# 	u'计算机':{'level':1, 'parents':set(), 'books':[]},
+	# 	u'编程':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
+	# 	u'C/C++':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
+	# 	u'STL':{'level':4, 'parents':set((u'C/C++', u'编程', u'计算机')), 'books':[]},
+	# 	u'java':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
+	# 	u'J2EE':{'level':4, 'parents':set((u'java', u'编程', u'计算机')), 'books':[]},
+	# 	u'算法':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
+	# 	u'数据结构':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
+	# 	u'网络':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
+	# }
+
+	field_nodes = []
+
+	def __init__(self, input_tree):
+		self.vector = {}
+		self.field_nodes = []
+		self.parse_fields(input_tree, 1, set(), self.field_nodes)
+		# print self.fields
+
+	def parse_fields(self, input_tree, level, parents, output):
+		for inp in input_tree.items():
+			node = FieldNode(inp[0], level, parents)
+			output.append(node)
+			if inp[1]:
+				parents_set = set()
+				parents_set.add(node)
+				parents_set.update(parents)
+				self.parse_fields(inp[1], level + 1, parents_set, output)
+
+	def getNodeIdx(self, tagname):
+		for fn in self.field_nodes:
+			if fn.match(tagname):
+				return self.field_nodes.index(fn)
+
+	def getNode(self, tagname):
+		idx = self.getNodeIdx(tagname)
+		if idx:
+			return self.field_nodes[idx]
+
+	def getVector(self):
+		return self.vector
+
+	def insertBook(self, book):
+		lowest_idx = set()
+		lowest_lev = 0
+		for tag in [t['name'] for t in book['tags']]:
+			# if tag not in self.fields:
+			# 	continue
+			logging.debug('book tag:%s' % tag)
+			if tag == u'C++':
+				print tag
+
+			## node version
+			idx = self.getNodeIdx(tag)
+			if idx is None:
+				logging.debug('no node book tag %s'%tag)
+				continue
+			node = self.field_nodes[idx]
+
+			## 获得最低层次node
+			if node.level > lowest_lev:
+				lowest_lev = node.level
+				lowest_idx = set([idx])
+			elif node.level == lowest_lev:
+				lowest_idx.add(idx)	
+
+			## 累计vector
+			if node.name in self.vector:
+				self.vector[node.name] += 1
+			elif len(self.vector) == 0:
+				self.vector[node.name] = 1
+				logging.debug(u'获取第一个标签: %s'%tag)
+			else:
+				_isnewvec = False
+				for pre_tag in [x[0] for x in self.vector.items()]:
+					pre_node = self.getNode(pre_tag)
+					logging.debug('compare node %s and pre_node  %s' % (node.name, pre_node.name))
+					ret = node.getBranchLoc(pre_node)
+					if not ret:
+						logging.debug('node %s not in same branch of pre_node %s' % (node.name, pre_node.name))
+						_isnewvec = True
+						continue
+					if ret > 0:
+						logging.debug('get same branch tag: %s, delete old branch tag: %s' % (tag, pre_tag))
+						_isnewvec = True
+						del self.vector[pre_tag]
+					else:
+						logging.debug('skip same branch high level tag:%s'%tag)
+						_isnewvec = False
+						break
+					
+				if _isnewvec:
+					logging.debug('node %s and pre_node %s finally not in same branch' % (node.name, pre_node.name) )
+					self.vector[node.name] = 1
+
+
+		# 分类书籍到节点标签
+		for idx in lowest_idx:
+			logging.debug('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], self.field_nodes[idx].name) )
+			self.field_nodes[idx].books.append(book)
+
 
 def main():
 	# test FieldTree:
@@ -175,7 +170,6 @@ def main():
 		book = rsdb.findOneBook(unicode(bk))
 		if not book or 'tags' not in book:
 			continue
-		# print book['title']
 		ft.insertBook(book)
 	vec = ft.getVector()
 	logging.debug('=-=-=-Final Vector: %s=-=-=' % (' '.join([ unicode(x[0])+u'='+unicode(x[1]) for x in vec.items() ])))
