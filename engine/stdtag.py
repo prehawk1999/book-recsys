@@ -2,8 +2,6 @@
 from book_recsys import *
 import gensim
 
-# rsdb = RecsysDatabase()#
-
 class StandardTags(object):
 
     def __init__(self):
@@ -69,20 +67,6 @@ class StandardTags(object):
             if normal[val[1]] not in ret:
                 ret[normal[val[1]]] = self.start[val[0]]
         return ret
-
-    # 利用word2vec计算相似标签
-    def similar(self, inp_tag, thres=0.01):
-        self._loadModel()
-        self._loadStart()
-        ret_list = {}
-        for tag in self.start:
-            try:
-                ret_list[tag] = self.model.similarity(tag, inp_tag)
-            except:
-                continue
-        ret_list_item = ret_list.items()
-        ret_list_item.sort(cmp=lambda a,b:cmp(a[1],b[1]), reverse=True)
-        return [(x[0],x[1]) for x in ret_list_item if x[1] > thres]    
 
     ### 计算单个标签的最相似标准标签, 直接计算    
     def transform(self, inp_tag, thres=0.01):
