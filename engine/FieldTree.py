@@ -5,9 +5,9 @@ from book_recsys import *
 FIELDS = {
 	u'计算机`计算机科学`计算机技术':{ # 0
 		u'程序设计`编程`程序开发`编程语言`programming':{#3
-			u'c/c++`c`c++`c语言':{#9
+			u'c/c++`c`c++`c语言':{#11
 				u'stl':{},#10
-				u'c/c++`c`c++`c语言':{},#11
+				u'c/c++`c`c++`c语言':{},#9
 			},
 			u'java':{#6
 				u'j2ee':{},#7
@@ -77,16 +77,16 @@ class FieldTree(object):
 		self.vector = {}
 		self.field_nodes = []
 		self.parse_fields(input_tree, 1, set(), self.field_nodes)
-		# print self.fields
+		# print self.field_nodes
 
 	def parse_fields(self, input_tree, level, parents, output):
 		for inp in input_tree.items():
 			node = FieldNode(inp[0], level, parents)
-			output.append(node)
 			if inp[1]:
-				parents_set = set([node])
-				parents_set.update(parents)
-				self.parse_fields(inp[1], level + 1, parents_set, output)
+				next_parents = set([node])
+				next_parents.update(parents)
+				self.parse_fields(inp[1], level + 1, next_parents, output)
+			output.append(node)
 
 	def getNodeIdx(self, tagname):
 		for fn in self.field_nodes:
@@ -95,7 +95,7 @@ class FieldTree(object):
 
 	def getNode(self, tagname):
 		idx = self.getNodeIdx(tagname)
-		if idx:
+		if idx is not None:
 			return self.field_nodes[idx]
 
 	def getVector(self):
@@ -163,11 +163,20 @@ class FieldTree(object):
 
 def main():
 	# test FieldTree:
-	test_book = [1767741, 1500149, 1110934, 1091086, 1885170, 1102259, 1230206, 1246192, ]
+	# test_book = [1767741, 1500149, 1110934, 1091086, 1885170, 1102259, 1230206, 1246192, ]
+	# ft = FieldTree(FIELDS)
+	# for bk in test_book:
+	# 	book = rsdb.findOneBook(unicode(bk))
+	# 	if not book or 'tags' not in book:
+	# 		continue
+	# 	ft.insertBook(book)
+	# vec = ft.getVector()
+
 	ft = FieldTree(FIELDS)
-	for bk in test_book:
-		book = rsdb.findOneBook(unicode(bk))
+	for book in db.books.find(timeout=False):
 		if not book or 'tags' not in book:
+			continue
+		if not book['general_domain'] or book['general_domain'][0][0] != u'技术':
 			continue
 		ft.insertBook(book)
 	vec = ft.getVector()
