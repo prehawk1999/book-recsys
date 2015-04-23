@@ -84,8 +84,7 @@ class FieldTree(object):
 			node = FieldNode(inp[0], level, parents)
 			output.append(node)
 			if inp[1]:
-				parents_set = set()
-				parents_set.add(node)
+				parents_set = set([node])
 				parents_set.update(parents)
 				self.parse_fields(inp[1], level + 1, parents_set, output)
 

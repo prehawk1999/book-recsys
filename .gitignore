@@ -1,6 +1,10 @@
 docs/
 mongoexports/
 pkgs/
+website/sessions/*
 *.json
 *.gz
 *.zip
+*.pyc
+*.log
+
