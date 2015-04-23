@@ -99,7 +99,9 @@ class FieldTree(object):
 			return self.field_nodes[idx]
 
 	def getVector(self):
-		return self.vector
+		ret = self.vector
+		self.vector = {}
+		return ret
 
 	def insertBook(self, book):
 		lowest_idx = set()

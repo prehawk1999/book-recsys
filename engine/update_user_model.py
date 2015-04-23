@@ -2,8 +2,7 @@
 from book_recsys import *
 from GetWacWeight import getWacWeight, loadLevel, print_wac #getWordWeight
 from stdtag import StandardTags
-# from GetBookModel import getBookModel
-
+from FieldTree import *
 
 # stdtag = StandardTags()
 # rsdb   = RecsysDatabase()
@@ -30,6 +29,9 @@ PRO_RECOMM_NUM = 60
 ## 根据专业度选择近邻的上限和下限
 PRO_SIM_RECORD_CEILING   = 50
 PRO_SIM_RECORD_FLOOR     = 5
+
+## 专业树的初始化
+field_tree = FieldTree(FIELDS)
 
 def getModelUsersHistory():
     users = {}
@@ -78,10 +80,16 @@ def updateUserModel(user, nowtime, utype):
                 umodel['interest_eval'][t[0]] = 0.0
             umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
 
-        # 累加最终专业向量
-        for t in pro_vec.items():
-            umodel['pro_eval'][t[0]] += math.log( pro_vec[t[0]] + 1 )
-            # print umodel['pro_eval'][t[0]]
+        # # 累加最终专业向量
+        # for t in pro_vec.items():
+        #     umodel['pro_eval'][t[0]] += math.log( pro_vec[t[0]] + 1 )
+        #     # print umodel['pro_eval'][t[0]]
+
+        # 获得历史记录的书籍
+        book = rsdb.findOneBook(h['book_id'])
+        if not book or 'tags' not in book:
+            continue
+        field_tree.insertBook(book)
              
         db.umodel.update({"_id":u_id}, {"$addToSet":{"history_vec":history_vec}})
         # logging.info('-=-=-=INSERT-=-=-=- history_vec interest %s, pro %s, on date %s' % (' '.join([unicode(x[0])+unicode(x[1]) for x in interest_vec.items()]), ' '.join([unicode(x[0])+unicode(x[1]) for x in pro_vec.items()]), h['date']) )
