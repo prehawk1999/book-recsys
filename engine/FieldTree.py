@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*- 
 from book_recsys import *
 
-
 FIELDS = {
 	u'计算机`计算机科学`计算机技术':{ # 0
 		u'程序设计`编程`程序开发`编程语言`programming':{#3
@@ -59,49 +58,37 @@ class FieldNode(object):
 class FieldTree(object):
 	"""docstring for FieldTree"""
 
-	# fields = {
-	# 	u'计算机':{'level':1, 'parents':set(), 'books':[]},
-	# 	u'编程':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-	# 	u'C/C++':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
-	# 	u'STL':{'level':4, 'parents':set((u'C/C++', u'编程', u'计算机')), 'books':[]},
-	# 	u'java':{'level':4, 'parents':set((u'编程', u'计算机')), 'books':[]},
-	# 	u'J2EE':{'level':4, 'parents':set((u'java', u'编程', u'计算机')), 'books':[]},
-	# 	u'算法':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-	# 	u'数据结构':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-	# 	u'网络':{'level':2, 'parents':set((u'计算机',)), 'books':[]},
-	# }
-
 	field_nodes = []
+	# self._parse_fields(FIELDS, 1, set(), FieldTree.field_nodes)
 
 	def __init__(self, input_tree):
 		self.vector = {}
-		self.field_nodes = []
-		self.parse_fields(input_tree, 1, set(), self.field_nodes)
-		# print self.fields
+		if not FieldTree.field_nodes:
+			self._parse_fields(input_tree, 1, set(), FieldTree.field_nodes)
+			logging.info('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
+		# self.field_nodes = []
 
-	def parse_fields(self, input_tree, level, parents, output):
+	def _parse_fields(self, input_tree, level, parents, output):
 		for inp in input_tree.items():
 			node = FieldNode(inp[0], level, parents)
 			output.append(node)
 			if inp[1]:
 				parents_set = set([node])
 				parents_set.update(parents)
-				self.parse_fields(inp[1], level + 1, parents_set, output)
+				self._parse_fields(inp[1], level + 1, parents_set, output)
 
-	def getNodeIdx(self, tagname):
-		for fn in self.field_nodes:
+	def _getNodeIdx(self, tagname):
+		for fn in FieldTree.field_nodes:
 			if fn.match(tagname):
-				return self.field_nodes.index(fn)
+				return FieldTree.field_nodes.index(fn)
 
-	def getNode(self, tagname):
-		idx = self.getNodeIdx(tagname)
-		if idx:
-			return self.field_nodes[idx]
+	def _getNode(self, tagname):
+		idx = self._getNodeIdx(tagname)
+		if idx is not None:
+			return FieldTree.field_nodes[idx]
 
 	def getVector(self):
-		ret = self.vector
-		self.vector = {}
-		return ret
+		return self.vector
 
 	def insertBook(self, book):
 		lowest_idx = set()
@@ -109,16 +96,14 @@ class FieldTree(object):
 		for tag in [t['name'] for t in book['tags']]:
 			# if tag not in self.fields:
 			# 	continue
-			logging.debug('book tag:%s' % tag)
-			if tag == u'C++':
-				print tag
+			# logging.debug('book tag:%s' % tag)
 
 			## node version
-			idx = self.getNodeIdx(tag)
+			idx = self._getNodeIdx(tag)
 			if idx is None:
-				logging.debug('no node book tag %s'%tag)
+				# logging.debug('no node book tag %s'%tag)
 				continue
-			node = self.field_nodes[idx]
+			node = FieldTree.field_nodes[idx]
 
 			## 获得最低层次node
 			if node.level > lowest_lev:
@@ -136,7 +121,7 @@ class FieldTree(object):
 			else:
 				_isnewvec = False
 				for pre_tag in [x[0] for x in self.vector.items()]:
-					pre_node = self.getNode(pre_tag)
+					pre_node = self._getNode(pre_tag)
 					logging.debug('compare node %s and pre_node  %s' % (node.name, pre_node.name))
 					ret = node.getBranchLoc(pre_node)
 					if not ret:
@@ -159,21 +144,23 @@ class FieldTree(object):
 
 		# 分类书籍到节点标签
 		for idx in lowest_idx:
-			logging.debug('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], self.field_nodes[idx].name) )
-			self.field_nodes[idx].books.append(book)
+			logging.info('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
+			FieldTree.field_nodes[idx].books.append(book)
 
 
 def main():
 	# test FieldTree:
 	test_book = [1767741, 1500149, 1110934, 1091086, 1885170, 1102259, 1230206, 1246192, ]
 	ft = FieldTree(FIELDS)
-	for bk in test_book:
-		book = rsdb.findOneBook(unicode(bk))
+	for book in db.books.find(timeout=False):
+		# book = rsdb.findOneBook(unicode(bk))
 		if not book or 'tags' not in book:
 			continue
 		ft.insertBook(book)
 	vec = ft.getVector()
-	logging.debug('=-=-=-Final Vector: %s=-=-=' % (' '.join([ unicode(x[0])+u'='+unicode(x[1]) for x in vec.items() ])))
+	for fn in ft.field_nodes:
+		logging.info('node: %s, level:%d, booknum: %d' % (fn.name, fn.level, len(fn.books)) )
+	logging.info('=-=-=-Final Vector: %s=-=-=' % (' '.join([ unicode(x[0])+u'='+unicode(x[1]) for x in vec.items() ])))
 
 if __name__ == '__main__':
 	main()	

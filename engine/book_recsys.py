@@ -18,7 +18,7 @@ conn = MongoClient('localhost',27017)
 db = conn.group_mems
 
 # 日志模块配置
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                 format='[%(asctime)s | %(funcName)s]: %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',
                 filename='log/Analysis.log',
@@ -306,21 +306,6 @@ def getLines(inpfile):
         pass      
     count += 1
     return count
-
-def loadBookLst():
-    books = []
-    bid = set()
-    for u in db.umodel.find():
-        if 'interest_eval' not in u or 'user_id' not in u: 
-            continue 
-        for h in rsdb.findOneUser(u['user_id'])['history']:
-            book = rsdb.findOneBook(h['book_id'])
-            if not book or 'title' not in book:
-                continue
-            if book['id'] not in bid:
-                books.append(book)
-                bid.add(book['id'])
-    return books
 
 def loadUModels():
     umodels = []
