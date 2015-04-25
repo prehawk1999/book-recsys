@@ -3,21 +3,25 @@ from book_recsys import *
 
 FIELDS = {
 	u'计算机`计算机科学`计算机技术':{ # 0
-		u'程序设计`编程`程序开发`编程语言`programming':{#3
-			u'c/c++`c`c++`c语言':{#9
-				u'stl':{},#10
-				u'c/c++`c`c++`c语言':{},#11
+		u'程序设计`编程`程序开发`programming':{#3
+			u'编程语言':{
+				u'c/c++`c`c++`c语言':{#9
+					u'stl':{},#10
+					u'c/c++`c`c++`c语言':{},#11
+				},
+				u'java':{#6
+					u'j2ee':{},#7
+					u'java':{},#8
+				},
+				u'python':{#4
+					u'python':{},#5	
+				}
 			},
-			u'java':{#6
-				u'j2ee':{},#7
-				u'java':{},#8
-			},
-			u'python':{#4
-				u'python':{},#5	
+			u'软件测试':{
 
-			}								
+			}
 		},
-		u'网络`network':{#12
+		u'网络`network`计算机网络':{#12
 
 		},
 		u'算法`algorithm':{#2
@@ -26,6 +30,14 @@ FIELDS = {
 		u'数据结构':{#1
 
 		},
+		u'信息安全`计算机安全`网络安全':{
+			u'密码学':{
+
+			}
+		},
+		u'人工智能':{
+
+		}
 	}
 }
 
@@ -38,9 +50,24 @@ class FieldNode(object):
 		self.level   = level
 		self.parents = parents
 		self.books   = []
+		self.books_allow  = set()
+		self.books_exists = set()
+
 
 	def match(self, tagname):
 		if tagname.lower() in self.tags:
+			return True
+
+	def multi_match(self, tags):
+		for t in tags:
+			if t.lower() in self.tags:
+				return True
+
+	def insertBook(self, book):
+		# print book['id'] in self.books_allow, len(self.books_allow), self.books_allow
+		if 'id' in book and book['id'] not in self.books_exists and book['id'] in self.books_allow:
+			self.books.append(book)
+			self.books_exists.add(book['id'])
 			return True
 
 	# a.getBranchLoc(b), return None if a b not in same branch, return 1 if a is one level deeper than b.
@@ -59,13 +86,18 @@ class FieldTree(object):
 	"""docstring for FieldTree"""
 
 	field_nodes = []
+	mem = set()
 	# self._parse_fields(FIELDS, 1, set(), FieldTree.field_nodes)
 
-	def __init__(self, input_tree):
+	def __init__(self, input_tree=FIELDS, tree_dump='dump/FieldTreeNodes.dmp'):
 		self.vector = {}
 		if not FieldTree.field_nodes:
+		# if not os.path.exists(tree_dump):
 			self._parse_fields(input_tree, 1, set(), FieldTree.field_nodes)
 			logging.info('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
+		# 	pickle.dump(FieldTree.field_nodes, open(tree_dump, 'w'))
+		# else:
+		# 	FieldTree.field_nodes = pickle.load(open(tree_dump))
 		# self.field_nodes = []
 
 	def _parse_fields(self, input_tree, level, parents, output):
@@ -87,13 +119,15 @@ class FieldTree(object):
 		if idx is not None:
 			return FieldTree.field_nodes[idx]
 
+
 	def getVector(self):
 		return self.vector
 
 	def insertBook(self, book):
 		lowest_idx = set()
 		lowest_lev = 0
-		for tag in [t['name'] for t in book['tags']]:
+		tags = [t['name'] for t in book['tags']]
+		for tag in tags:
 			# if tag not in self.fields:
 			# 	continue
 			# logging.debug('book tag:%s' % tag)
@@ -143,9 +177,13 @@ class FieldTree(object):
 
 
 		# 分类书籍到节点标签
+		# _ret_inserted = False
 		for idx in lowest_idx:
 			logging.info('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
-			FieldTree.field_nodes[idx].books.append(book)
+			FieldTree.field_nodes[idx].books_allow.add(book['id'])
+			print len(FieldTree.field_nodes[idx].books_allow)
+			# _ret_inserted = True
+		# return _ret_inserted
 
 
 def main():
@@ -159,7 +197,7 @@ def main():
 		ft.insertBook(book)
 	vec = ft.getVector()
 	for fn in ft.field_nodes:
-		logging.info('node: %s, level:%d, booknum: %d' % (fn.name, fn.level, len(fn.books)) )
+		logging.info('node: %s, level:%d' % (fn.name, fn.level) )
 	logging.info('=-=-=-Final Vector: %s=-=-=' % (' '.join([ unicode(x[0])+u'='+unicode(x[1]) for x in vec.items() ])))
 
 if __name__ == '__main__':

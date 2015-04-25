@@ -15,7 +15,7 @@ BOOK_TAG_W = 1
 USER_SIM_THRES = 1500.0
 
 ## 书籍推荐评分数量限制
-BOOK_REC_NUM = 10
+BOOK_REC_NUM = 50
 
 ## 用户专业度阀值，低于这个阀值的用户将不归类到这个专业里
 PRO_THRES      = 0
@@ -28,9 +28,8 @@ PRO_SIM_RECORD_CEILING   = 50
 PRO_SIM_RECORD_FLOOR     = 5
 
 # 一些需要用到的全局数据
-G_models   = {}
+G_umodels   = {}
 G_historys = {}
-G_read_set = set()
 
 ### 用户模型表umodel
 #   通过阅读历史计算的模型增量
@@ -46,7 +45,7 @@ def updateUserModel(user, nowtime, utype):
             count = len(umodel['history_vec'])
         elif (nowtime - umodel['uptime']).days == 0:
             logging.info('- user %s model is up to date.' % umodel['user_id']) # 通过user表来更新umodel表
-            return
+            return umodel
         logging.info('update user %s model - umodel len: %d, history len: %d' 
             % (user['user_id'], len(umodel['history_vec']), len(user['history'])) )
         u_id = umodel['_id']
@@ -70,18 +69,11 @@ def updateUserModel(user, nowtime, utype):
                 umodel['interest_eval'][t[0]] = 0.0
             umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
 
-        # # 累加最终专业向量
-        # for t in pro_vec.items():
-        #     umodel['pro_eval'][t[0]] += math.log( pro_vec[t[0]] + 1 )
-        #     # print umodel['pro_eval'][t[0]]
-
         # 获得历史记录的书籍
         book = rsdb.findOneBook(h['book_id'])
         if not book or 'tags' not in book:
             continue
-        user_fields.insertBook(book)
-        G_read_set.add(book['id'])
-             
+        user_fields.insertBook( book )
         db.umodel.update({"_id":u_id}, {"$addToSet":{"history_vec":history_vec}})
         # logging.info('-=-=-=INSERT-=-=-=- history_vec interest %s, pro %s, on date %s' % (' '.join([unicode(x[0])+unicode(x[1]) for x in interest_vec.items()]), ' '.join([unicode(x[0])+unicode(x[1]) for x in pro_vec.items()]), h['date']) )
     
@@ -89,7 +81,7 @@ def updateUserModel(user, nowtime, utype):
     umodel['uptime'] = nowtime
     db.umodel.update({'_id':u_id}, umodel, upsert=True)
     logging.info('-=-=-=- evaluate -=-=-=- final vector: ||interest|| %s, ||pro|| %s' 
-        % (' '.join([unicode(x[0])+unicode(x[1]) for x in umodel['interest_eval'].items()]), ' '.join( [unicode(x[0])+unicode(x[1]) for x in umodel['pro_eval'].items()] )) )
+        % (' '.join([unicode(x[0])+unicode(x[1]) for x in umodel['interest_eval'].items()]), ' '.join( [unicode(x[0])+unicode(x[1]) for x in umodel['field_eval'].items()] )) )
     return umodel
 
 ### 根据每条历史获得兴趣向量, 专业模型
@@ -138,18 +130,6 @@ def getVecByHistory(history):
                     intVec[realtag] = 0
                 intVec[realtag] += BOOK_TAG_W * tag_idf
 
-                # # 累加专业模型
-                # if realtag not in PRO_VEC:
-                #     continue
-                # proVec[PRO_VEC[realtag][0]] += float(PRO_VEC[realtag][1])
-                # logging.info('user: [%s] book: [%s] tag:[%s] [%s] provec: %s - %f' 
-                #     % (history['user_id'], book['title'], booktag, realtag, PRO_VEC[realtag][0], PRO_VEC[realtag][1]) )
-        # 只根据书籍的domain累加
-        # if 'domain' in book and book['domain']:
-        #     proVec[book['domain'][0][0]] = book['domain'][0][1]
-        #     logging.info('%s %s provec: %s - %f' 
-        #         % (history['user_id'], book['title'], book['domain'][0][0], book['domain'][0][1]) )
-
     return intVec
 
 ### 根据艾宾浩斯遗忘公式，计算两个日子间隔表示的时间系数
@@ -159,137 +139,111 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 
 ### 根据users表更新umodels表的每个用户,以及缓存部分数据
 #   给每个用户生成
-def generateUModelsFromUsers(query):
+def generateUModelFromUsers(query):
     total = db.users.find(query).count()
     for u in db.users.find(query, timeout=False):
         um = updateUserModel(u, datetime.datetime(2015,4,1), 'recsys')
         G_umodels[u['user_id']] = um
-        G_historys[u['user_id']] = u['history']     
+        G_historys[u['user_id']] = u['history']   
+        rsdb.cacheUsers(u)
 
 ### 根据interest_eval生成interest_recbooks, 根据FieldTree里的每个标签的已排名书目生成field_recbooks
-def 
-
-
-def main():
-
-    
-    generateUModelsFromUsers({'read':{'$gte':15, '$lte':15}})
-
-
+def generateRecBooksFromUModel():
     ### 开始整理umodels表里用户的信息
-    for u in umodels:
+    for i,u in enumerate(G_umodels.values()):
+
+        # 用户已阅读书籍
+        user_read = [ x['book_id'] for x in G_historys[u['user_id']] ]
+        logging.info('user_read:%r' % user_read )
 
         ## 获得根据用户兴趣向量的推荐书籍, 需要排除已阅读书籍
         if 'interest_eval' in u:
             user_books = []
-            for bid in G_read_set():
-                book = rsdb.findOneBook(bid)
+            for book in rsdb.findBooks():
                 if not book or 'tags' not in book:
                     continue
                 weight = 0.0
                 for t in book['tags']:
                     if t['name'] in u['interest_eval'].keys():
                         weight += u['interest_eval'][t['name']]
-                if book['id'] not in [ x['book_id'] for x in G_historys[u['user_id']] ]:
+                if book['id'] not in user_read:
                     user_books.append( (book['id'], weight, book['title']) )
                     if len(user_books) > BOOK_REC_NUM:
                         break
             user_books.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)
             u['interest_recbooks'] = user_books
-            logging.info('sort interest_recbooks for user %s' % u['user_id'])
-
-
-
-
-
-
-
-
-
-
-
-
+            if len(user_books) > 0:
+                logging.info('sort interest_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 
         ## 获得根据用户专业向量的推荐书籍
-        # 获得用户的专业近邻用户
-        user_sim_list = [ (u['user_id'], 1.0) ]
-        for v in db.umodel.find():
-            if 'interest_eval' not in v: 
-                continue
-            similarity = getCosSim(u['pro_eval'], v['pro_eval'])
-            if similarity > USER_SIM_THRES:
-                user_sim_list.append( (v['user_id'], similarity) )
-        user_sim_list.sort(cmp=lambda a,b: cmp(a[1], b[1]), reverse=True)
-        u['sim_users'] = user_sim_list
-        # logging.debug('user_sim_list len: %d' % len(user_sim_list) )
-
-        ## slope one 算法数据准备, 评分和阅读量，评分差矩阵            
-        # 获得近邻用户和输入用户阅读的本领域书籍
-        comm_read = set() # book_id
-        self_read = set() # book_id：rate
-        # other_read  = set()
-        for um in user_sim_list: # um[0] user_id, um[1] similarity
-            for x in G_historys[um[0]]:
-                binfo = rsdb.findOneBook(x['book_id'])
-                if not binfo or 'domain' not in binfo:
-                    continue
-                if not binfo['domain']:
-                    continue
-                comm_read.add( x['book_id'] )
-                if um[0] == u['user_id']:
-                    self_read.add( x['book_id'] )
-        logging.debug('user %s, sim_users len: %d, comm_read len:%d self_read len:%d\r\n\r\n ' % (u['user_id'], len(user_sim_list), len(comm_read), len(self_read)) )
-
-        # 获得comm_read的近邻用户书籍平均评分和评分人数
-        avg_rate = {}
-        for bid in comm_read:
-
-            # 计算平均评分
-            accrate = 0 
-            readers = 0
-            for um in user_sim_list:
-                if bid in [ x['book_id'] for x in G_historys[um[0]] ]: # 用户看过
-                    ret = [x['rate'] for x in G_historys[um[0]] if x['book_id'] == bid][0]
-                    if int(ret) == 0:
+        if 'field_eval' in u:
+            u['field_recbooks'] = {}
+            for uf in u['field_eval'].items():
+                user_books = []
+                for node in FieldTree.field_nodes:
+                    if not node.match(uf[0]):
                         continue
-                    accrate += int(ret)
-                    readers += 1
-            if readers != 0:
-                avgrate = float(accrate) / float(readers)
-                avg_rate[bid] = [avgrate, readers]
-            else:
-                avg_rate[bid] = [0,0]
+                    for book in node.books:
+                        if book not in user_read:
+                            user_books.append( (book['id'], book['title']) )
+                            if len(user_books) > BOOK_REC_NUM:
+                                break
+                u['field_recbooks'][uf[0]] = user_books
+            # u['field_recbooks'] = user_books
+            if len(user_books) > 0:
+                logging.info('sort field_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 
-        # 构造评分差矩阵    
-        dev_mtrx = dict([(x,{}) for x in avg_rate.keys()])
-        for dev in dev_mtrx.keys():
-            # print avg_rate[dev][0] - avg_rate[x[0]][0]
-            dev_mtrx[dev] = dict([ ( x[0], avg_rate[dev][0] - avg_rate[x[0]][0] ) for x in avg_rate.items() ]) 
 
-        # 计算对于输入用户所有本领域的书籍平均分, 
-        book_rate = dict([ (x, 0.0) for x in comm_read if x not in self_read ]) # book_id, rate
-        for br in book_rate.keys():
-            rate = 0.0
-            if self_read:
-                for sr in self_read:
-                    rate += dev_mtrx[sr][br]
-                book_rate[br] = rate / len(self_read)
-            else:
-                book_rate[br] = 0
-
-        pro_recomm = book_rate.items()
-        pro_recomm.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)
-        pro_recomm = pro_recomm[:PRO_RECOMM_NUM]
-        logging.info('pro_recomm len: %d' % len(pro_recomm))
-        u['pro_recbooks'] = pro_recomm
-        for pr in pro_recomm:
-            book = rsdb.findOneBook(pr[0])
-            if book and pr[1] > 0:
-                print book['title'], pr[1]
 
         ## 写入用户最终推荐书目
         ret = db.umodel.update({"_id":u['_id']}, u)
-        logging.info('update user recommend books %s' % u['user_id'] )
+        # logging.info('update user recommend books %s' % u['user_id'] )
+
+def sortFieldNodeTree():
+    ## 对每个节点标签进行书籍的排序
+    for idx,fn in enumerate(FieldTree.field_nodes):
+
+        # 排序函数
+        def umodel_sort(a, b):
+            aval = a['field_eval'][fn.name]
+            bval = b['field_eval'][fn.name]
+            if aval > bval:
+                return 1
+            elif aval == bval:
+                adate = datetime.datetime.strptime(a['history_vec'][0]['date'], "%Y-%m-%d")
+                bdate = datetime.datetime.strptime(b['history_vec'][0]['date'], "%Y-%m-%d")
+                daydiff = (adate - bdate).days
+                if daydiff > 0:
+                    return 1
+                else:
+                    return -1
+            else:
+                return -1
+ 
+        # 首先根据这个节点标签, 按照field_eval[fn.name]对所有用户进行排序, 从小到大
+        # 然后根据用户的建立时间排序，也是从小到大
+        umodels = [ x for x in G_umodels.values() if 'field_eval' in x and fn.name in x['field_eval'] ]
+        umodels.sort(cmp=umodel_sort, reverse=False)
+        logging.debug('=%s=SORTING field_nodes:%s, len of umodels:%d, ' % ('-'*1, fn.name, len(umodels)) )
+         
+        for um in umodels: # 对于每个用户
+            raw_books = [ rsdb.findOneBook(x['book_id']) for x in G_historys[um['user_id']] if rsdb.findOneBook(x['book_id']) ]
+            raw_books.sort(cmp=lambda a,b:cmp(a['rating']['average'], b['rating']['average']), reverse=True)
+            for b in raw_books:
+                ret = FieldTree.field_nodes[idx].insertBook(b)
+                if ret:
+                    logging.debug('=%s=INSERT book %s' % ('-'*9, b['title']) )
+
+    # 输出每个节点的 书籍情况
+    for fn in FieldTree.field_nodes:
+        logging.info('node:%s, %d books inserted.' % (fn.name, len(fn.books)) )
+
+
+def main():
+    FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
+    generateUModelFromUsers({'read':{'$gte':15, '$lte':15}})
+    sortFieldNodeTree()
+    generateRecBooksFromUModel()
 
 if __name__ == '__main__':
     main()

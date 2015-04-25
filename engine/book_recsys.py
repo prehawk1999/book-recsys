@@ -18,7 +18,7 @@ conn = MongoClient('localhost',27017)
 db = conn.group_mems
 
 # 日志模块配置
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                 format='[%(asctime)s | %(funcName)s]: %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',
                 filename='log/Analysis.log',
@@ -64,6 +64,9 @@ class RecsysDatabase(object):
                 self.books_info[book_id] = book
                 return book
 
+    def findBooks(self):
+        return self.books_info.values()
+
     def findOneUser(self, user_id):
         if user_id in self.users_info:
             return self.users_info[user_id]
@@ -73,6 +76,13 @@ class RecsysDatabase(object):
                 self.users_info[user_id] = user
                 return user
 
+    def findUsers(self):
+        return self.users_info.values()
+
+    def cacheUsers(self, user):
+        if 'users_id' in user and user['user_id'] not in self.users_info:
+            self.users_info['user_id'] = user
+
     def findOneTag(self, tag_id):
         if tag_id in self.tags_info:
             return self.tags_info[tag_id]
@@ -81,6 +91,9 @@ class RecsysDatabase(object):
             if tag:
                 self.tags_info[tag_id] = tag
                 return tag
+
+    def findTags(self):
+        return self.tags_info.values()
 
     def findOneModel(self, mod_id):
         if mod_id in self.umodel_info:
