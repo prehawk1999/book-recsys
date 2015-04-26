@@ -278,8 +278,6 @@ class StandardTags(object):
         Hb  = -pb * math.log(pb)
         return float(Iab) / (float(Ha + Hb) / 2)
 
-rsdb   = RecsysDatabase()
-stdtag = StandardTags()
 
 # set PROG before using this function
 def prog_d(dstr, line=-1, total=100):
@@ -290,10 +288,10 @@ def prog_d(dstr, line=-1, total=100):
             return
         # print progress
         PROG_REC = progress
-        dstr += ' %d%%(%d/%d) -=-=-' % (progress, line, total)
-        logging.info('-=-=- Processing ' + dstr)
+        dstr += ' %d%%(%d/%d)' % (progress, line, total)
+        logging.info('=%s='%progress + dstr)
     else:
-        logging.info('-=-=- Finishing ' + dstr)
+        logging.info('=%s= Finishing ' + dstr)
 
 ### 计算用户相似度，利用余弦公式, a和b向量是维度和元素都是相同的
 def getCosSim(a_vec, b_vec):
@@ -320,13 +318,8 @@ def getLines(inpfile):
     count += 1
     return count
 
-def loadUModels():
-    umodels = []
-    for u in db.umodel.find():
-        umodels.append(u)
-    return umodels
-
+rsdb   = RecsysDatabase()
+stdtag = StandardTags()
 
 if __name__ == '__main__':
-    for i in range(1000):
-        prog_d('a', i, 1000)
+    pass

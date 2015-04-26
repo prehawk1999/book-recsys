@@ -240,8 +240,9 @@ def sortFieldNodeTree():
 
 
 def main():
-    FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
-    generateUModelFromUsers({'read':{'$gte':15, '$lte':15}})
+    # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
+    generateUModelFromUsers({'read':{'$gte':15, '$lte':60}})
+    pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))
     sortFieldNodeTree()
     generateRecBooksFromUModel()
 
