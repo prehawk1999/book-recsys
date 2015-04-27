@@ -1,74 +1,72 @@
 #coding=utf-8
-from model import *
-import web
-from web import form
-
-urls = (
-    '/', 'Index',
-    '/book/(\d+)', 'Book', 
-    '/user/(\d+)', 'User',
-    '/tag/(\d+)', 'Tag', 
-    '/login', 'Login',
-    '/logout', 'Logout',
-    '/register', 'Register',
-)
-
-#模板公共变量
-t_globals = {
-    'datestr': web.datestr,
-    'cookie': web.cookies,
-}
-
-app = web.application(urls, locals())
-render = web.template.render('templates/')
-session = web.session.Session(app, web.session.DiskStore('sessions'))  
-web.config.debug = False
+import tornado.ioloop
+import tornado.web
+from book_recsys import *
 
 
-login = form.Form(
-            form.Textbox('username'),
-            form.Password('password'),
-            form.Button('login')
-    )
-  
-register = form.Form(
-            form.Textbox('username', form.regexp(r".{3,20}$", '用户名长度为3-20位'), description=u'用户名'), 
-            form.Textbox('email', form.regexp(r".*@.*", "must be a valid email address") , description=u'电子邮箱') 
-            form.Password("password", form.regexp(r".{6,20}$", '密码长度为6-20位'), description=u"密码"),  
-            form.Password("password2", description=u"确认密码"),  
-            form.Button("register", type="submit", description="submit"),  
-            form.Textbox('idcode')
-            validators = [ form.Validator("两次输入的密码不一致", lambda i: i.password == i.password2) ]
-    )  
+class BaseHandler(tornado.web.RequestHandler):
+    def get_current_user(self):
+        return self.get_secure_cookie("user")
 
-class Index(object):
-    def GET(self, name='prehawk'):
-        return render.index(name, popbooks, recbooks)
-    def POST(self):
-        pass
+class MainHandler(BaseHandler):
+    @tornado.web.authenticated
+    def get(self):
+        name = tornado.escape.xhtml_escape(self.current_user)
+        # self.write("Hello, " + name)
+        popbooks = []
+        for pb in db.popbooks.find(limit=30):
+            popbooks.append(pb)
+        self.render("index.html", username=name, popbooks=popbooks)
 
-class Login(object):
-    def POST(self):
-        f = form
-        print '%r' % f
+class LoginHandler(BaseHandler):
+    def get(self):
+        self.write('<html><body><form action="/login" method="post">'
+                   'Name: <input type="text" name="name">'
+                   '<input type="submit" value="Sign in">'
+                   '</form></body></html>')
+    def post(self):
+        # 这里补充一个，获取用户输入
+        # self.get_argument("name")
 
-class Book(object):
+        self.set_secure_cookie("user", self.get_argument("name"))
+        self.redirect("/")
+
+class BookHandler(BaseHandler):
     def GET(self, book_id):
         # return '<p>%s</p>' % book_id
         book_info = rsdb.findOneBook(book_id)
         return render.book(book_info)
 
-class User(object):
+class UserHandler(BaseHandler):
     pass
 
-class Tag(object):
+class TagHandler(BaseHandler):
     pass
 
-class Logout(object):
+class LogoutHandler(BaseHandler):
     pass
 
-class Register(object):
+class RegisterHandler(BaseHandler):
     pass
+
+settings = {
+    "cookie_secret": "__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__", # 安全cookie所需的
+    "login_url": "/login", # 默认的登陆页面，必须有
+    "template_path": os.path.join(os.path.dirname(__file__), "templates"),
+    "static_path": os.path.join(os.path.dirname(__file__), "static"),
+    "static_url_prefix": "/templates/"
+}
+
+application = tornado.web.Application([
+    (r'/', MainHandler),
+    (r'/book/(\d+)', BookHandler),
+    (r'/user/(\d+)', UserHandler),
+    (r'/tag/(\d+)', TagHandler),
+    (r'/login', LoginHandler),
+    (r'/logout', LogoutHandler),
+    (r'/register', RegisterHandler),
+], **settings)
 
 if __name__ == '__main__':
-    app.run()
+    application.listen(8888)
+    tornado.ioloop.IOLoop.instance().start()
