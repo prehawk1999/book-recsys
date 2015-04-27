@@ -90,9 +90,6 @@ def getVecByHistory(history):
     # 兴趣向量，用用户的标签标示
     intVec = {}
 
-    # 专业向量的表示：{所属领域：专业度，阅读量}
-    # proVec = dict( [(x, 0.0) for x in DOMAIN_TAG] )
-
     # 根据用户显式标注的标签来累加兴趣向量，但是对专业向量没有影响
     if 'tag' in history:
         for usertag in history['tags']:
