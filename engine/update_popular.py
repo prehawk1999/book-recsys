@@ -67,7 +67,7 @@ def updPopBooks2():
             book['random'] = random.random()
             db.popbooks.insert(book)
 
-    db.popbooks.ensureIndex({"id":1, "random":1})
+    # db.popbooks.ensureIndex({"id":1, "random":1})
 
 def main():
     updPopBooks2()

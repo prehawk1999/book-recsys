@@ -122,7 +122,7 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
     return float(k)/float(math.log(timediff.days)**c+k)
 
 ### 根据users表更新umodels表的每个用户,以及缓存部分数据
-#   给每个用户生成
+#   给每个用户生成 books, users, umodel, tags
 def generateUModelFromUsers(query):
     total = db.users.find(query).count()
     for u in db.users.find(query, timeout=False):

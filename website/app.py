@@ -9,7 +9,7 @@ from bson import ObjectId
 class RecsysDatabase:
 
     def __init__(self):
-        self.book_infos       = {}
+        self.books_info       = {}
         self.book_popular     = []
         self.book_recommend   = []
         self.book_domain      = {}
@@ -33,7 +33,8 @@ class RecsysDatabase:
             return self.book_popular
 
         for i,pb in enumerate( db.popbooks.find(limit=limit) ):
-
+            if not pb or 'title' not in pb:
+                continue
             pb = self.summaryBook(pb)
 
             if i%2 == 0:
@@ -119,12 +120,13 @@ class LoginHandler(BaseHandler):
 class BookHandler(BaseHandler):
     
     def get(self, book_id):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None
         book_info = rsdb.findOneBook(book_id)
-        return render("book.html", book_info)
-
-    def get(self, book_id):
-        book_info = rsdb.findOneBook(book_id)
-        return render('book.html', book_info)
+        return self.render("book.html", username=name, book_info=book_info)
 
 class UserHandler(BaseHandler):
     pass
@@ -156,7 +158,8 @@ settings = {
     # "login_url": "/login", # 默认的登陆页面，必须有
     "template_path": os.path.join(os.path.dirname(__file__), "templates"),
     "static_path": os.path.join(os.path.dirname(__file__), "templates"),
-    "static_url_prefix": "/templates/"
+    "static_url_prefix": "/templates/",
+    "debug":True
 }
 
 application = tornado.web.Application([
