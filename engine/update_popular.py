@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*- 
 from book_recsys import *
+import random
 
 def getSimBooks(book):
     return [{'sim_book_id':book['id'], 'sim_book':book, 'similarity':1}]
 
 def updPopBooks():
-    new_hash = getUmodelHash()
-    print new_hash
+    new_hash = getUModelHash()
+    print 'umodel hash value: ', new_hash
     record = db.popbooks.find_one()
     if record:
         if new_hash == record['update_hash']:
@@ -18,7 +19,7 @@ def updPopBooks():
         record = {}
         record['update_hash'] = new_hash
         db.popbooks.insert(record)
-    # return
+
     bid = set()
     books = []
     for u in db.umodel.find():
@@ -32,6 +33,7 @@ def updPopBooks():
                     del book['_id']
                     books.append(book)
                     bid.add(book['id'])
+
 
     books.sort(cmp=lambda a,b:cmp(a['tags'][0]['count'], b['tags'][0]['count']), reverse=True)
     # db.popbooks.update(books)
@@ -47,15 +49,28 @@ def updPopBooks():
     db.dombooks.insert(domain_popbooks)
 
 
-def getUmodelHash():
+def getUModelHash():
     hashstr = ''
     hashlst = []
     for u in db.umodel.find():
         hashlst.append(str(u['uptime']))
     return hash( str(hashlst.sort()) )
 
+
+def updPopBooks2():
+    # books = []
+    for book in db.books.find(timeout=False):
+        if not book or 'tags' not in book or len(book['tags']) < 1:
+            continue
+        if book['tags'][0]['count'] > 1000:
+            # books.append(book)
+            book['random'] = random.random()
+            db.popbooks.insert(book)
+
+    db.popbooks.ensureIndex({"id":1, "random":1})
+
 def main():
-    updPopBooks()
+    updPopBooks2()
 
 if __name__ == '__main__':
     main()

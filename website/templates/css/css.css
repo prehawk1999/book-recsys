@@ -2,8 +2,8 @@
 /*******************************公共样式******************************************************/
 body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,strong,span,th,table,tr,td,dl,dd,form,fieldset,legend,img,input,textarea,select{margin:0;padding:0}
 body{  font-family:微软雅黑;font-size:14px;color: #313131;}
-a{font-size:14px;text-decoration:none;color:#313131;}
-a:hover{font-size:14px;text-decoration:underline;}
+a{font-size:12px;text-decoration:none;color:#313131;}
+a:hover{font-size:12px;text-decoration:underline;}
 em{font-style:normal}
 ul,ol,li{list-style-type: none;}
 img{border:0;vertical-align:middle}

@@ -18,9 +18,7 @@ db = conn.group_mems
 # 日志模块配置
 logging.basicConfig(level=logging.DEBUG,
                 format='[%(asctime)s | %(funcName)s]: %(levelname)s %(message)s',
-                datefmt='%a, %d %b %Y %H:%M:%S',
-                filename='log/Analysis.log',
-                filemode='a')
+                datefmt='%a, %d %b %Y %H:%M:%S')
 
 console = logging.StreamHandler()
 

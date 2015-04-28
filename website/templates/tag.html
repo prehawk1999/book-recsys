@@ -9,16 +9,20 @@
 
 <body>
 <div class="top">
-<div class="row">
-     
-        <p>
-          <span class="top-left">小明，欢迎来到豆瓣读书!</span>
+      <div class="row">
+        {% if username %}
+          <span class="top-left">{{username}}，欢迎来到豆瓣读书!</span>
+        {%end%}
           <span class="top-right">
-          <a href="#" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="images/d-01.jpg" />个人中心</a>
-            <a href="#">注册</a>
-            <a href="#">登录</a>
-          </span>
-          </p>
+        {% if username %}
+          <a href="#" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="templates/images/d-01.jpg" />个人中心</a>
+        {%end%}
+
+        {% if not username %}
+          <a href="#">注册</a>
+          <a href="#">登录</a>
+        {% end %}
+        </span>
       </div>
 </div>
 <div class="clear"></div>

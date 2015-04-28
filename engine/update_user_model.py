@@ -11,21 +11,8 @@ USER_TAG_W = 2
 ##书籍原有标签对兴趣模型的权重
 BOOK_TAG_W = 1
 
-## 用户相似度阀值
-USER_SIM_THRES = 1500.0
-
 ## 书籍推荐评分数量限制
 BOOK_REC_NUM = 50
-
-## 用户专业度阀值，低于这个阀值的用户将不归类到这个专业里
-PRO_THRES      = 0
-
-## 专业书籍推荐数量
-PRO_RECOMM_NUM = 60
-
-## 根据专业度选择近邻的上限和下限
-PRO_SIM_RECORD_CEILING   = 50
-PRO_SIM_RECORD_FLOOR     = 5
 
 # 一些需要用到的全局数据
 G_umodels   = {}

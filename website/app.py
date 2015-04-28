@@ -9,9 +9,23 @@ from bson import ObjectId
 class RecsysDatabase:
 
     def __init__(self):
+        self.book_infos       = {}
         self.book_popular     = []
         self.book_recommend   = []
         self.book_domain      = {}
+
+    def summaryString(self, inpStr, num=12, dotlen=6):
+        if len(inpStr) > num:
+            return inpStr[:num] + '.'*dotlen
+        else:
+            return inpStr
+
+    def summaryBook(self, book):
+        book['title']   = self.summaryString(book['title'], 6, 2)
+        book['author']  = self.summaryString( ','.join(book['author']), 6 )
+        book['summary'] = self.summaryString(book['summary'], 24)
+        book['tags']    = self.summaryString( '/'.join([ x['name'] for x in book['tags'] ]), 12 )
+        return book
 
     ## limit要是偶数
     def getPopbooks(self, limit=60):
@@ -19,21 +33,15 @@ class RecsysDatabase:
             return self.book_popular
 
         for i,pb in enumerate( db.popbooks.find(limit=limit) ):
-            pb['author'] = ','.join(pb['author'])
-            if len(pb['summary']) > 24:
-                pb['summary'] = pb['summary'][:24] + '......'
-            pb['tags'] = '/'.join([ x['name'] for x in pb['tags'] ])
-            if len(pb['tags']) > 12:
-                pb['tags'] = pb['tags'][:12] + '......'
+
+            pb = self.summaryBook(pb)
 
             if i%2 == 0:
                 self.book_popular.append({'up':pb, 'down':{}})
             else:
                 self.book_popular[len(self.book_popular)-1]['down'] = pb
 
-        print len(self.book_popular)
-        print self.book_popular[len(self.book_popular)-1]['up']
-        print self.book_popular[len(self.book_popular)-1]['down']
+        return self.book_popular
 
     def getRecbooks(self, name):
         if self.book_recommend:
@@ -43,7 +51,11 @@ class RecsysDatabase:
         if not umodel:
             return
 
-        self.book_recommend = umodel['interest_recbooks']
+        for b in umodel['interest_recbooks']:
+            book = self.findOneBook(b['id'])
+            if not book or 'title' not in book:
+                continue
+            self.book_recommend.append(self.summaryBook(book))
         return self.book_recommend
 
     def getDombooks(self, limit=10):
@@ -57,9 +69,18 @@ class RecsysDatabase:
             dom = book['general_domain'][0][0]
             if dom not in self.book_domain:
                 self.book_domain[dom] = []
-            if len(self.book_domain) < limit:
-                self.book_domain[dom].append(book)
+            if len(self.book_domain[dom]) < limit:
+                self.book_domain[dom].append(self.summaryBook(book))
+        return self.book_domain
 
+    def findOneBook(self, book_id):
+        if book_id in self.books_info:
+            return self.books_info[book_id]
+        else:
+            book = db.books.find_one({"id":book_id})
+            if book and 'title' in book:
+                self.books_info[book_id] = book
+                return book
 
 class BaseHandler(tornado.web.RequestHandler):
     # def get_current_user(self):
@@ -80,6 +101,7 @@ class MainHandler(BaseHandler):
 
         self.render("index.html", username=name, popbooks=pb, recbooks=rb, dombooks=pd)
 
+
 class LoginHandler(BaseHandler):
     def get(self):
         self.render('login.html')
@@ -95,11 +117,14 @@ class LoginHandler(BaseHandler):
         self.redirect("/")
 
 class BookHandler(BaseHandler):
-    pass
-    # def get(self, book_id):
-    #     # return '<p>%s</p>' % book_id
-    #     book_info = rsdb.findOneBook(book_id)
-    #     return render.book(book_info)
+    
+    def get(self, book_id):
+        book_info = rsdb.findOneBook(book_id)
+        return render("book.html", book_info)
+
+    def get(self, book_id):
+        book_info = rsdb.findOneBook(book_id)
+        return render('book.html', book_info)
 
 class UserHandler(BaseHandler):
     pass
@@ -115,7 +140,8 @@ class TagHandler(BaseHandler):
 
 
 class LogoutHandler(BaseHandler):
-    pass
+    def post(self):
+        self.set_secure_cookie('user', '')
 
 class RegisterHandler(BaseHandler):
     pass
