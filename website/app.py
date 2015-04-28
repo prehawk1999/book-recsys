@@ -9,13 +9,12 @@ class BaseHandler(tornado.web.RequestHandler):
         return self.get_secure_cookie("user")
 
 class MainHandler(BaseHandler):
-    @tornado.web.authenticated
+    # @tornado.web.authenticated
     def get(self):
         name = tornado.escape.xhtml_escape(self.current_user)
         
-        limit = 30
+        # 60本热门书籍，
         popbooks = []
-        recbooks = []
         for i,pb in enumerate( db.popbooks.find(limit=61) ):
             if 'author' not in pb:
                 continue
@@ -25,17 +24,24 @@ class MainHandler(BaseHandler):
             pb['tags'] = '/'.join([ x['name'] for x in pb['tags'] ])
             if len(pb['tags']) > 12:
                 pb['tags'] = pb['tags'][:12] + '......'
-
-            recbooks.append(pb)
+            
             if i%2 != 0:
                 popbooks.append({'up':pb, 'down':{}})
             else:
                 popbooks[len(popbooks)-1]['down'] = pb
-        self.render("index.html", username=name, popbooks=popbooks, recbooks=recbooks)
+        # 每个分类10个热门书籍
+        domain = []
+
+        # 30本兴趣模型推荐书籍，
+        if name:
+            model = db.umodel.find_one({"user_id":name})
+            if model:
+                recbooks = model['interest_recbooks']
+        self.render("index.html", username=name, popbooks=popbooks, recbooks=recbooks, domain=domain)
 
 class LoginHandler(BaseHandler):
     def get(self):
-        self.render('/login.html')
+        self.render('login.html')
         # self.write('<html><body><form action="/login" method="post">'
         #            'Name: <input type="text" name="name">'
         #            '<input type="submit" value="Sign in">'
@@ -48,11 +54,14 @@ class LoginHandler(BaseHandler):
         self.redirect("/")
 
 class BookHandler(BaseHandler):
-    pass
-    # def get(self, book_id):
-    #     # return '<p>%s</p>' % book_id
-    #     book_info = rsdb.findOneBook(book_id)
-    #     return render.book(book_info)
+    
+    def get(self, book_id):
+        book_info = rsdb.findOneBook(book_id)
+        return render("book.html", book_info)
+
+    def get(self, book_id):
+        book_info = rsdb.findOneBook(book_id)
+        return render('book.html', book_info)
 
 class UserHandler(BaseHandler):
     pass
@@ -68,7 +77,8 @@ class TagHandler(BaseHandler):
 
 
 class LogoutHandler(BaseHandler):
-    pass
+    def post(self):
+        self.set_secure_cookie('user', '')
 
 class RegisterHandler(BaseHandler):
     pass
