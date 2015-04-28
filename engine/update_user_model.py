@@ -11,21 +11,8 @@ USER_TAG_W = 2
 ##书籍原有标签对兴趣模型的权重
 BOOK_TAG_W = 1
 
-## 用户相似度阀值
-USER_SIM_THRES = 1500.0
-
 ## 书籍推荐评分数量限制
 BOOK_REC_NUM = 50
-
-## 用户专业度阀值，低于这个阀值的用户将不归类到这个专业里
-PRO_THRES      = 0
-
-## 专业书籍推荐数量
-PRO_RECOMM_NUM = 60
-
-## 根据专业度选择近邻的上限和下限
-PRO_SIM_RECORD_CEILING   = 50
-PRO_SIM_RECORD_FLOOR     = 5
 
 # 一些需要用到的全局数据
 G_umodels   = {}
@@ -105,6 +92,7 @@ def getVecByHistory(history):
     # proVec = dict( [(x, 0.0) for x in DOMAIN_TAG] )
 
     # 根据用户显式标注的标签（用户自己写的标签）来累加兴趣向量，但是对专业向量没有影响
+
     if 'tag' in history:
         for usertag in history['tags']:
             #标签标准化 ：利用互信息将使用次数较少的标签聚类到使用次数较多的标签上
@@ -155,7 +143,7 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
     return float(k)/float(math.log(timediff.days)**c+k)
 
 ### 根据users表更新umodels表的每个用户,以及缓存部分数据
-#   给每个用户生成
+#   给每个用户生成 books, users, umodel, tags
 def generateUModelFromUsers(query):
     total = db.users.find(query).count()
     for u in db.users.find(query, timeout=False):
