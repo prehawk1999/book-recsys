@@ -39,6 +39,7 @@ def updateUserModel(user, nowtime, utype):
 
     # user表中的记录表和umodel表中的长度不同则优先计算user表中剩下的history
     # 否则如果更新时间有差异更新所有umodel中的条目
+    #判断umodel表的数据是否是最新的（根据user表）
     umodel = db.umodel.find_one({"user_id":user['user_id']})
     if umodel:
         if len(umodel['history_vec']) != len(user['history']):
@@ -55,29 +56,39 @@ def updateUserModel(user, nowtime, utype):
         logging.info('create user %s model _id %s' % (user['user_id'], u_id) )
         
     umodel['interest_eval'] = {}
+    #user_fields:初始化一个用户的专业树
     user_fields = FieldTree(FIELDS)
 
     # 遍历用户阅读历史
     for h in user['history'][count:]:
+        #得到一条阅读历史的兴趣向量(字典)
         interest_vec = getVecByHistory(h)
         history_vec  = {"date" : h['date'], "interest_vec" : interest_vec}
         umodel['history_vec'].append(history_vec)
 
         # 累加最终兴趣向量
+        #items将字典转化为列表
         for t in interest_vec.items():
+            #t[0]系文本；t[1]系权重
             if t[0] not in umodel['interest_eval']:
                 umodel['interest_eval'][t[0]] = 0.0
+            #umodel['interest_eval']系用户最终向量的字典；[t[0]]取出t[0]键所对应的值；
+            #权重要乘上时间系数
             umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
 
+        #专业向量
         # 获得历史记录的书籍
         book = rsdb.findOneBook(h['book_id'])
         if not book or 'tags' not in book:
             continue
         user_fields.insertBook( book )
+        #将每条历史的兴趣向量存入数据库的umodel表
         db.umodel.update({"_id":u_id}, {"$addToSet":{"history_vec":history_vec}})
         # logging.info('-=-=-=INSERT-=-=-=- history_vec interest %s, pro %s, on date %s' % (' '.join([unicode(x[0])+unicode(x[1]) for x in interest_vec.items()]), ' '.join([unicode(x[0])+unicode(x[1]) for x in pro_vec.items()]), h['date']) )
     
+    #获得最终的专业向量
     umodel['field_eval'] = user_fields.getVector()
+    #记录更新时间
     umodel['uptime'] = nowtime
     db.umodel.update({'_id':u_id}, umodel, upsert=True)
     logging.info('-=-=-=- evaluate -=-=-=- final vector: ||interest|| %s, ||pro|| %s' 
@@ -93,13 +104,16 @@ def getVecByHistory(history):
     # 专业向量的表示：{所属领域：专业度，阅读量}
     # proVec = dict( [(x, 0.0) for x in DOMAIN_TAG] )
 
-    # 根据用户显式标注的标签来累加兴趣向量，但是对专业向量没有影响
+    # 根据用户显式标注的标签（用户自己写的标签）来累加兴趣向量，但是对专业向量没有影响
     if 'tag' in history:
         for usertag in history['tags']:
+            #标签标准化 ：利用互信息将使用次数较少的标签聚类到使用次数较多的标签上
             realtag = stdtag.simple_transform(usertag)
+            #mongodb不支持小数点，tag里面不能有小数点
             if realtag and realtag.find('.') == -1:
 
                 # 获得标签的idf
+                #找数据库中标签的idf，有的话就是tag_idf，没有的话就是1
                 ret = rsdb.findOneTag(realtag)
                 if ret:
                     tag_idf = ret['idf']
@@ -109,11 +123,14 @@ def getVecByHistory(history):
 
                 if realtag not in intVec:
                     intVec[realtag] = 0
+                #USER_TAG_W是用户自定义标签的权重，经验值，需考察；
+                #计算兴趣向量中标签的权重（叠加）
                 intVec[realtag] += USER_TAG_W * tag_idf
 
     # 根据书籍所拥有的8个标签来累加兴趣向量和专业向量
     book = rsdb.findOneBook(history['book_id'])
     if book:
+        #遍历书中的每个热门标签
         for booktag in [x['name'] for x in book['tags']]:
             realtag = stdtag.simple_transform(booktag)
             if realtag and realtag.find('.') == -1:
@@ -142,6 +159,8 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 def generateUModelFromUsers(query):
     total = db.users.find(query).count()
     for u in db.users.find(query, timeout=False):
+        #updateUserModel函数是计算特定用户嘅模型；
+        #u是用户；第二个参数是当前时间
         um = updateUserModel(u, datetime.datetime(2015,4,1), 'recsys')
         G_umodels[u['user_id']] = um
         G_historys[u['user_id']] = u['history']   
@@ -150,6 +169,7 @@ def generateUModelFromUsers(query):
 ### 根据interest_eval生成interest_recbooks, 根据FieldTree里的每个标签的已排名书目生成field_recbooks
 def generateRecBooksFromUModel():
     ### 开始整理umodels表里用户的信息
+    #i:索引；u：umodel表中每个用户模型；enumerate：计数器
     for i,u in enumerate(G_umodels.values()):
 
         # 用户已阅读书籍
@@ -159,10 +179,13 @@ def generateRecBooksFromUModel():
         ## 获得根据用户兴趣向量的推荐书籍, 需要排除已阅读书籍
         if 'interest_eval' in u:
             user_books = []
+            #计算数据库中的所有书籍的兴趣得分
             for book in rsdb.findBooks():
                 if not book or 'tags' not in book:
                     continue
                 weight = 0.0
+                #对于书中的所有热门标签进行与兴趣向量的匹配，如果在兴趣向量中存在这个标签，则书籍得分
+                #会加上这个标签的权重
                 for t in book['tags']:
                     if t['name'] in u['interest_eval'].keys():
                         weight += u['interest_eval'][t['name']]
@@ -176,6 +199,7 @@ def generateRecBooksFromUModel():
                 logging.info('sort interest_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 
         ## 获得根据用户专业向量的推荐书籍
+        # 专业向量中每个分量所代表的节点的书籍去除该用户阅读过的书籍
         if 'field_eval' in u:
             u['field_recbooks'] = {}
             for uf in u['field_eval'].items():
@@ -201,9 +225,10 @@ def generateRecBooksFromUModel():
 
 def sortFieldNodeTree():
     ## 对每个节点标签进行书籍的排序
+    #idx：表示节点列表中这本书属于第几个；fn：节点；节点是列表
     for idx,fn in enumerate(FieldTree.field_nodes):
 
-        # 排序函数
+        # 比较函数：按照专业度来排序（用户）；若a & b的专业度相同的话，就按照用户创建时间来排
         def umodel_sort(a, b):
             aval = a['field_eval'][fn.name]
             bval = b['field_eval'][fn.name]
@@ -222,13 +247,18 @@ def sortFieldNodeTree():
  
         # 首先根据这个节点标签, 按照field_eval[fn.name]对所有用户进行排序, 从小到大
         # 然后根据用户的建立时间排序，也是从小到大
+        # fliter有专业向量嘅用户；
         umodels = [ x for x in G_umodels.values() if 'field_eval' in x and fn.name in x['field_eval'] ]
+        #根据just嘅比较函数来排序
         umodels.sort(cmp=umodel_sort, reverse=False)
         logging.debug('=%s=SORTING field_nodes:%s, len of umodels:%d, ' % ('-'*1, fn.name, len(umodels)) )
-         
+        
+        #um：每个用户模型中的用户
         for um in umodels: # 对于每个用户
+            #raw_books: 啱先果啲排好序嘅用户嘅阅读历史
             raw_books = [ rsdb.findOneBook(x['book_id']) for x in G_historys[um['user_id']] if rsdb.findOneBook(x['book_id']) ]
             raw_books.sort(cmp=lambda a,b:cmp(a['rating']['average'], b['rating']['average']), reverse=True)
+            #将书插入当前遍历节点
             for b in raw_books:
                 ret = FieldTree.field_nodes[idx].insertBook(b)
                 if ret:
@@ -241,8 +271,11 @@ def sortFieldNodeTree():
 
 def main():
     # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
+    #对阅读量大于15小于60的用户进行模型计算；将user表中的数据计算后保存到umodel表
     generateUModelFromUsers({'read':{'$gte':15, '$lte':60}})
+    #保存最新更新的专业树
     pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))
+
     sortFieldNodeTree()
     generateRecBooksFromUModel()
 
