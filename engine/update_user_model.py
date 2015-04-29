@@ -49,19 +49,24 @@ def updateUserModel(user, nowtime, utype):
     # 遍历用户阅读历史
     for h in user['history'][count:]:
         #得到一条阅读历史的兴趣向量(字典)
-        interest_vec = getVecByHistory(h)
-        history_vec  = {"date" : h['date'], "interest_vec" : interest_vec}
+        tag_vec, book_vec = getVecByHistory(h)
+        history_vec  = {"date" : h['date'], "book_id": h['book_id'], "tag_vec" : tag_vec, "book_vec" : book_vec}
         umodel['history_vec'].append(history_vec)
 
         # 累加最终兴趣向量
         #items将字典转化为列表
-        for t in interest_vec.items():
+        for t in book_vec.items():
             #t[0]系文本；t[1]系权重
             if t[0] not in umodel['interest_eval']:
                 umodel['interest_eval'][t[0]] = 0.0
             #umodel['interest_eval']系用户最终向量的字典；[t[0]]取出t[0]键所对应的值；
             #权重要乘上时间系数
             umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
+        for t in tag_vec.items():
+            if t[0] not in umodel['interest_eval']:
+                umodel['interest_eval'][t[0]] = 0.0
+            umodel['interest_eval'][t[0]] += t[1]
+
 
         #专业向量
         # 获得历史记录的书籍
@@ -82,14 +87,12 @@ def updateUserModel(user, nowtime, utype):
         % (' '.join([unicode(x[0])+unicode(x[1]) for x in umodel['interest_eval'].items()]), ' '.join( [unicode(x[0])+unicode(x[1]) for x in umodel['field_eval'].items()] )) )
     return umodel
 
-### 根据每条历史获得兴趣向量, 专业模型
+### 根据每条历史获得兴趣向量
 def getVecByHistory(history):
 
     # 兴趣向量，用用户的标签标示
-    intVec = {}
-
-    # 专业向量的表示：{所属领域：专业度，阅读量}
-    # proVec = dict( [(x, 0.0) for x in DOMAIN_TAG] )
+    tag_vec = {}
+    book_vec = {}
 
     # 根据用户显式标注的标签（用户自己写的标签）来累加兴趣向量，但是对专业向量没有影响
 
@@ -109,13 +112,13 @@ def getVecByHistory(history):
                     tag_idf = 1
                     logging.warn('tag %s get idf error.' % realtag)
 
-                if realtag not in intVec:
-                    intVec[realtag] = 0
+                if realtag not in tag_vec:
+                    tag_vec[realtag] = 0
                 #USER_TAG_W是用户自定义标签的权重，经验值，需考察；
                 #计算兴趣向量中标签的权重（叠加）
-                intVec[realtag] += USER_TAG_W * tag_idf
+                tag_vec[realtag] += USER_TAG_W * tag_idf
 
-    # 根据书籍所拥有的8个标签来累加兴趣向量和专业向量
+    # 根据书籍所拥有的8个标签来累加兴趣向量
     book = rsdb.findOneBook(history['book_id'])
     if book:
         #遍历书中的每个热门标签
@@ -131,11 +134,11 @@ def getVecByHistory(history):
                     tag_idf = 1
                     logging.warn('tag %s get idf error.' % realtag)
 
-                if realtag not in intVec:
-                    intVec[realtag] = 0
-                intVec[realtag] += BOOK_TAG_W * tag_idf
+                if realtag not in book_vec:
+                    book_vec[realtag] = 0
+                book_vec[realtag] += BOOK_TAG_W * tag_idf
 
-    return intVec
+    return tag_vec, book_vec
 
 ### 根据艾宾浩斯遗忘公式，计算两个日子间隔表示的时间系数
 def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
@@ -147,7 +150,7 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 def generateUModelFromUsers(query):
     total = db.users.find(query).count()
     for u in db.users.find(query, timeout=False):
-        #updateUserModel函数是计算特定用户嘅模型；
+        #updateUserModel函数是计算特定用户的模型；
         #u是用户；第二个参数是当前时间
         um = updateUserModel(u, datetime.datetime(2015,4,1), 'recsys')
         G_umodels[u['user_id']] = um
