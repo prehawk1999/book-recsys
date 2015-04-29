@@ -14,6 +14,9 @@ BOOK_TAG_W = 1
 ## 书籍推荐评分数量限制
 BOOK_REC_NUM = 50
 
+## 根据兴趣模型的书籍得分推荐阀值
+BOOK_INT_THRES = 20
+
 # 一些需要用到的全局数据
 G_umodels   = {}
 G_historys = {}
@@ -28,23 +31,16 @@ def updateUserModel(user, nowtime, utype):
     # 否则如果更新时间有差异更新所有umodel中的条目
     #判断umodel表的数据是否是最新的（根据user表）
     umodel = db.umodel.find_one({"user_id":user['user_id']})
-    if umodel:
+    if not umodel:
+        umodel = {'history_vec':[], 'uptime':nowtime, 'user_id':user['user_id'], 'type':utype}
+        u_id = db.umodel.insert(umodel)
+        logging.info('create user %s model _id %s' % (user['user_id'], u_id) )
+    else:
         if len(umodel['history_vec']) != len(user['history']):
             count = len(umodel['history_vec'])
         elif (nowtime - umodel['uptime']).days == 0:
             logging.info('- user %s model is up to date.' % umodel['user_id']) # 通过user表来更新umodel表
             return umodel
-        logging.info('update user %s model - umodel len: %d, history len: %d' 
-            % (user['user_id'], len(umodel['history_vec']), len(user['history'])) )
-        u_id = umodel['_id']
-    else:
-        umodel = {'history_vec':[], 'uptime':nowtime, 'user_id':user['user_id'], 'type':utype}
-        u_id = db.umodel.insert(umodel)
-        logging.info('create user %s model _id %s' % (user['user_id'], u_id) )
-        
-    umodel['interest_eval'] = {}
-    #user_fields:初始化一个用户的专业树
-    user_fields = FieldTree(FIELDS)
 
     # 遍历用户阅读历史
     for h in user['history'][count:]:
@@ -52,21 +48,26 @@ def updateUserModel(user, nowtime, utype):
         tag_vec, book_vec = getVecByHistory(h)
         history_vec  = {"date" : h['date'], "book_id": h['book_id'], "tag_vec" : tag_vec, "book_vec" : book_vec}
         umodel['history_vec'].append(history_vec)
-
+    u_id = umodel['_id']
+        
+    umodel['interest_eval'] = {}
+    #user_fields:初始化一个用户的专业树
+    user_fields = FieldTree(FIELDS)
+    for h in umodel['history_vec']:
         # 累加最终兴趣向量
         #items将字典转化为列表
-        for t in book_vec.items():
+        for t in h['book_vec'].items():
             #t[0]系文本；t[1]系权重
             if t[0] not in umodel['interest_eval']:
                 umodel['interest_eval'][t[0]] = 0.0
             #umodel['interest_eval']系用户最终向量的字典；[t[0]]取出t[0]键所对应的值；
-            #权重要乘上时间系数
+            #书籍标签权重要乘上时间系数
             umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
-        for t in tag_vec.items():
+        for t in h['tag_vec'].items():
             if t[0] not in umodel['interest_eval']:
                 umodel['interest_eval'][t[0]] = 0.0
+            #用户自定义标签不需要乘上时间系数
             umodel['interest_eval'][t[0]] += t[1]
-
 
         #专业向量
         # 获得历史记录的书籍
@@ -165,7 +166,7 @@ def generateRecBooksFromUModel():
 
         # 用户已阅读书籍
         user_read = [ x['book_id'] for x in G_historys[u['user_id']] ]
-        logging.info('user_read:%r' % user_read )
+        # logging.info('user_read:%r' % user_read )
 
         ## 获得根据用户兴趣向量的推荐书籍, 需要排除已阅读书籍
         if 'interest_eval' in u:
@@ -181,11 +182,10 @@ def generateRecBooksFromUModel():
                     if t['name'] in u['interest_eval'].keys():
                         weight += u['interest_eval'][t['name']]
                 if book['id'] not in user_read:
+                    # if weight > BOOK_INT_THRES:
                     user_books.append( (book['id'], weight, book['title']) )
-                    if len(user_books) > BOOK_REC_NUM:
-                        break
             user_books.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)
-            u['interest_recbooks'] = user_books
+            u['interest_recbooks'] = user_books[:BOOK_REC_NUM]
             if len(user_books) > 0:
                 logging.info('sort interest_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 

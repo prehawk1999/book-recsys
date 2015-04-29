@@ -195,7 +195,7 @@ class FieldTree(object):
 		for idx in lowest_idx:
 			logging.info('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
 			FieldTree.field_nodes[idx].books_allow.add(book['id'])
-			print len(FieldTree.field_nodes[idx].books_allow)
+			# print len(FieldTree.field_nodes[idx].books_allow)
 			# _ret_inserted = True
 		# return _ret_inserted
 

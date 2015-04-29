@@ -15,17 +15,25 @@ class RecsysDatabase:
         self.book_domain      = {}
 
     def summaryString(self, inpStr, num=12, dotlen=6):
-        if len(inpStr) > num:
+        if num > 0 and len(inpStr) > num:
             return inpStr[:num] + '.'*dotlen
         else:
             return inpStr
 
-    def summaryBook(self, book):
-        book['title']   = self.summaryString(book['title'], 6, 2)
-        book['author']  = self.summaryString( ','.join(book['author']), 6 )
-        book['summary'] = self.summaryString(book['summary'], 24)
-        book['tags']    = self.summaryString( '/'.join([ x['name'] for x in book['tags'] ]), 12 )
+    def summaryBook(self, book, ti_s=6, au_s=6, su_s=24, ta_s=12):
+        book['title']      = self.summaryString(book['title'], ti_s, 2).strip()
+        book['author']     = self.summaryString( ','.join(book['author']), au_s).strip()
+        book['translator'] = self.summaryString( ','.join(book['translator']), au_s).strip()
+        book['summary'] = self.summaryString(book['summary'], su_s)
+        # print book['tags']
+        book['tags']    = self.summaryString( '/'.join([ x['name'] for x in book['tags'] ]), ta_s)
         return book
+
+    def prettifyText(self, text):
+        output = text.replace(u'\n', u'</p><p>')
+        # print u'<p>' + output + u'</p>'
+        return u'<p>' + output + u'</p>'
+
 
     ## limit要是偶数
     def getPopbooks(self, limit=60):
@@ -125,8 +133,14 @@ class BookHandler(BaseHandler):
             name = tornado.escape.xhtml_escape(cook)
         else:
             name = None
-        book_info = rsdb.findOneBook(book_id)
-        return self.render("book.html", username=name, book_info=book_info)
+        ret = rsdb.findOneBook(book_id)
+        ret['origin_title'] = ret['origin_title'].strip()
+        # ret['translator']   
+        ret['summary'] = rsdb.prettifyText(ret['summary'])
+        ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
+        ret['catalog'] = rsdb.prettifyText(ret['catalog'])
+        return self.render("book.html", username=name, 
+            book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
 
 class UserHandler(BaseHandler):
     pass

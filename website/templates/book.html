@@ -56,16 +56,21 @@
 <div class="row">
 <!--/*左边部分开始*/-->
   <div class="list-left">
-      <div class="list-left-top"><span class="left-s1">热门标签</span><span class="left-s2">您现在所在的位置：<a href="#">首页</a> > <a href="#">标签列表</a></span></div>
       <div class="clear"></div>
       
       <div class="xq-jieshao">
-        <div class="xq-jieshao-left"><img src="{{ book_info['images']['medium'] }}" /></div>
+        <div class="xq-jieshao-left"><img src="{{ book_info['images']['large'] }}" /></div>
         <div class="xq-jieshao-right">
             <p class="xq-jieshao-right-p1">{{ book_info['title'] }}</p>
-            <p>作者：<span>史密斯</span></p>
-            <p>关键词：食品安全，爱情，勇气</p>
-            <p>授权方：<span>人民出版社</span>授权作品，不得转载</p>
+            {%if book_info['subtitle']%}<p>副标题：{{book_info['subtitle']}} </p>{%end%}
+            {%if book_info['origin_title']%}<p>原标题：{{ book_info['origin_title'] }} </p>{%end%}
+            <p>作者：<span>{{ book_info['author'] }}</span></p>
+            {%if book_info['translator']%}<p>译者：<span>{{ book_info['translator'] }}</span></p>{%end%}
+            <p>标签：{{ book_info['tags'] }}</p>
+            <p>出版社：<span>{{ book_info['publisher'] }}</span></p>
+            <p>页码：{{ book_info['pages'] }}</p>
+            <p>isbn10/13: <span>{{ book_info['isbn10'] }}</span> <span>{{ book_info['isbn13'] }}</span></p>
+            <p>定价：{{book_info['price']}}</p>
             <p>评分：<img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" />
                  3人 | <a href="#"><span>我来评分</span></a></p>
             <p class="xq-jieshao-right-p2">
@@ -109,7 +114,7 @@
       <div class="clear"></div>  
    </div>      
       
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{{static_url('js/jquery-1.9.1.min.js')}}"></script>
 <script type="text/javascript">
 
     $(function(){
@@ -130,20 +135,18 @@
 
        <div class="xq-js1"> 
        <div class="list-left-top111"><span class="left-s1">内容介绍</span></div>
-           <p>和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</p> 
-         <p>和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</p>  
+        {{book_info['summary']}}
        </div>
         
         <div class="xq-js1"> 
-       <div class="list-left-top111"><span class="left-s1">作者介绍</span></div>
-           <p>和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</p> 
-         <p>和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</p>  
+       <div class="list-left-top111"><span class="left-s1">目录</span></div>
+        {{book_info['catalog']}}
        </div>       
        
        
        <div class="xq-js2"> 
-          <div class="list-left-top111"><span class="left-s1">用户评论</span></div>
-          
+          <div class="list-left-top111"><span class="left-s1">作者介绍</span></div>
+         {{book_info['author_intro']}}
           <div class="xq-js1-plun">
              <div class="xq-js1-plun1"><img src="{{static_url('images/d-27.png')}}" /></div>
              <div class="xq-js1-plun2"><p><textarea name="wenb" cols="wenb" id="wenb" rows=""></textarea></p>
