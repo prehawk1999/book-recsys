@@ -13,6 +13,7 @@ class RecsysDatabase:
         self.book_popular     = []
         self.book_recommend   = []
         self.book_domain      = {}
+        self.book_tagged      = {}
 
     def summaryString(self, inpStr, num=12, dotlen=6):
         if num > 0 and len(inpStr) > num:
@@ -20,11 +21,11 @@ class RecsysDatabase:
         else:
             return inpStr
 
-    def summaryBook(self, book, ti_s=6, au_s=6, su_s=24, ta_s=12):
+    def summaryBook(self, book, ti_s=8, au_s=6, su_s=24, ta_s=12):
         book['title']      = self.summaryString(book['title'], ti_s, 2).strip()
         book['author']     = self.summaryString( ','.join(book['author']), au_s).strip()
         book['translator'] = self.summaryString( ','.join(book['translator']), au_s).strip()
-        book['summary'] = self.summaryString(book['summary'], su_s)
+        book['summary'] = self.summaryString(book['summary'], su_s).strip()
         # print book['tags']
         book['tags']    = self.summaryString( '/'.join([ x['name'] for x in book['tags'] ]), ta_s)
         return book
@@ -91,6 +92,43 @@ class RecsysDatabase:
                 self.books_info[book_id] = book
                 return book
 
+    def findTagBooks(self, tagname):
+        if tagname in self.book_tagged:
+            return self.book_tagged[tagname]
+
+        self.book_tagged[tagname] = []
+
+        def tgName(book):
+            if isinstance(book['tags'], list):
+                return [x['name'] for x in book['tags']]
+            elif isinstance(book['tags'], unicode):
+                return book['tags'].split('/')
+
+        def tbSort(a,b):
+            aidx = tgName(a).index(tagname)
+            bidx = tgName(b).index(tagname)
+            if aidx < bidx:
+                return 1
+            elif aidx == bidx:
+                if a['rating']['numRaters'] > b['rating']['numRaters']:
+                    return 1
+                elif a['rating']['numRaters'] == b['rating']['numRaters']:
+                    if a['rating']['average'] > b['rating']['average']:
+                        return 1
+                    else:
+                        return -1
+                else:
+                    return -1
+            else:
+                return -1
+
+        for book in db.popbooks.find():
+            if 'tags' in book and tagname in tgName(book):
+                self.book_tagged[tagname].append(self.summaryBook(book, ta_s=100, su_s=200))
+        self.book_tagged[tagname].sort(cmp=tbSort, reverse=True)
+
+        return self.book_tagged[tagname]
+
 class BaseHandler(tornado.web.RequestHandler):
     # def get_current_user(self):
     #     return self.get_secure_cookie("user")
@@ -109,7 +147,6 @@ class MainHandler(BaseHandler):
             rb = None
 
         self.render("index.html", username=name, popbooks=pb, recbooks=rb, dombooks=pd)
-
 
 class LoginHandler(BaseHandler):
     def get(self):
@@ -137,6 +174,7 @@ class BookHandler(BaseHandler):
         ret['origin_title'] = ret['origin_title'].strip()
         # ret['translator']   
         ret['summary'] = rsdb.prettifyText(ret['summary'])
+        #print ret['summary']
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
         return self.render("book.html", username=name, 
@@ -147,12 +185,28 @@ class UserHandler(BaseHandler):
 
 class TagHandler(BaseHandler):
 
-    def get(self):
-        pass
+    def get(self, tagname):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None
+        tbooks = rsdb.findTagBooks(tagname)[:15]
+        dbooks = rsdb.getDombooks(2)
+        self.render('tag.html', username=name, tagbooks=tbooks, dombooks=dbooks)
 
-    def post(self):
-        # self.write(self.get_argument())
-        pass
+    def post(self, tagname):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None
+
+        # tagname = self.get_argument('tagname')
+        # print tagname
+        tbooks = rsdb.findTagBooks(tagname)[:15]
+        dbooks = rsdb.getDombooks(2)
+        self.render('tag.html', username=name, tagbooks=tbooks, dombooks=dbooks)
 
 
 class LogoutHandler(BaseHandler):
@@ -180,7 +234,7 @@ application = tornado.web.Application([
     (r'/', MainHandler),
     (r'/book/(\d+)', BookHandler),
     (r'/user/(\d+)', UserHandler),
-    (r'/tag/(\d+)', TagHandler),
+    (r'/tag/(.*)', TagHandler),
     (r'/login', LoginHandler),
     (r'/logout', LogoutHandler),
     (r'/register', RegisterHandler),

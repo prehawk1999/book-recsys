@@ -23,8 +23,8 @@
         {%end%}
 
         {% if not username %}
-          <a href="#">注册</a>
-          <a href="#">登录</a>
+          <a href="/register">注册</a>
+          <a href="/login">登录</a>
         {% end %}
         </span>
       </div>
@@ -39,7 +39,7 @@
 <div class="sousuo">
           <form name="form3" method="post" action="/tag">
             
-                <input type="text" name="box3" id="box3" 
+                <input type="text" name="tagname" id="box3" 
         onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
        value="请输入关键字"/>
                 <input type="submit" name="ss_btn3" id="ss_btn3" value="搜 索"/>
@@ -168,7 +168,7 @@ function tab(tabId, tabC){
     <ul class="tu-list11">
     <!-- 10 本 -->
     {% for b in dombooks.values()[0] %}
-      <li><a href="/book{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
+      <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
     {%end%}
     </ul>  
    </div>
@@ -179,7 +179,7 @@ function tab(tabId, tabC){
       <div class="con">    
         <ul class="tu-list11">
           {% for b in dombooks.values()[i+1] %}
-            <li><a href="/book{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
+            <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
           {%end%}
         </ul>
       </div>
@@ -321,59 +321,21 @@ function tab(tabId, tabC){
      </div>
 
      <div class="list-right2"><!--右边二楼-->
-        <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
+        <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
+            {% for i in range(len(dombooks)) %}
              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
+                <p class="shu-list-p1"><a href="#"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
+                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
+                <!-- <p><img src="" /></p>  -->
+                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
+                <p>{{dombooks.values()[i][0]['tags']}}</p>
              </li>
 
              <div class="clear"></div>
-              
-
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-
-             <div class="clear"></div> 
-             
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             </li>
-
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-
-             <div class="clear"></div>   
-
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-
-             <div class="clear"></div>            
+             {%end%}
+      
           </ul>
      </div>
   </div><!--/*右边结束*/-->

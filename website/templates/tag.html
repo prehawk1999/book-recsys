@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无豆瓣读书</title>
-<link href="css/css.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/lrtk.js"></script>
+<link href="{{static_url('css/css.css')}}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{{static_url('js/lrtk.js')}}"></script>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
         {%end%}
 
         {% if not username %}
-          <a href="#">注册</a>
-          <a href="#">登录</a>
+          <a href="/register">注册</a>
+          <a href="/login">登录</a>
         {% end %}
         </span>
       </div>
@@ -29,13 +29,13 @@
 
 <div class="logo">
       <div class="row">
-          <div class="logo-left"><img src="images/d-02.png" /></div>
+          <div class="logo-left"><img src="{{static_url('images/d-02.png')}}" /></div>
           <div class="logo-right">
               
 <div class="sousuo">
           <form name="form3" method="post" action="">
             
-                <input type="text" name="box3" id="box3" 
+                <input type="text" name="tagname" id="box3" 
         onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
        value="请输入关键字"/>
                 <input type="submit" name="ss_btn3" id="ss_btn3" value="搜 索"/>
@@ -49,7 +49,7 @@
 <div class="clear"></div>
 
 <div class="row">
-  <div style="padding-top:20px;"><img src="images/d-03.jpg" /></div>
+  <div style="padding-top:20px;"><img src="{{static_url("images/d-03.jpg")}}" /></div>
 </div>
 <div class="clear"></div>
 
@@ -60,96 +60,19 @@
       <div class="clear"></div>
       
       <ul class="list-list">
-        <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
+        {%for book in tagbooks %}
+        <li><div class="lili-left"><a href="/book/{{book['id']}}"><img src="{{book['images']['medium']}}" /></a></div>
+           <p class="lili1">{{book['title']}}</p>
+           <p class="lili2"><a href="/book/{{book['id']}}">{{book['summary']}}</a></p> 
+           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="/book/{{book['id']}}"><img src="{{static_url('images/d-06.png')}}" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
         </li>
+        {%end%}
         <div class=" clear"></div>
-        
-
-        
-
-
-        
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-       <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-              
-                <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-       <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-                
-                <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-       <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-        
-                
-                <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-           <p class="lili1">追风筝的人</p>
-           <p class="lili2"><a href="#">和女子入住南安大霞美一家宾馆40多分钟后，堂哥就在别人的美一家宾馆40多分钟后，堂哥就在别人的搀扶下从宾馆一消防门走出，随后就搀扶下从宾馆一消防门走出，随后就发生了意外。这是怎么回事呢？记者随即赶赴现场了解情况</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="#"><img src="images/d-06.png" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
-        </li>
-        <div class=" clear"></div>
-
-        
-
-        
-          
-        
-        
-         
-      
+       
       </ul>
       
       <div class="lie"><!--分页开始-->
-<ul>  
+<!-- <ul>  
   <li><a style="width:54px;" href="#">上一页</a></li>
   <li><a style="width:34px;" href="#">首页</a></li>
   <li><a href="#">1</a></li>
@@ -159,11 +82,11 @@
   <li><a href="#">5</a></li>
   <li><a style="width:34px;" href="#">尾页</a></li>
   <li><a style="width:54px;" href="#">下一页</a></li>
-</ul>
+</ul> -->
 
 </div><!--分页结束-->
 
-<div class="left-bottom"><img src="images/d-07.png" /></div>
+<div class="left-bottom"><img src="{{static_url('images/d-07.png')}}" /></div>
 </div>
 <!--左边结束  -->
   
@@ -271,121 +194,26 @@
 
      
      <!-- 代码开始 --> 
-<div id="div1">
-<a href="http://www.lanrentuku.com" target="_blank">小说</a>
-<a href="http://www.lanrentuku.com" target="_blank">随笔 </a>
-<a href="http://www.lanrentuku.com" target="_blank">散文</a>
-<a href="http://www.lanrentuku.com" target="_blank">文学</a>
-<a href="http://www.lanrentuku.com" target="_blank">日本</a>
-<a href="http://www.lanrentuku.com" target="_blank">诗歌</a>
-<a href="http://www.lanrentuku.com" target="_blank">童话</a>
-<a href="http://www.lanrentuku.com" target="_blank">港台</a>
-<a href="http://www.lanrentuku.com" target="_blank">名著</a>
-<a href="http://www.lanrentuku.com" target="_blank">流行</a>
-<a href="http://www.lanrentuku.com" target="_blank">小说</a>
-<a href="http://www.lanrentuku.com" target="_blank">随笔 </a>
-<a href="http://www.lanrentuku.com" target="_blank">散文</a>
-<a href="http://www.lanrentuku.com" target="_blank">文学</a>
-<a href="http://www.lanrentuku.com" target="_blank">日本</a>
-<a href="http://www.lanrentuku.com" target="_blank">诗歌</a>
-<a href="http://www.lanrentuku.com" target="_blank">童话</a>
-<a href="http://www.lanrentuku.com" target="_blank">港台</a>
-<a href="http://www.lanrentuku.com" target="_blank">名著</a>
-<a href="http://www.lanrentuku.com" target="_blank">流行</a>
-<a href="http://www.lanrentuku.com" target="_blank">小说</a>
-<a href="http://www.lanrentuku.com" target="_blank">随笔 </a>
-<a href="http://www.lanrentuku.com" target="_blank">散文</a>
-<a href="http://www.lanrentuku.com" target="_blank">文学</a>
-<a href="http://www.lanrentuku.com" target="_blank">日本</a>
-<a href="http://www.lanrentuku.com" target="_blank">诗歌</a>
-<a href="http://www.lanrentuku.com" target="_blank">童话</a>
-<a href="http://www.lanrentuku.com" target="_blank">港台</a>
-<a href="http://www.lanrentuku.com" target="_blank">名著</a>
-<a href="http://www.lanrentuku.com" target="_blank">流行</a>
-</div>
+
 <!-- 代码结束 -->
 
 
      <div class="list-right2"><!--右边二楼-->
-       <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
+       <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
+            {% for i in range(len(dombooks)) %}
              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
+                <p class="shu-list-p1"><a href="#"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
+                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
+                <!-- <p><img src="" /></p>  -->
+                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
+                <p>{{dombooks.values()[i][0]['tags']}}</p>
              </li>
+
              <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div> 
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>            
+             {%end%}
+      
           </ul>
      </div>
   </div><!--/*右边结束*/-->
