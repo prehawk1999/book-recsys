@@ -60,16 +60,16 @@
       <ul class="list-list">
       {% for h in userinfo['history'] %}
         {% if 'book' in h %}
-        <li><div class="lili-left"><a href="/book/{{h['book']['id']}}"><img src="{{h['book']['images']['medium']}}" /></a></div>
+          <li><div class="lili-left"><a href="/book/{{h['book']['id']}}"><img src="{{h['book']['images']['medium']}}" /></a></div>
           <p class="lili-p6"><a href="/book/{{h['book']['id']}}">{{h['book']['title']}}</a></p>
           <p class="lili-p7">{{h['book']['tags']}}</p>
-          <p class="lili-p8"><img src="{{static_url('images/d-22.png')}}" />234人读过<br />
+          <p class="lili-p8">{{h['book']['rating']['numRaters']}}人读过<br />
                              {{h['book']['summary']}}<br />
                              <!-- <a href="#">修改</a><a href="#">删除</a> -->
          </p>  
-        </li>
-        {% end %}
-        {% end %}
+          </li>
+          {% end %}
+      {% end %}
         <div class=" clear"></div>
            
       

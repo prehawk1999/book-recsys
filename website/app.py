@@ -2,6 +2,7 @@
 import os
 import tornado.ioloop
 import tornado.web
+import datetime
 import pymongo
 from pymongo import MongoClient
 from bson import ObjectId
@@ -85,8 +86,8 @@ class RecsysDatabase:
                 self.book_domain[dom].append(self.summaryBook(book))
         return self.book_domain
 
-    def findOneBook(self, book_id):
-        if book_id in self.books_info:
+    def findOneBook(self, book_id, update=False):
+        if book_id in self.books_info and not update:
             return self.books_info[book_id]
         else:
             book = db.books.find_one({"id":book_id})
@@ -155,8 +156,8 @@ class MainHandler(BaseHandler):
 class LoginHandler(BaseHandler):
     def get(self):
         self.render('login.html', username=None)
+    
     def post(self):
-        # 这里补充一个，获取用户输入
         username = self.get_argument("username")
         password = self.get_argument("password")
         user = rsdb.findOneUser(username)
@@ -174,12 +175,38 @@ class BookHandler(BaseHandler):
             name = tornado.escape.xhtml_escape(cook)
         else:
             name = None
+
         dbooks = rsdb.getDombooks(10)
         ret = rsdb.findOneBook(book_id).copy()
         ret['origin_title'] = ret['origin_title'].strip()
         ret['summary'] = rsdb.prettifyText(ret['summary'])
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
+        # print ret['comments']
+        return self.render("book.html", username=name, dombooks=dbooks,
+            book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
+
+    def post(self, book_id):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = ''
+        comment = self.get_argument('comment') 
+        comment_doc = {}
+        comment_doc['content'] = comment
+        comment_doc['user_id'] = name
+        comment_doc['date']    = datetime.datetime.utcnow()
+        dbret = db.books.update({"id":book_id}, {"$push":{"comments":comment_doc}})
+        if not dbret['ok']:
+            print 'error update comments'
+            
+        dbooks = rsdb.getDombooks(10)
+        ret = rsdb.findOneBook(book_id, update=True).copy()
+        ret['origin_title'] = ret['origin_title'].strip()
+        ret['summary'] = rsdb.prettifyText(ret['summary'])
+        ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
+        ret['catalog'] = rsdb.prettifyText(ret['catalog'])   
         return self.render("book.html", username=name, dombooks=dbooks,
             book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
 
