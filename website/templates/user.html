@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无豆瓣读书</title>
-<link href="css/css.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/lrtk.js"></script>
+<title>书籍推荐系统</title>
+<link href="{{static_url('css/css.css')}}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{{static_url('js/lrtk.js')}}"></script>
 </head>
 
 <body>
@@ -15,7 +15,8 @@
         {%end%}
           <span class="top-right">
         {% if username %}
-          <a href="#" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="templates/images/d-01.jpg" />个人中心</a>
+          <a href="/user" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="{{static_url('images/d-01.jpg')}}" />个人中心</a>
+          <a href="/logout">登出</a>
         {%end%}
 
         {% if not username %}
@@ -29,27 +30,16 @@
 
 <div class="logo">
       <div class="row">
-          <div class="logo-left"><img src="images/d-02.png" /></div>
+          <div class="logo-left"><a href="/"><img src="{{static_url('images/d-02.png')}}" /></a></div>
           <div class="logo-right">
               
-<div class="sousuo">
-          <form name="form3" method="post" action="">
-            
-                <input type="text" name="box3" id="box3" 
-        onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
-       value="请输入关键字"/>
-                <input type="submit" name="ss_btn3" id="ss_btn3" value="搜 索"/>
-             
-          
-          </form>  
-          </div>
           </div>
       </div>
 </div>
 <div class="clear"></div>
 
 <div class="row">
-  <div style="padding-top:20px;"><img src="images/d-03.jpg" /></div>
+  <div style="padding-top:20px;"><img src="{{static_url('images/d-03.jpg')}}" /></div>
 </div>
 <div class="clear"></div>
 
@@ -57,130 +47,35 @@
 <!--/*左边部分开始*/-->
   <div class="list-left">
         <div class="yonghu-top">
-          <span class="yonghu-top-left"><img src="images/d-21.png" /></span>
-          <span class="yonghu-top-right"><p>我读过的书(25)</p>
-                <p><a href="#">在读</a><a href="#">想读</a>
-                <a href="#"> 读过 </a>  <a href="#">感兴趣</a>   </p>
-           </span>
+          <span class="yonghu-top-left"></span>
+          <span class="yonghu-top-right"><p>我读过的书({{len(userinfo['history'])}})</p></span>
         </div>
         <div class="clear"></div>
         
-        <div class="yonghu-fen"><a href="#"> 按时间排序</a>
+<!--         <div class="yonghu-fen"><a href="#"> 按时间排序</a>
                                 <a href="#"> 按评论排序</a>   
                                 <a href="#">  按标题排序</a>
         </div>
-
+ -->
       <ul class="list-list">
-        <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
+      {% for h in userinfo['history'] %}
+        {% if 'book' in h %}
+        <li><div class="lili-left"><a href="/book/{{h['book']['id']}}"><img src="{{h['book']['images']['medium']}}" /></a></div>
+          <p class="lili-p6"><a href="/book/{{h['book']['id']}}">{{h['book']['title']}}</a></p>
+          <p class="lili-p7">{{h['book']['tags']}}</p>
+          <p class="lili-p8"><img src="{{static_url('images/d-22.png')}}" />234人读过<br />
+                             {{h['book']['summary']}}<br />
+                             <!-- <a href="#">修改</a><a href="#">删除</a> -->
          </p>  
         </li>
+        {% end %}
+        {% end %}
         <div class=" clear"></div>
-        
-        
-             
-            <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>    
-       
-        
-        <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>
-        
-     
-      <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>   
            
-        
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>
-       
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div> 
-            
-        
-           <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>   
-           
-        
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>
-       
-         <li><div class="lili-left"><a href="#"><img src="images/d-05.png" /></a></div>
-          <p class="lili-p6"><a href="#">追影子的人</a></p>
-          <p class="lili-p7">于秋华 / 钱钟书 / 爱情</p>
-          <p class="lili-p8"><img src="images/d-22.png" />234人读过<br />
-                             关于爱情的理解与感悟，对生物能干活对违法后哈佛呢飞机哦合格的部分南非化脓<br />
-                             <a href="#">修改</a><a href="#">删除</a>
-         </p>  
-        </li>
-        <div class=" clear"></div>  
-        
-      
-
-        
-
-        
-          
-        
-        
-         
       
       </ul>
       
-      <div class="lie"><!--分页开始-->
+<!--       <div class="lie">
 <ul>  
   <li><a style="width:54px;" href="#">上一页</a></li>
   <li><a style="width:34px;" href="#">首页</a></li>
@@ -193,9 +88,9 @@
   <li><a style="width:54px;" href="#">下一页</a></li>
 </ul>
 
-</div><!--分页结束-->
+</div>  -->
 
-<div class="left-bottom"><img src="images/d-07.png" /></div>
+<div class="left-bottom"><img src="{{static_url('images/d-07.png')}}" /></div>
 </div>
 <!--左边结束  -->
   
@@ -206,14 +101,13 @@
      <div class="list-right1">
         <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
         <div class="sousuo2">
-          <form name="form4" method="post" action="">
+          <form name="form4" method="post" action="/tag">
             
-                <input type="text" name="box4" id="box4" 
+                <input type="text" name="tagname" id="box4" 
         onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
        value="请输入关键字"/>
-                <input type="submit" name="ss_btn4" id="ss_btn4" value="搜 索"/>
-             
-          
+                <input type="submit" id="ss_btn4" value="搜 索"/>
+
           </form>  
           </div>
           <div class="clear"></div>
@@ -304,7 +198,7 @@
      
           
      <!-- 代码开始 --> 
-<div id="div1">
+<!-- <div id="div1">
 <a href="http://www.lanrentuku.com" target="_blank">小说</a>
 <a href="http://www.lanrentuku.com" target="_blank">随笔 </a>
 <a href="http://www.lanrentuku.com" target="_blank">散文</a>
@@ -335,83 +229,27 @@
 <a href="http://www.lanrentuku.com" target="_blank">港台</a>
 <a href="http://www.lanrentuku.com" target="_blank">名著</a>
 <a href="http://www.lanrentuku.com" target="_blank">流行</a>
-</div>
+</div> -->
 <!-- 代码结束 -->
      
      
      
      <div class="list-right2"><!--右边二楼-->
-        <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
+        <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
+            {% for i in range(len(dombooks)) %}
              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
+                <p class="shu-list-p1"><a href="/book/{{dombooks.values()[i][0]['id']}}"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
+                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
+                <!-- <p><img src="" /></p>  -->
+                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
+                <p>{{dombooks.values()[i][0]['tags']}}</p>
              </li>
+
              <div class="clear"></div>
- 
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>            
+             {%end%}
+      
           </ul>
      </div>
   </div><!--/*右边结束*/-->
@@ -429,19 +267,15 @@
 <div class="di">
    <div class="row">
    
-  <div class="di-pp"> <p><a href="#">关于豆瓣</a> 
-  · <a href="#">在豆瓣工作</a>
-   · <a href="#">联系我们</a>
-    ·<a href="#"> 免责声明</a>
-    · <a href="#"> 帮助中心</a>
-     ·<a href="#"> 开发者
-     ·<a href="#">图书馆合作</a> 
-     · <a href="#">手机读书</a> 
-     ·<a href="#"> 豆瓣广告</a></p>
-<p>© 2005－2015 douban.com, all rights reserved 版权所有：豆瓣读书</p>
+  <div class="di-pp"> <p><a href="#">关于书籍推荐系统</a> 
+  · <a href="#">黄镨卉</a>
+   · <a href="#">秦梓欣</a>
+    ·<a href="#"> 陈经冬</a>
+<p>all rights reserved 版权所有：陈经东</p>
 </div>
    </div>
 </div>
+
 
 
 

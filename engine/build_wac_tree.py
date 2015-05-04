@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*- 
 from book_recsys import *
-from stdtag import StandardTags
+from MI import MI
 import gensim
-
-stdtag = StandardTags()
-
 
 def solveWord2VecMatrix(starttags, model):
     lines = len(starttags)*len(starttags)
@@ -32,19 +29,26 @@ def getCluster(b,d, mtrx):
     return b
 
 def solveWACmatrix(mtrx, T=0.9):
-    # 1-15 T=1, 15-44 T=0.9
-    for i in range(50):
+    pre_len = -1
+    i = 0
+    while True:
         if os.path.exists('dump/waclevel%d.dmp' % int(i+1)):
             continue
         if i == 0:
             b = mtrx
         else:
             b = pickle.load(open('dump/waclevel%d.dmp' % int(i)))[1]
-        # {tag_name：degree},{tag1:{tag1:degree}}, {tag1:{tag:degree}}   
         a,b,c = buildUpperLevel(b, T)
+        if pre_len != -1 and len(b) == pre_len:
+            if T <= 0.4 or len(b) == 1:
+                return # 结束
+            T -= 0.01
+            continue
+        pre_len = len(b)
 
         pickle.dump((a,b,c), open('dump/waclevel%d.dmp' % int(i+1), 'w'))
-        prog_d('dump/waclevel%d.dmp' % int(i+1))
+        prog_d('dump/waclevel%d.dmp       T: %f' % (int(i+1), T) )
+        i += 1
 
 # 构建上一层节点，返回值全部是字典，用于保存对应关系
 # @param Wl: 二维dict，原始数据，存放相似度矩阵
@@ -137,17 +141,18 @@ def buildUpperLevel(Wl, T):
 
 def build_wac_tree(T):
 
-    # starttags = stdtag._loadStart()
-    model = gensim.models.Word2Vec.load("corpus/misc.model")
-
     # 载入领域相关标签
-    stdtag._loadDomain()
+    domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.domain-classify.txt')]
+    # m = MI(stdtag.domain)
+    # m.enable_idf
+    # mtrx = m.solveMatrix()
 
     # 获得第一层相似度矩阵
     if os.path.exists('dump/word2vecmtrx.dmp'):
         mtrx = pickle.load(open('dump/word2vecmtrx.dmp'))
     else:
-        mtrx = solveWord2VecMatrix(stdtag.domain, model)
+        model = gensim.models.Word2Vec.load("corpus/misc.model")
+        mtrx = solveWord2VecMatrix(domain, model)
         pickle.dump(mtrx, open('dump/word2vecmtrx.dmp', 'w'))
 
     # 以第一层相似度矩阵为输入，构建wac树，结果存放到dump/waclevel%d 里

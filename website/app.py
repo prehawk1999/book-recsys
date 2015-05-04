@@ -10,6 +10,7 @@ class RecsysDatabase:
 
     def __init__(self):
         self.books_info       = {}
+        self.users_info       = {}
         self.book_popular     = []
         self.book_recommend   = []
         self.book_domain      = {}
@@ -57,12 +58,13 @@ class RecsysDatabase:
         if self.book_recommend:
             return self.book_recommend
 
-        umodel = db.umodel.find({"user_id":name})
-        if not umodel:
+        umodel = db.umodel.find_one({"user_id":name})
+        # print umodel
+        if not umodel or 'interest_recbooks' not in umodel:
             return
 
         for b in umodel['interest_recbooks']:
-            book = self.findOneBook(b['id'])
+            book = self.findOneBook(b[0]).copy()
             if not book or 'title' not in book:
                 continue
             self.book_recommend.append(self.summaryBook(book))
@@ -92,21 +94,24 @@ class RecsysDatabase:
                 self.books_info[book_id] = book
                 return book
 
+    def findOneUser(self, user_id):
+        if user_id in self.users_info:
+            return self.users_info[user_id]
+        else:
+            user = db.users.find_one({"user_id":user_id})
+            if user:
+                self.users_info[user_id] = user
+                return user
+
     def findTagBooks(self, tagname):
         if tagname in self.book_tagged:
             return self.book_tagged[tagname]
 
         self.book_tagged[tagname] = []
 
-        def tgName(book):
-            if isinstance(book['tags'], list):
-                return [x['name'] for x in book['tags']]
-            elif isinstance(book['tags'], unicode):
-                return book['tags'].split('/')
-
         def tbSort(a,b):
-            aidx = tgName(a).index(tagname)
-            bidx = tgName(b).index(tagname)
+            aidx = a['tags'].split('/').index(tagname)
+            bidx = b['tags'].split('/').index(tagname)
             if aidx < bidx:
                 return 1
             elif aidx == bidx:
@@ -123,15 +128,13 @@ class RecsysDatabase:
                 return -1
 
         for book in db.popbooks.find():
-            if 'tags' in book and tagname in tgName(book):
+            if 'tags' in book and tagname in [x['name'] for x in book['tags']]:
                 self.book_tagged[tagname].append(self.summaryBook(book, ta_s=100, su_s=200))
         self.book_tagged[tagname].sort(cmp=tbSort, reverse=True)
 
         return self.book_tagged[tagname]
 
 class BaseHandler(tornado.web.RequestHandler):
-    # def get_current_user(self):
-    #     return self.get_secure_cookie("user")
     pass
 
 class MainHandler(BaseHandler):
@@ -141,7 +144,8 @@ class MainHandler(BaseHandler):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
-            rb = getRecbooks(name)
+            # print name
+            rb = rsdb.getRecbooks(name)[:20]
         else:
             name = None
             rb = None
@@ -150,17 +154,17 @@ class MainHandler(BaseHandler):
 
 class LoginHandler(BaseHandler):
     def get(self):
-        self.render('login.html')
-        # self.write('<html><body><form action="/login" method="post">'
-        #            'Name: <input type="text" name="name">'
-        #            '<input type="submit" value="Sign in">'
-        #            '</form></body></html>')
+        self.render('login.html', username=None)
     def post(self):
         # 这里补充一个，获取用户输入
-        # self.get_argument("name")
+        username = self.get_argument("username")
+        password = self.get_argument("password")
+        user = rsdb.findOneUser(username)
+        if user:
+            if ('crawled' in user and password == u'123456') or ('password' in user and password == user['password']):
+                self.set_cookie('user', username)
+                self.redirect('/')
 
-        self.set_secure_cookie("user", self.get_argument("name"))
-        self.redirect("/")
 
 class BookHandler(BaseHandler):
     
@@ -170,51 +174,76 @@ class BookHandler(BaseHandler):
             name = tornado.escape.xhtml_escape(cook)
         else:
             name = None
-        ret = rsdb.findOneBook(book_id)
+        dbooks = rsdb.getDombooks(10)
+        ret = rsdb.findOneBook(book_id).copy()
         ret['origin_title'] = ret['origin_title'].strip()
-        # ret['translator']   
         ret['summary'] = rsdb.prettifyText(ret['summary'])
-        #print ret['summary']
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
-        return self.render("book.html", username=name, 
+        return self.render("book.html", username=name, dombooks=dbooks,
             book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
 
 class UserHandler(BaseHandler):
-    pass
+    
+    def get(self):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None
+        dbooks = rsdb.getDombooks(10)
+        user = rsdb.findOneUser(name)
+        for h in user['history'][:45]:
+            if 'book_id' not in h:
+                continue
+            book = rsdb.findOneBook(h['book_id']).copy()
+            h['book'] = rsdb.summaryBook(book)
+        self.render('user.html', username = name, dombooks=dbooks, userinfo=user)
+
 
 class TagHandler(BaseHandler):
 
     def get(self, tagname):
+        if tagname:
+            tagname = tagname.decode('utf-8')
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
         else:
             name = None
-        tbooks = rsdb.findTagBooks(tagname)[:15]
-        dbooks = rsdb.getDombooks(2)
-        self.render('tag.html', username=name, tagbooks=tbooks, dombooks=dbooks)
+        tbooks = rsdb.findTagBooks(tagname)[:45]
+        dbooks = rsdb.getDombooks(10)
+        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, dombooks=dbooks)
 
-    def post(self, tagname):
+    def post(self):
+        tagname = self.get_argument('tagname')
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
         else:
             name = None
 
-        # tagname = self.get_argument('tagname')
-        # print tagname
-        tbooks = rsdb.findTagBooks(tagname)[:15]
-        dbooks = rsdb.getDombooks(2)
-        self.render('tag.html', username=name, tagbooks=tbooks, dombooks=dbooks)
-
+        tbooks = rsdb.findTagBooks(tagname)[:45]
+        dbooks = rsdb.getDombooks(10)
+        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, dombooks=dbooks)
 
 class LogoutHandler(BaseHandler):
-    def post(self):
-        self.set_secure_cookie('user', '')
+    def get(self):
+        self.clear_cookie('user')
+        self.redirect('/')
 
 class RegisterHandler(BaseHandler):
-    pass
+    
+    def get(self):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None        
+        self.render('register.html', username=name)
+
+    def post(self):
+        pass
 
 # mongo数据库配置
 conn = MongoClient('localhost',27017) 
@@ -233,7 +262,8 @@ settings = {
 application = tornado.web.Application([
     (r'/', MainHandler),
     (r'/book/(\d+)', BookHandler),
-    (r'/user/(\d+)', UserHandler),
+    (r'/user', UserHandler),
+    (r'/tag', TagHandler),
     (r'/tag/(.*)', TagHandler),
     (r'/login', LoginHandler),
     (r'/logout', LogoutHandler),

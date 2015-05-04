@@ -18,7 +18,7 @@ conn = MongoClient('localhost',27017)
 db = conn.group_mems
 
 # 日志模块配置
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                 format='[%(asctime)s | %(funcName)s]: %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',
                 filename='log/Analysis.log',
@@ -52,7 +52,7 @@ class RecsysDatabase(object):
     def __init__(self):
         self.books_info   = {}
         self.users_info   = {}
-        # self.umodel_info  = {}
+        self.umodel_info  = {}
         self.tags_info    = {}
 
     def findOneBook(self, book_id):
@@ -65,6 +65,11 @@ class RecsysDatabase(object):
                 return book
 
     def findBooks(self):
+        if len(self.books_info) > 100000:
+            return self.books_info.values()
+        for b in db.books.find(timeout=False):
+            if b['id'] not in self.books_info:
+                self.books_info[b['id']] = b
         return self.books_info.values()
 
     def findOneUser(self, user_id):
@@ -112,14 +117,9 @@ class StandardTags(object):
 
     def __init__(self):
         self.rawtags = {}
-        self.model = None
         self.start = None
         self.domain = None
         pass
-
-    def _loadModel(self):
-        if not self.model:
-            self.model = gensim.models.Word2Vec.load("corpus/misc.model")
 
     def _loadRawtags(self): 
         if not self.rawtags:
@@ -153,16 +153,7 @@ class StandardTags(object):
             normal = [input_tags]
         if not normal:
             return input_tags
-        # logging.debug('start appending db.tags.')
-        # # tag = []
-        # rawtags = {}
-        # for t in db.tags.find():
-        #     rawtags[t['name']] = t
-        #     tag.append(t)
-        # rawtags = dict([(i['name'], i) for i in tag]) 
-        mtrx = self._solveMImatrix(start, normal)
-        # pickle.dump(mtrx, open('dump/MImtrx.dmp', 'w'))
-        # mtrx = pickle.load(open('dump/MImtrx.dmp'))
+        mtrx = self.solveMImatrix(start, normal)
 
         ret = {}
         maximum = self._getMtrxMaxVec(mtrx)
@@ -173,20 +164,6 @@ class StandardTags(object):
             if normal[val[1]] not in ret:
                 ret[normal[val[1]]] = self.start[val[0]]
         return ret
-
-    # 利用word2vec计算相似标签
-    def similar(self, inp_tag, thres=0.01):
-        self._loadModel()
-        self._loadStart()
-        ret_list = {}
-        for tag in self.start:
-            try:
-                ret_list[tag] = self.model.similarity(tag, inp_tag)
-            except:
-                continue
-        ret_list_item = ret_list.items()
-        ret_list_item.sort(cmp=lambda a,b:cmp(a[1],b[1]), reverse=True)
-        return [(x[0],x[1]) for x in ret_list_item if x[1] > thres]    
 
     ### 计算单个标签的最相似标准标签, 直接计算    
     def transform(self, inp_tag, thres=0.01):
@@ -242,7 +219,7 @@ class StandardTags(object):
         ret.sort( cmp=lambda a,b: cmp(a[2], b[2]), reverse=True)
         return ret
 
-    def _solveMImatrix(self, normal):
+    def solveMImatrix(self, normal):
      
         MImatrix = []
         root = 0

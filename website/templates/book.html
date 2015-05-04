@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无豆瓣读书</title>
+<title>书籍推荐系统</title>
 <link href="{{static_url('css/css.css')}}" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{{static_url('js/lrtk.js')}}"></script>
 
@@ -15,7 +15,8 @@
         {%end%}
           <span class="top-right">
         {% if username %}
-          <a href="#" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="{{static_url('images/d-01.jpg')}}" />个人中心</a>
+          <a href="/user" style="height:30px; background:#277378; padding:0px 10px; font-size:12px; color:#fff;float:left; text-align:center"><img src="{{static_url('images/d-01.jpg')}}" />个人中心</a>
+          <a href="/logout">登出</a>
         {%end%}
 
         {% if not username %}
@@ -29,20 +30,9 @@
 
 <div class="logo">
       <div class="row">
-          <div class="logo-left"><img src="{{static_url('images/d-02.png')}}" /></div>
+          <div class="logo-left"><a href="/"><img src="{{static_url('images/d-02.png')}}" /></a></div>
           <div class="logo-right">
               
-<div class="sousuo">
-          <form name="form3" method="post" action="">
-            
-                <input type="text" name="box3" id="box3" 
-        onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
-       value="请输入关键字"/>
-                <input type="submit" name="ss_btn3" id="ss_btn3" value="搜 索"/>
-             
-          
-          </form>  
-          </div>
           </div>
       </div>
 </div>
@@ -163,65 +153,10 @@
                    </span>
                     <div class="clear"></div>
                </li>
-               
-                <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>               
-               
-               <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>
-               
-                               <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>               
-               
-               <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>
-              
-              
-                              <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>               
-               
-               <li><span class="xq-js1-plun3-s1"><img src="/templates/images/d-29.png" /></span>
-                   <span class="xq-js1-plun3-s2">
-                         <p class="xq-js1-plun3-s2-pp1"><img src="/templates/images/d-30.png" />用户1990<span>2015-09-08  08:00 发表</span></p>
-                         <p class="xq-js1-plun3-s2-pp2">很喜欢看了很多很喜欢看了很很喜欢看了很多遍了，真的很经典之几零五年新低多遍了，真的很经典之几零五年新低遍了，真的很经典之几零五年新低</p>
-                         <p class="xq-js1-plun3-s2-pp3"><a href="#">回复</a></p>
-                   </span>
-                    <div class="clear"></div>
-               </li>
       </ul>
       
-      
-       <div class="lie"><!--分页开始-->
+<!--       
+       <div class="lie">
 <ul>  
   <li><a style="width:54px;" href="#">上一页</a></li>
   <li><a style="width:34px;" href="#">首页</a></li>
@@ -234,14 +169,14 @@
   <li><a style="width:54px;" href="#">下一页</a></li>
 </ul>
 
-</div><!--分页结束--> 
+</div> -->
  
          </div>
  </div>      
 
     <div class="left-bottom1"><img src="{{static_url('images/d-07.png')}}" /></div>
 
-    <div class="list-left-top">
+<!--     <div class="list-left-top">
            <span class="left-s1">热门标签</span>
            <span class="left-s2"><a href="#">更多>></a></span></div>
    <ul class="tu-list">
@@ -251,7 +186,7 @@
      <li><a href="#"><img src="/templates/images/d-05.png" /><p class="tu-list-p1">生活本身</p><p>海明威.威尔逊</p></a></li>
      <li><a href="#"><img src="/templates/images/d-05.png" /><p class="tu-list-p1">生活本身</p><p>海明威.威尔逊</p></a></li>
      <li><a href="#"><img src="/templates/images/d-05.png" /><p class="tu-list-p1">生活本身</p><p>海明威.威尔逊</p></a></li>
-  </ul>
+  </ul> -->
 
 
 
@@ -265,14 +200,13 @@
      <div class="list-right1">
         <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
         <div class="sousuo2">
-          <form name="form4" method="post" action="">
+          <form name="form4" method="post" action="/tag">
             
-                <input type="text" name="box4" id="box4" 
+                <input type="text" name="tagname" id="box4" 
         onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}" 
        value="请输入关键字"/>
-                <input type="submit" name="ss_btn4" id="ss_btn4" value="搜 索"/>
-             
-          
+                <input type="submit" id="ss_btn4" value="搜 索"/>
+
           </form>  
           </div>
           <div class="clear"></div>
@@ -359,94 +293,22 @@
           </ul>
      </div>
      
-     
-
-     
-     
-     
-     
-     
-     
      <div class="list-right2"><!--右边二楼-->
-        <div class="list-right1-top">热门标签<a href="#">更多>></a></div>
+        <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
+            {% for i in range(len(dombooks)) %}
              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
+                <p class="shu-list-p1"><a href="/book/{{dombooks.values()[i][0]['id']}}"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
+                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
+                <!-- <p><img src="" /></p>  -->
+                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
+                <p>{{dombooks.values()[i][0]['tags']}}</p>
              </li>
+
              <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div> 
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>   
-             
-                          <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>
-             
-             </li>
-             <div class="clear"></div>
-              
-              <li>
-                <p class="shu-list-p1"><a href="#"><img src="/templates/images/d-08.png" /></a></p>
-                <p class="shu-list-p2">月光落在我的左手</p>
-                <p><img src="/templates/images/d-09.png" /></p> 
-                <p>作者：余秀华</p> 
-                <p>诗歌/余秀华/中国出版社</p>   
-             </li>
-             <div class="clear"></div>            
+             {%end%}
+      
           </ul>
      </div>
   </div><!--/*右边结束*/-->
@@ -461,19 +323,15 @@
 <div class="di">
    <div class="row">
    
-  <div class="di-pp"> <p><a href="#">关于豆瓣</a> 
-  · <a href="#">在豆瓣工作</a>
-   · <a href="#">联系我们</a>
-    ·<a href="#"> 免责声明</a>
-    · <a href="#"> 帮助中心</a>
-     ·<a href="#"> 开发者
-     ·<a href="#">图书馆合作</a> 
-     · <a href="#">手机读书</a> 
-     ·<a href="#"> 豆瓣广告</a></p>
-<p>© 2005－2015 douban.com, all rights reserved 版权所有：豆瓣读书</p>
+  <div class="di-pp"> <p><a href="#">关于书籍推荐系统</a> 
+  · <a href="#">黄镨卉</a>
+   · <a href="#">秦梓欣</a>
+    ·<a href="#"> 陈经冬</a>
+<p>all rights reserved 版权所有：陈经东</p>
 </div>
    </div>
 </div>
+
 
 
 

@@ -13,9 +13,7 @@ FIELDS = {
 					u'j2ee':{},#7
 					u'java':{},#8
 				},
-				u'python':{#4
-					u'python':{},#5	
-				},
+				u'python':{},
 				u'动态语言':{},
 				u'汇编语言':{}
 			},
@@ -45,7 +43,8 @@ FIELDS = {
 			u'神经网络':{},
 			u'遗传算法':{},
 			u'推荐系统':{},
-			u'机器学习':{}
+			u'机器学习':{},
+			u'人工智能':{}
 		},
 		u'大数据`云计算`数据':{
 			u'数据挖掘':{},
@@ -101,18 +100,12 @@ class FieldTree(object):
 
 	field_nodes = []
 	mem = set()
-	# self._parse_fields(FIELDS, 1, set(), FieldTree.field_nodes)
 
 	def __init__(self, input_tree=FIELDS, tree_dump='dump/FieldTreeNodes.dmp'):
 		self.vector = {}
 		if not FieldTree.field_nodes:
-		# if not os.path.exists(tree_dump):
 			self._parse_fields(input_tree, 1, set(), FieldTree.field_nodes)
-			logging.info('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
-		# 	pickle.dump(FieldTree.field_nodes, open(tree_dump, 'w'))
-		# else:
-		# 	FieldTree.field_nodes = pickle.load(open(tree_dump))
-		# self.field_nodes = []
+			logging.debug('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
 
 	def _parse_fields(self, input_tree, level, parents, output):
 		for inp in input_tree.items():
@@ -142,14 +135,9 @@ class FieldTree(object):
 		lowest_lev = 0
 		tags = [t['name'] for t in book['tags']]
 		for tag in tags:
-			# if tag not in self.fields:
-			# 	continue
-			# logging.debug('book tag:%s' % tag)
 
-			## node version
 			idx = self._getNodeIdx(tag)
 			if idx is None:
-				# logging.debug('no node book tag %s'%tag)
 				continue
 			node = FieldTree.field_nodes[idx]
 
@@ -191,18 +179,14 @@ class FieldTree(object):
 
 
 		# 分类书籍到节点标签
-		# _ret_inserted = False
 		for idx in lowest_idx:
 			logging.info('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
 			FieldTree.field_nodes[idx].books_allow.add(book['id'])
-			# print len(FieldTree.field_nodes[idx].books_allow)
-			# _ret_inserted = True
-		# return _ret_inserted
-
 
 def main():
 	# test FieldTree:
 	test_book = [1767741, 1500149, 1110934, 1091086, 1885170, 1102259, 1230206, 1246192, ]
+	# 
 	ft = FieldTree(FIELDS)
 	for book in db.books.find(timeout=False):
 		# book = rsdb.findOneBook(unicode(bk))
