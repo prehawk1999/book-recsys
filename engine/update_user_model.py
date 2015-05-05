@@ -11,16 +11,19 @@ USER_TAG_W = 10
 BOOK_TAG_W = 1
 
 ## 书籍推荐评分数量限制
-BOOK_REC_NUM = 60
+BOOK_REC_NUM = 65
 
 ## 兴趣向量窗口大小
-INT_VEC_MAX = 1000
+INT_VEC_MAX = 2000
 
 ## 相似用户窗口
 USER_SIM_WINDOW = 10
 
 ## 开启标签标准化
-ENABLE_STANDALIZE = False
+ENABLE_STANDALIZE = True
+
+## 进行标准化的相似度阀值
+STANDARD_THRES = 0.9
 
 ## 开启遗忘公式
 ENABLE_EBBIN = True
@@ -50,6 +53,7 @@ def updateUserModel(user, nowtime, utype):
     train_idx = int( len(user['history']) * TRAIN_RATIO )
     logging.info('create user %s Training data: ratio: %f, totallen: %d, scope: %d - %d' % (user['user_id'], TRAIN_RATIO, len(user['history']), count, train_idx) )
     train_now_time = user['history'][train_idx]['date']
+
     # 遍历用户阅读历史
     history_vec_list = []
     for i,h in enumerate(user['history'][count:]):
@@ -115,7 +119,7 @@ def getVecByHistory(history):
         for usertag in history['tags']:
             #标签标准化 ：利用互信息将使用次数较少的标签聚类到使用次数较多的标签上
             if ENABLE_STANDALIZE:
-                realtag = stdtag.simple_transform(usertag)
+                realtag = stdtag.simple_transform(usertag, STANDARD_THRES)
             else:
                 realtag = usertag
 
@@ -143,7 +147,7 @@ def getVecByHistory(history):
         #遍历书中的每个热门标签
         for booktag in [x['name'] for x in book['tags']]:
             if ENABLE_STANDALIZE:
-                realtag = stdtag.simple_transform(booktag)
+                realtag = stdtag.simple_transform(booktag, STANDARD_THRES)
             else:
                 realtag = booktag
 
@@ -258,7 +262,7 @@ def generateRecBooksFromUModel():
                 if ENABLE_STANDALIZE:
                     realtag = {}
                     for i,t in enumerate(book['tags']):
-                        rl = stdtag.simple_transform(t['name'])
+                        rl = stdtag.simple_transform(t['name'], STANDARD_THRES)
                         realtag[rl] = float(8-i)/10
                     weight = getCosSim(u['interest_eval'], realtag)
                 else: 
@@ -374,19 +378,15 @@ def Test(query, limit):
     T_Recall    = 0.0 
     T_Precision = 0.0
     for u in db.umodel.find():
-        # if u['user_id'] not in G_umodels:
-        #     continue
         train_idx = int( len(rsdb.findOneUser(u['user_id'])['history']) * TRAIN_RATIO )
         u_reads = set([unicode(x['book_id']) for x in rsdb.findOneUser(u['user_id'])['history']][:train_idx])
-        # print '\nactually read:', ' '.join([rsdb.findOneBook(x)['title'] for x in u_reads if 'title' in rsdb.findOneBook(x)])
         rec_reads = set([ unicode(x[0]) for x in rsdb.findOneModel(u['user_id'])['interest_recbooks'] ])
-        # print '\nrecommend read:', ' '.join([rsdb.findOneBook(x)['title'] for x in rec_reads if 'title' in rsdb.findOneBook(x)])
+        if len(u_reads) == 0 or rec_reads == 0:
+            continue
         Recall_    = float(len(u_reads&rec_reads)) / float((len(u_reads)+1))
         Precision_ = float(len(u_reads&rec_reads)) / float((len(rec_reads)+1))
         T_Recall += Recall_ 
         T_Precision += Precision_
-        # if Recall_ == 0.0 or Precision_ == 0.0:
-        #     users_count -= 1
         logging.info('Testing User %s u_read: %d, rec_reads: %d, Recall : %f%%, Precision : %f%%' 
             % (u['user_id'], len(u_reads), len(rec_reads), Recall_*100, Precision_*100) )
     logging.info('Testing total, Recall : %f%%, Precision : %f%%, F: %F%%' 
@@ -395,8 +395,8 @@ def Test(query, limit):
 def main():
     # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
     #对阅读量大于15小于600的用户进行模型计算；将user表中的数据计算后保存到umodel表
-    query = {'read':{'$gte':60, '$lte':600}}
-    limit = 10000
+    query = {'read':{'$gte':60}}
+    limit = 100
     generateUModelFromUsers(query, limit=limit)
     # #保存最新更新的专业树
     # # pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))

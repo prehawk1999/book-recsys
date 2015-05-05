@@ -2,6 +2,10 @@
 from book_recsys import *
 import gensim
 
+
+## 标准化阀值
+STANDARD_THRES = 10
+
 class StandardTags(object):
 
     def __init__(self):
@@ -103,7 +107,10 @@ class StandardTags(object):
         if isinstance(ret, unicode):
             return ret
         elif isinstance(ret, list):
-            return ret[0][0]
+            if ret[0][1] > STANDARD_THRES:
+                return ret[0][0]
+            else:
+                return inp_tag
 
     # 把矩阵所有数字按照大小排列, 获取一个(x,y,value)的列表，标记坐标和值
     def _getMtrxMaxVec(self, mtrx):

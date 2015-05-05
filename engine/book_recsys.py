@@ -34,6 +34,8 @@ PROG       = 100
 PROG_REC   = 0 
 PROG_SCALE = (0,10,20,30,40,50,60,70,80,90,100)
 
+
+
 BOOK_DOMAIN = [u'技术', u'经济', u'文学', u'艺术', u'历史', u'文化', u'金融', u'漫画', u'法学']
 
 DOMAIN = [u'程序设计', u'信息安全', u'人工智能', u'集体智慧', u'计算机硬件', u'计算机网络', u'计算机图像']
@@ -195,12 +197,15 @@ class StandardTags(object):
                 return ret['standard']
 
     # 永远只返回None或者最相似标签
-    def simple_transform(self, inp_tag):
+    def simple_transform(self, inp_tag, thres):
         ret = self.transform_from_db(inp_tag)
         if isinstance(ret, unicode):
             return ret
         elif isinstance(ret, list):
-            return ret[0][0]
+            if ret[0][1] > thres:
+                return ret[0][0]
+            else:
+                return inp_tag
 
     # 把矩阵所有数字按照大小排列, 获取一个(x,y,value)的列表，标记坐标和值
     def _getMtrxMaxVec(self, mtrx):
@@ -276,6 +281,8 @@ def getCosSim(a_vec, b_vec):
     Ra = 0.0
     Rb = 0.0
     for k in a_vec.keys():
+        if k not in b_vec:
+            continue
         RU += a_vec[k]*b_vec[k]
         Ra += a_vec[k]**2
         Rb += b_vec[k]**2 
@@ -294,6 +301,16 @@ def getLines(inpfile):
         pass      
     count += 1
     return count
+
+def getRankedItems(inp_dict, cmpf=None, prt=False):
+    inp_vec = inp_dict.items()
+    if not cmpf:
+        inp_vec.sort(cmp=lambda a,b:cmp(a[1],b[1]), reverse=True)
+    else:
+        inp_vec.sort(cmp=cmpf, reverse=True)
+    if prt:
+        print 'getRankedItems: ', ' '.join([x[0] for x in inp_vec])
+    return inp_vec
 
 rsdb   = RecsysDatabase()
 stdtag = StandardTags()

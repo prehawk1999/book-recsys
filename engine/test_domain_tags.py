@@ -13,14 +13,17 @@ def main():
     # m.enable_idf()
     # mtrx = m.solveMatrix()
     # model = gensim.models.Word2Vec.load("corpus/misc.model")
-    model = gensim.models.Word2Vec.load('corpus/book.model')
+    model = gensim.models.Word2Vec.load('corpus/misc.model')
+    # mts = model.most_similar(u'计算机', topn=1000)
+    # for k,v in mts:
+    #     print k,v
     mtrx = solveWord2VecMatrix(domain, model)
-    pickle.dump(mtrx, open('dump/word2vecmtrx.dmp', 'w'))
+    # pickle.dump(mtrx, open('dump/word2vecmtrx.dmp', 'w'))
 
-    # k = KNN(mtrx)
-    # k.setInitClass()
-    # ret = k.getCluster()
-    # print ret
+    # # k = KNN(mtrx)
+    # # k.setInitClass()
+    # # ret = k.getCluster()
+    # # print ret
     for domtag in mtrx.items():
         domtag_lst = domtag[1].items()
         domtag_lst.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)
