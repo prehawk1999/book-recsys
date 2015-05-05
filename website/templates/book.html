@@ -11,7 +11,7 @@
 <div class="top">
       <div class="row">
         {% if username %}
-          <span class="top-left">{{username}}，欢迎来到豆瓣读书!</span>
+          <span class="top-left">{{username}}，欢迎回到书籍推荐系统!</span>
         {%end%}
           <span class="top-right">
         {% if username %}
@@ -62,19 +62,8 @@
             <p>isbn10/13: <span>{{ book_info['isbn10'] }}</span> <span>{{ book_info['isbn13'] }}</span></p>
             <p>定价：{{book_info['price']}}</p>
             <p>评分：{{book_info['rating']['average']}} | 
-                 {{book_info['rating']['numRaters']}}人 | <a href="#"><span class="show-tankuan">我来评分</span></a></p>
-            <p class="xq-jieshao-right-p2">            
-            <!-- <p>评分：<img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" /><img src="{{static_url('images/d-25.png')}}" />
-                 3人 | <a href="#"><span>我来评分</span></a></p>
+                 {{book_info['rating']['numRaters']}}人  {%if username%}|<a href="#"><span class="show-tankuan">我来评分</span></a>{%end%}</p>
             <p class="xq-jieshao-right-p2">
-            <a href="#" class="show-tankuan">想读</a>
-            <a href="#" class="show-tankuan">在读</a>
-            <a href="#" class="show-tankuan">读过</a>
-            评分：<img src="{{static_url('images/d-24.png')}}" /></p> -->
-            
-            
-            
-            
         </div>
       
       </div>
@@ -83,26 +72,23 @@
 <!--鼠标点击下拉框-->
    <div class="tankuan" style="display: none;">
       <div class="tankuan-top">添加收藏：我读过这本书<a href="#" class="closeBtn"><img src="/templates/images/d-33.png" /></a></div>
+      <form name="taggit" method="post" action="/user"> 
       <div class="tankuan-nn">
-          <p>给个评论吧?（可选）<select name="userrate"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>分</p>
+           
+          <p>给个评论吧?（可选）<select name="rate"><option value="1">1</option><option value="2">2</option><option value="3" selected=1>3</option><option value="4">4</option><option value="5">5</option></select>分</p>
           <p>标签(多个标签用空格分隔):</p>
-          <p><input name="tancc" id="tancc" type="text" /></p>
-          <p class="tankuan-nn-p1"><span>常用标签：</span><span><a href="#">传记</a>
-                     <a href="#">宋淇</a>
-                     <a href="#"> 张爱玲</a>
-                     <a href="#">散文随笔</a>
-                     <a href="#">文学</a>
-                     <a href="#">钱锺书 </a>
-                     <a href="#"> 陈晓勤</a>   
-                     <a href="#"> Biography</a> 
-                     <a href="#"> 现当代文学</a>  
-                     <a href="#">随便看看</a> </span>
+          <p><input name="tags" id="tancc" type="text" value=""/></p>
+          <p class="tankuan-nn-p1">
          </p>
          <div class="clear"></div>
          
-          <p>简介附注：<br /><input name="tandd" id="tandd" type="text" /></p>
+          <p>简介附注：<br /><input name="comment" id="tandd" type="text" value="" /></p>
       </div>
-      <div class="tankuan-bott"><span><a href="#"><img src="/templates/images/d-35.png" /></a></span></div>
+
+      <input type="text" name="book_id" value="{{book_info['id']}}" style="display:none"/>
+      <div class="tankuan-bott"><span><input type="submit" value="保存"></input></span>
+      </div>
+      </form>
       <div class="clear"></div>  
    </div>      
       

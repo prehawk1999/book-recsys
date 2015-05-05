@@ -11,7 +11,7 @@
 <div class="top">
       <div class="row">
         {% if username %}
-          <span class="top-left">{{username}}，欢迎来到豆瓣读书!</span>
+          <span class="top-left">{{username}}，欢迎回到书籍推荐系统!</span>
         {%end%}
           <span class="top-right">
         {% if username %}
@@ -66,16 +66,18 @@
   </tr> -->
    <tr>
     <td class="biaod-1">密码：</td>
-    <td class="biaod-2"><input name="password" value=""  id="" class="bb2" type="password" /></td>
+    <td class="biaod-2"><input name="password" value=""  id="pwd1" class="bb2" type="password" /></td>
     <td><img src="{{static_url('images/d-12.png')}}">6-15个字符，英文区分大小写</td>
   </tr> 
   <tr>
     <td class="biaod-1">确认密码：</td>
-    <td class="biaod-2"><input name="password2" value=""  id="" class="bb2" type="text" /></td>
+    <td class="biaod-2"><input name="password2" value=""  id="pwd2" class="bb2" type="text" /></td>
     <td><img src="{{static_url('images/d-12.png')}}">重复您输入的密码</td>
   </tr> 
 
-    
+  <script type="text/javascript">
+
+  </script>
 <!--   <tr>
     <td class="biaod-1">验 证 码：</td>
     <td class="biaod-3"><input name="bb3" value=""  id="" class="bb3"  type="text" /><img src="images/d-13.png" /></td>
@@ -91,7 +93,7 @@
  
    <tr>
     <td class="biaod-1"></td>
-    <td><input name="bb4" class="bb4"  type="button" /></td>
+    <td><input name="bb4" class="bb4"  type="submit" /></td>
     <td></td>
   </tr>
  

@@ -5,22 +5,25 @@ from FieldTree import *
 #### 影响推荐效果的几个参数
 
 ## 用户标注标签对兴趣模型的权重
-USER_TAG_W = 1
+USER_TAG_W = 10
 
 ##书籍原有标签对兴趣模型的权重
-BOOK_TAG_W = 0.5
+BOOK_TAG_W = 1
 
 ## 书籍推荐评分数量限制
-BOOK_REC_NUM = 20
+BOOK_REC_NUM = 60
 
 ## 兴趣向量窗口大小
 INT_VEC_MAX = 1000
 
 ## 相似用户窗口
-USER_SIM_WINDOW = 40
+USER_SIM_WINDOW = 10
 
 ## 开启标签标准化
-ENABLE_STANDALIZE = True
+ENABLE_STANDALIZE = False
+
+## 开启遗忘公式
+ENABLE_EBBIN = True
 
 
 ## 训练集比重
@@ -46,7 +49,7 @@ def updateUserModel(user, nowtime, utype):
     u_id = db.umodel.insert(umodel)
     train_idx = int( len(user['history']) * TRAIN_RATIO )
     logging.info('create user %s Training data: ratio: %f, totallen: %d, scope: %d - %d' % (user['user_id'], TRAIN_RATIO, len(user['history']), count, train_idx) )
-    
+    train_now_time = user['history'][train_idx]['date']
     # 遍历用户阅读历史
     history_vec_list = []
     for i,h in enumerate(user['history'][count:]):
@@ -71,7 +74,10 @@ def updateUserModel(user, nowtime, utype):
                 umodel['interest_eval'][t[0]] = 0.0
             #umodel['interest_eval']系用户最终向量的字典；[t[0]]取出t[0]键所对应的值；
             #书籍标签权重要乘上时间系数
-            umodel['interest_eval'][t[0]] += getEbbinghausVal(nowtime, h['date']) * t[1]
+            if ENABLE_EBBIN:
+                umodel['interest_eval'][t[0]] += getEbbinghausVal(train_now_time, h['date']) * t[1]
+            else:
+                umodel['interest_eval'][t[0]] += t[1]
         for t in h['tag_vec'].items():
             if t[0] not in umodel['interest_eval']:
                 umodel['interest_eval'][t[0]] = 0.0
@@ -114,7 +120,7 @@ def getVecByHistory(history):
                 realtag = usertag
 
             #mongodb不支持小数点，tag里面不能有小数点
-            if realtag and realtag.find('.') == -1:
+            if realtag and realtag.find('.') == -1 and realtag.find('$') == -1:
 
                 # 获得标签的idf
                 #找数据库中标签的idf，有的话就是tag_idf，没有的话就是1
@@ -141,7 +147,7 @@ def getVecByHistory(history):
             else:
                 realtag = booktag
 
-            if realtag and realtag.find('.') == -1:
+            if realtag and realtag.find('.') == -1 and realtag.find('$') == -1:
 
                 # 获得标签的idf
                 ret = rsdb.findOneTag(realtag)
@@ -159,7 +165,11 @@ def getVecByHistory(history):
 
 ### 根据艾宾浩斯遗忘公式，计算两个日子间隔表示的时间系数
 def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
+    if isinstance(nowtime, unicode):
+        nowtime = datetime.datetime.strptime(nowtime, "%Y-%m-%d")
     timediff = nowtime - datetime.datetime.strptime(history_date, "%Y-%m-%d")
+    if timediff.days <= 0:
+        return 1
     return float(k)/float(math.log(timediff.days)**c+k)
 
 ### 根据users表更新umodels表的每个用户,以及缓存部分数据
@@ -245,7 +255,14 @@ def generateRecBooksFromUModel():
 
                 # #对于书中的所有热门标签进行与兴趣向量的匹配，如果在兴趣向量中存在这个标签，则书籍得分
                 # #会加上这个标签的权重
-                weight = getCosSim(u['interest_eval'], dict([(t['name'], float(8-i)/10) for i,t in enumerate(book['tags'])]) )        
+                if ENABLE_STANDALIZE:
+                    realtag = {}
+                    for i,t in enumerate(book['tags']):
+                        rl = stdtag.simple_transform(t['name'])
+                        realtag[rl] = float(8-i)/10
+                    weight = getCosSim(u['interest_eval'], realtag)
+                else: 
+                    weight = getCosSim(u['interest_eval'], dict([(t['name'], float(8-i)/10) for i,t in enumerate(book['tags'])]) )        
                 if weight <= 0.0:
                     continue
 
@@ -253,8 +270,8 @@ def generateRecBooksFromUModel():
                     user_books.append( (book['id'], weight, book['title']) )
             user_books.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)      
             u['interest_recbooks'] = user_books[:BOOK_REC_NUM]
-            print '\n user %s: interest_eval: %s' % (u['user_id'], ' '.join([unicode(x[0])+unicode(x[1]) for x in G_umodels[u['user_id']]['interest_eval'].items() ]) )
-            print '\n check rec books', ' '.join([ rsdb.findOneBook(x[0])['title']+unicode(x[1]) for x in u['interest_recbooks'] ])
+            # print '\n user %s: interest_eval: %s' % (u['user_id'], ' '.join([unicode(x[0])+unicode(x[1]) for x in G_umodels[u['user_id']]['interest_eval'].items() ]) )
+            # print '\n check rec books', ' '.join([ rsdb.findOneBook(x[0])['title']+unicode(x[1]) for x in u['interest_recbooks'] ])
             if len(user_books) > 0:
                 logging.info('sort interest_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 
@@ -379,7 +396,7 @@ def main():
     # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
     #对阅读量大于15小于600的用户进行模型计算；将user表中的数据计算后保存到umodel表
     query = {'read':{'$gte':60, '$lte':600}}
-    limit = 100
+    limit = 10000
     generateUModelFromUsers(query, limit=limit)
     # #保存最新更新的专业树
     # # pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))

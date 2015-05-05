@@ -11,7 +11,7 @@
 <div class="top">
       <div class="row">
         {% if username %}
-          <span class="top-left">{{username}}，欢迎来到豆瓣读书!</span>
+          <span class="top-left">{{username}}，欢迎回到书籍推荐系统!</span>
         {%end%}
           <span class="top-right">
         {% if username %}
@@ -45,7 +45,7 @@
 <div class="row">
 <!--/*左边部分开始*/-->
   <div class="list-left">
-      <div class="list-left-top"><span class="left-s1">搜索 {{tagname}} 的结果...</span><span class="left-s2">您现在所在的位置：<a href="#">首页</a> > <a href="#">搜索标签列表</a></span></div>
+      <div class="list-left-top"><span class="left-s1">搜索 {{tagname}} 的结果...</span><span class="left-s2">您现在所在的位置：<a href="#">首页</a> > <a href="#">搜索列表</a></span></div>
       <div class="clear"></div>
       
       <ul class="list-list">
@@ -53,7 +53,7 @@
         <li><div class="lili-left"><a href="/book/{{book['id']}}"><img src="{{book['images']['medium']}}" /></a></div>
            <p class="lili1">{{book['title']}}</p>
            <p class="lili2"><a href="/book/{{book['id']}}">{{book['summary']}}</a></p> 
-           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"><a href="/book/{{book['id']}}"><img src="{{static_url('images/d-06.png')}}" /></a><a href="#">评论(90)</a>|<a href="#">分享</a></span></p>
+           <p class="lili3"><span class="lili2-s1">2015-09-08</span>  <span class="lili2-s2"></span></p>
         </li>
         {%end%}
         <div class=" clear"></div>

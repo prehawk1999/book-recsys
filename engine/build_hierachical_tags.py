@@ -52,7 +52,7 @@ def shrinkCluster(inp_class):
 			return inp_class
 		inp_class.remove(a_cl)
 		inp_class.remove(b_cl)
-		logging.debug('getting new_cluster len:%d - [%s] - [%s]' % (len(inp_class), ' '.join(a_cl.tags), ' '.join(b_cl.tags)))
+		logging.info('getting new_cluster len:%d - [%s] - [%s]' % (len(inp_class), ' '.join(a_cl.tags), ' '.join(b_cl.tags)))
 		inp_class.append(a_cl.merge(b_cl))
 		return shrinkCluster(inp_class)
 	else:
@@ -67,8 +67,8 @@ def build_hierachical_tags(mtrx):
 
 def main():
     domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.domain-classify.txt')]
-    test_tree = FieldTree()
-    domain = [x.name for x in test_tree.field_nodes]
+    # test_tree = FieldTree()
+    # domain = [x.name for x in test_tree.field_nodes]
     m = MI(domain)
     # m.enable_idf()
     mtrx = m.solveMatrix()

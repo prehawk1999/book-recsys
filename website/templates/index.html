@@ -15,7 +15,7 @@
 <div class="top">
       <div class="row">
         {% if username %}
-          <span class="top-left">{{username}}，欢迎来到豆瓣读书!</span>
+          <span class="top-left">{{username}}，欢迎回到书籍推荐系统!</span>
         {%end%}
           <span class="top-right">
         {% if username %}
@@ -138,16 +138,9 @@ function tab(tabId, tabC){
     <ul class="tab">
       <li id="tabId1" class="current" onclick="tab('tabId1','tabC1');">{{ dombooks.keys()[0] }}</li>
       {% for i in range(len(dombooks)-1) %}
-      <li id="tabId{{i+2}}" onclick="tab('tabId{{i+2}}','tabC{{i+2}}');">{{ dombooks.keys()[i+1] }}</li>
+      <li id="tabId{{i+2}}" onclick="tab('tabId{{i+2}}','tabC{{i+2}}');">{{ dombooks.keys()[i+1] }}
+      </li>
       {% end %}
-<!--      <li id="tabId2" onclick="tab('tabId2','tabC2');"></li>
-      <li id="tabId3" onclick="tab('tabId3','tabC3');"></li>
-      <li id="tabId4" onclick="tab('tabId4','tabC4');"></li>
-      <li id="tabId5" onclick="tab('tabId5','tabC5');"></li>
-      <li id="tabId6" onclick="tab('tabId6','tabC6');"></li>
-      <li id="tabId7" onclick="tab('tabId7','tabC7');"></li>   
-      <li id="tabId8" onclick="tab('tabId4','tabC8');"></li>
-      <li id="tabId9" onclick="tab('tabId5','tabC9');"></li> -->
     </ul>
   </div>
 
@@ -177,6 +170,7 @@ function tab(tabId, tabC){
   {% end %}
 
 </div>
+ 
  
       
 <!--左边二楼结束 -->  

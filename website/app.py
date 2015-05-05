@@ -135,6 +135,23 @@ class RecsysDatabase:
 
         return self.book_tagged[tagname]
 
+    def insertUser(self, username, password):
+        ret = db.users.find_one({"user_id":username})
+        if not ret and username and password:
+            user_doc = {'user_id':username, 'password':password, 'history':[], 'uptime':datetime.datetime.utcnow()}
+            db.users.insert(user_doc)
+            print 'insert one user:%s, %s' % (username, password)
+
+    def insertComment(self, comment, user_id, book_id):
+        comment_doc = {}
+        comment_doc['content'] = comment
+        comment_doc['user_id'] = user_id
+        comment_doc['date']    = datetime.datetime.utcnow()
+        dbret = db.books.update({"id":book_id}, {"$push":{"comments":comment_doc}})
+        print 'book comment inserted %s' % book_id
+        if not dbret['ok']:
+            print 'error update comments'
+
 class BaseHandler(tornado.web.RequestHandler):
     pass
 
@@ -184,7 +201,7 @@ class BookHandler(BaseHandler):
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
         # print ret['comments']
         return self.render("book.html", username=name, dombooks=dbooks,
-            book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
+            book_info=rsdb.summaryBook(ret, au_s=14, ta_s=100, su_s=-1))
 
     def post(self, book_id):
         cook = self.get_cookie('user')
@@ -193,14 +210,8 @@ class BookHandler(BaseHandler):
         else:
             name = ''
         comment = self.get_argument('comment') 
-        comment_doc = {}
-        comment_doc['content'] = comment
-        comment_doc['user_id'] = name
-        comment_doc['date']    = datetime.datetime.utcnow()
-        dbret = db.books.update({"id":book_id}, {"$push":{"comments":comment_doc}})
-        if not dbret['ok']:
-            print 'error update comments'
-            
+        rsdb.insertComment(comment, name, book_id)
+
         dbooks = rsdb.getDombooks(10)
         ret = rsdb.findOneBook(book_id, update=True).copy()
         ret['origin_title'] = ret['origin_title'].strip()
@@ -226,6 +237,33 @@ class UserHandler(BaseHandler):
             book = rsdb.findOneBook(h['book_id']).copy()
             h['book'] = rsdb.summaryBook(book)
         self.render('user.html', username = name, dombooks=dbooks, userinfo=user)
+
+    def post(self):
+        cook = self.get_cookie('user')
+        if cook:
+            name = tornado.escape.xhtml_escape(cook)
+        else:
+            name = None
+        book_id = self.get_argument('book_id')
+        rate    = self.get_argument('rate')
+        try:
+            comment = self.get_argument('comment')
+            tags    = self.get_argument('tags')
+        except:
+            comment = None
+            tags    = None
+        if name:
+            history_doc = {'comment':'', 'user_id':name, 'book_id':book_id, 'rate':rate, 'date':datetime.datetime.utcnow()}
+            if comment:
+                history_doc['comment'] = comment
+                rsdb.insertComment(comment, name, book_id)
+            if tags and tags != 'null':
+                history_doc['tags'] = tags.split(' ')
+            ret = db.users.find_one({"user_id":name})
+            if 'crawled' not in ret:
+                db.users.update({"user_id":name}, {"$push":{"history":history_doc}})
+                print "user %s insert one history" % name
+        self.redirect('/book/%d' % int(book_id))
 
 
 class TagHandler(BaseHandler):
@@ -254,6 +292,7 @@ class TagHandler(BaseHandler):
         dbooks = rsdb.getDombooks(10)
         return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, dombooks=dbooks)
 
+
 class LogoutHandler(BaseHandler):
     def get(self):
         self.clear_cookie('user')
@@ -270,7 +309,10 @@ class RegisterHandler(BaseHandler):
         self.render('register.html', username=name)
 
     def post(self):
-        pass
+        name = self.get_argument('username')
+        password = self.get_argument('password')
+        rsdb.insertUser(name, password)
+        self.redirect('/')
 
 # mongo数据库配置
 conn = MongoClient('localhost',27017) 
