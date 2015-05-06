@@ -23,7 +23,7 @@ USER_SIM_WINDOW = 10
 ENABLE_STANDALIZE = True
 
 ## 进行标准化的相似度阀值
-STANDARD_THRES = 0.9
+STANDARD_THRES = 1
 
 ## 开启遗忘公式
 ENABLE_EBBIN = True
@@ -182,6 +182,8 @@ def generateUModelFromUsers(query, limit):
     db.umodel.remove({})
     total = db.users.find(query, limit=limit).count()
     for i,u in enumerate(db.users.find(query, limit=limit, timeout=False)):
+        if 'history' not in u:
+            continue
         #updateUserModel函数是计算特定用户的模型；
         #u是用户；第二个参数是当前时间
         um = updateUserModel(u, datetime.datetime(2015,4,1), 'recsys')
@@ -263,10 +265,10 @@ def generateRecBooksFromUModel():
                     realtag = {}
                     for i,t in enumerate(book['tags']):
                         rl = stdtag.simple_transform(t['name'], STANDARD_THRES)
-                        realtag[rl] = float(8-i)/10
+                        realtag[rl] = float(8-i)
                     weight = getCosSim(u['interest_eval'], realtag)
                 else: 
-                    weight = getCosSim(u['interest_eval'], dict([(t['name'], float(8-i)/10) for i,t in enumerate(book['tags'])]) )        
+                    weight = getCosSim(u['interest_eval'], dict([(t['name'], float(8-i)) for i,t in enumerate(book['tags'])]) )        
                 if weight <= 0.0:
                     continue
 
@@ -395,8 +397,8 @@ def Test(query, limit):
 def main():
     # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
     #对阅读量大于15小于600的用户进行模型计算；将user表中的数据计算后保存到umodel表
-    query = {'read':{'$gte':60}}
-    limit = 100
+    query = {'read':{'$gte':15}}
+    limit = 3000
     generateUModelFromUsers(query, limit=limit)
     # #保存最新更新的专业树
     # # pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))

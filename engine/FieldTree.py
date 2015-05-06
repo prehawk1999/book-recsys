@@ -58,14 +58,13 @@ class FieldNode(object):
 	"""docstring for FieldNode"""
 	
 	def __init__(self, taglist, level, parents):
-		self.tags = [t.lower() for t in taglist.split('`')]
+		self.tags = [t.lower() for t in taglist.split('`') if t]
 		self.name = self.tags[0]
 		self.level   = level
 		self.parents = parents
 		self.books   = []
 		self.books_allow  = set()
 		self.books_exists = set()
-
 
 	def match(self, tagname):
 		if tagname.lower() in self.tags:
@@ -104,8 +103,11 @@ class FieldTree(object):
 	def __init__(self, input_tree=FIELDS, tree_dump='dump/FieldTreeNodes.dmp'):
 		self.vector = {}
 		if not FieldTree.field_nodes:
-			self._parse_fields(input_tree, 1, set(), FieldTree.field_nodes)
-			logging.debug('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
+			if isinstance(FIELDS, dict):
+				self._parse_fields(input_tree, 1, set(), FieldTree.field_nodes)
+				logging.debug('INITIALIZE field_nodes: %d' % len(FieldTree.field_nodes))
+			elif isinstance(FIELDS, list):
+				FieldTree.field_nodes = FIELDS
 
 	def _parse_fields(self, input_tree, level, parents, output):
 		for inp in input_tree.items():

@@ -38,9 +38,38 @@ def getClosestCluster(mtrx):
 
 def shrinkCluster(inp_class, stop_idx=500, need_ask=True):
     count = 1
+
+    # 返回数据组装成列表的列表
+    def listData(inp_class):
+        cluster_lst = []
+        for one in inp_class:
+            
+            # 该簇的标签集合，然后对其进行排序
+            cluster = [ rsdb.findOneTag(x) for x in one.tags ]
+            cluster.sort(cmp=cmpf, reverse=True)
+            cluster_lst.append([x['name'] for x in cluster])
+        return cluster_lst
+
+    # 首先比较标签的互信息强度，然后比较使用该标签的书籍数量，然后比较标签的使用次数
+    def cmpf(a,b):
+        if ClusterClass.strg[a['name']] > ClusterClass.strg[b['name']]:
+            return 1
+        elif ClusterClass.strg[a['name']] == ClusterClass.strg[b['name']]:            
+            if len(a['book_ref']) > len(b['book_ref']):
+                return 1
+            elif len(a['book_ref']) == len(b['book_ref']):
+                if a['count'] > b['count']:
+                    return 1
+                else:
+                    return -1
+            else:
+                return -1
+        else:
+            return -1
+
     while True:
         if len(inp_class) <= 2:
-            return inp_class
+            return listData(inp_class)
         
         # 获得类簇之间的相似度
         tmp_mtrx = {}
@@ -53,28 +82,12 @@ def shrinkCluster(inp_class, stop_idx=500, need_ask=True):
 
         a_cl, b_cl = getClosestCluster(tmp_mtrx)
         if a_cl is None or b_cl is None:
-            return inp_class
+            return listData(inp_class)
         inp_class.remove(a_cl)
         inp_class.remove(b_cl)
         inp_class.append(a_cl.merge(b_cl))
         # logging.info('getting new_cluster len:%d - [%s] - [%s]' % (len(inp_class), ' '.join(a_cl.tags), ' '.join(b_cl.tags)))
         
-        # 首先比较标签的互信息强度，然后比较使用该标签的书籍数量，然后比较标签的使用次数
-        def cmpf(a,b):
-            if ClusterClass.strg[a['name']] > ClusterClass.strg[b['name']]:
-                return 1
-            elif ClusterClass.strg[a['name']] == ClusterClass.strg[b['name']]:            
-                if len(a['book_ref']) > len(b['book_ref']):
-                    return 1
-                elif len(a['book_ref']) == len(b['book_ref']):
-                    if a['count'] > b['count']:
-                        return 1
-                    else:
-                        return -1
-                else:
-                    return -1
-            else:
-                return -1
 
         if need_ask:
             cond = lambda count:raw_input('lev:%d,next level?(enter) or finish?(q)'%count).lower()
@@ -84,7 +97,7 @@ def shrinkCluster(inp_class, stop_idx=500, need_ask=True):
         # 停止条件，设置了迭代次数或者cmd中人工敲q
         ans = cond(count)
         if count >= stop_idx or ans == 'q':
-            return inp_class
+            return listData(inp_class)
 
         # 假如设置了手动模式，则每次迭代都会输出聚类结果
         while ans:
@@ -93,25 +106,22 @@ def shrinkCluster(inp_class, stop_idx=500, need_ask=True):
                 # 该簇的标签集合，然后对其进行排序，打印
                 cs_i = [ rsdb.findOneTag(x) for x in i.tags ]
                 cs_i.sort(cmp=cmpf, reverse=True)
-                print 'getRankedItems: ', ' '.join([x['name']+unicode( ClusterClass(cs_i[0]['name']).getSim(ClusterClass(x['name'])) ) for x in cs_i])
+                print 'getRankedItems: ', ' '.join([x['name']+unicode( ClusterClass.mtrx[cs_i[0]['name']][x['name']] )  for x in cs_i])
 
             print 'new cluster: ', ' '.join(a_cl.tags)
             ans = cond(count)
             if ans == 'q':
-                return inp_class
+                return listData(inp_class)
 
         count += 1
 
-def build_hierachical_tags(mtrx, strg, stop_idx=500, need_ask=True):
+def build_hierachical_tags(mtrx, strg, stop_idx=1000, need_ask=True):
     ClusterClass.mtrx = mtrx
     ClusterClass.strg = strg
     initClass = [ClusterClass(x) for x in mtrx.keys()]
     logging.debug('getting init class. len:%d' % len(initClass))
-    cluster = shrinkCluster(initClass, stop_idx=stop_idx, need_ask=need_ask)
-    ret_lst = []
-    for c in cluster:
-        ret_lst.append(c.tags)
-    return ret_lst
+    cluster_lst = shrinkCluster(initClass, stop_idx=stop_idx, need_ask=need_ask)
+    return cluster_lst
 
 
 def main():
@@ -120,7 +130,7 @@ def main():
     # domain = [x.name for x in FieldTree().field_nodes]
     m = MI(domain)
     mtrx = m.solveMImatrix()
-    strg = dict(m.solveTagRank(mtrx))      
+    strg = dict(m.solveTagStrength(mtrx))      
     build_hierachical_tags(mtrx, strg)
 
 if __name__ == '__main__':

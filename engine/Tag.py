@@ -16,7 +16,7 @@ class Tag(object):
         for t in tagvec:
             if t not in Tag.tdata:
                 self.tagvec.remove(t)
-                
+
 
     # 计算标签 - 物品矩阵
     def solveItemMtrx(self):
@@ -31,7 +31,7 @@ class Tag(object):
         return mtrx
 
     # 获得tagvec输入标签列表的相似度矩阵，利用标签 - 物品矩阵进行余弦相似度计算
-    def solveCosSimMtrx(self):
+    def solveCosmatrix(self):
         tag_item_mtrx = self.solveItemMtrx()
         mtrx = {}
         for tag_i in self.tagvec:
@@ -43,9 +43,9 @@ class Tag(object):
         return mtrx
 
     # 根据输入的标签相似度矩阵计算每个标签对其他所有标签的强度
-    def solveTagRank(self, mtrx):
+    def solveTagStrength(self, mtrx):
         ret = {}
-        # mtrx = self.solveCosSimMtrx()
+        # mtrx = self.solveCosmatrix()
         for t in self.tagvec:
             acc = 0.0
             for v in mtrx[t].values():
@@ -59,10 +59,10 @@ class Tag(object):
 def main():
     domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.domain-classify.txt')]
     tagg = Tag(domain)
-    mtrx = tagg.solveCosSimMtrx()
-    for i,v in tagg.solveTagRank(mtrx):
+    mtrx = tagg.solveCosmatrix()
+    for i,v in tagg.solveTagStrength(mtrx):
         print i,v
-    # mtrx = tagg.solveCosSimMtrx()
+    # mtrx = tagg.solveCosmatrix()
     # for domtag in mtrx.items():
     #     domtag_lst = domtag[1].items()
     #     domtag_lst.sort(cmp=lambda a,b:cmp(a[1], b[1]), reverse=True)
