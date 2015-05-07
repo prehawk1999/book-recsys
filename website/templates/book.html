@@ -263,24 +263,27 @@
           </ul>
      </div>
      
+     {%if recbooks%}
      <div class="list-right2"><!--右边二楼-->
-        <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
+        <div class="list-right1-top">相似用户推荐书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
-            {% for i in range(len(dombooks)) %}
-             <li>
-                <p class="shu-list-p1"><a href="/book/{{dombooks.values()[i][0]['id']}}"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
-                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
-                <!-- <p><img src="" /></p>  -->
-                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
-                <p>{{dombooks.values()[i][0]['tags']}}</p>
-             </li>
-
-             <div class="clear"></div>
-             {%end%}
+              {%for book in recbooks %}
+               <li>
+                  <p class="shu-list-p1"><a href="/book/{{book['id']}}"><img src="{{book['images']['medium']}}" /></a></p>
+                  <p class="shu-list-p2">{{book['title']}}</p>
+                  <!-- <p><img src="" /></p>  -->
+                  <p>作者：{{book['author']}}</p> 
+                  <p>{{book['tags']}}</p>
+               </li>
+               <div class="clear"></div>
+              {%end%}
+           
       
           </ul>
      </div>
+    {%end%}
+
   </div><!--/*右边结束*/-->
 </div>
 <div class="clear"></div>

@@ -11,13 +11,13 @@ USER_TAG_W = 10
 BOOK_TAG_W = 1
 
 ## 书籍推荐评分数量限制
-BOOK_REC_NUM = 65
+BOOK_REC_NUM = 30
 
 ## 兴趣向量窗口大小
 INT_VEC_MAX = 2000
 
 ## 相似用户窗口
-USER_SIM_WINDOW = 10
+USER_SIM_WINDOW = 30
 
 ## 开启标签标准化
 ENABLE_STANDALIZE = True
@@ -28,6 +28,8 @@ STANDARD_THRES = 1
 ## 开启遗忘公式
 ENABLE_EBBIN = True
 
+## 查询网页用户
+ENABLE_WEBSITE = True
 
 ## 训练集比重
 TRAIN_RATIO = 0.8
@@ -181,7 +183,7 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 def generateUModelFromUsers(query, limit):
     db.umodel.remove({})
     total = db.users.find(query, limit=limit).count()
-    for i,u in enumerate(db.users.find(query, limit=limit, timeout=False)):
+    for i,u in enumerate(db.users.find(query, limit=limit,timeout=False)):
         if 'history' not in u:
             continue
         #updateUserModel函数是计算特定用户的模型；
@@ -397,7 +399,10 @@ def Test(query, limit):
 def main():
     # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
     #对阅读量大于15小于600的用户进行模型计算；将user表中的数据计算后保存到umodel表
-    query = {'read':{'$gte':15}}
+    if ENABLE_WEBSITE:
+        query = {'read':{'$gte':15}}
+    else:
+        query = {'website':1}
     limit = 3000
     generateUModelFromUsers(query, limit=limit)
     # #保存最新更新的专业树

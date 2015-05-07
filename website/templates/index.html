@@ -128,6 +128,22 @@ function tab(tabId, tabC){
     }
   }
 }
+
+function tab2(tabId, tabC){
+  var len = document.getElementById('get2Id').getElementsByTagName('li').length;
+  for(i=1; i<=len; i++){
+    if ("tab2Id"+i==tabId){
+      document.getElementById(tabId).className="current";
+    }else{
+      document.getElementById("tab2Id"+i).className="";
+    }
+    if ("tab2C"+i==tabC){
+      document.getElementById(tabC).className="show";
+    }else{
+      document.getElementById("tab2C"+i).className="hidden";
+    }
+  }
+}
 //-->
 </script>
 
@@ -144,17 +160,15 @@ function tab(tabId, tabC){
     </ul>
   </div>
 
-
   <div class="show" id="tabC1">
-
     <div class="con">
     <ul class="tu-list11">
-    <!-- 10 本 -->
-    {% for b in dombooks.values()[0] %}
-      <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
-    {%end%}
+      <!-- 10 本 -->
+      {% for b in dombooks.values()[0] %}
+        <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
+      {%end%}
     </ul>  
-   </div>
+    </div>
   </div>
 
   {% for i in range(len(dombooks)-1) %}
@@ -171,36 +185,61 @@ function tab(tabId, tabC){
 
 </div>
  
- 
-      
-<!--左边二楼结束 -->  
-   
-
 
 <div class="clear"></div>
 <div class="left-bottom"><img src="{{static_url('images/d-07.png')}}" /></div> 
 
+ <div class="list-left-top22"><span class="left-s1">用户书籍推荐</span><span class="left-s2"><a href="#">更多>></a></span></div>
+      <div class="clear"></div>   
+
+ {% if fieldbooks %}
+ <div id="get2Id">
+
+  <div class="tabT">
+    <ul class="tab">
+      <li id="tab2Id1" class="current" onclick="tab2('tab2Id1','tab2C1');">{{ fieldbooks.keys()[0] }}</li>
+      {% for i in range(len(fieldbooks)-1) %}
+      <li id="tab2Id{{i+2}}" onclick="tab2('tab2Id{{i+2}}','tab2C{{i+2}}');">{{ fieldbooks.keys()[i+1] }}
+      </li>
+      {% end %}
+    </ul>
+  </div>
+
+  <div class="show" id="tab2C1">
+    <div class="con">
+    <ul class="tu-list11">
+      <!-- 10 本 -->
+      {% for b in fieldbooks.values()[0] %}
+        <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
+      {%end%}
+    </ul>  
+    </div>
+  </div>
+
+  {% for i in range(len(fieldbooks)-1) %}
+    <div class="hidden" id="tab2C{{i+2}}">
+      <div class="con">    
+        <ul class="tu-list11">
+          {% for b in fieldbooks.values()[i+1] %}
+            <li><a href="/book/{{ b['id'] }}"><img src="{{ b['images']['medium'] }}" /><p class="tu-lis11t-p1">{{ b['title'] }}</p><p>{{ b['author'] }}</p></a></li>
+          {%end%}
+        </ul>
+      </div>
+    </div>  
+  {% end %}
+
+</div>
+{%end%}
+
+<!--左边二楼结束 -->  
+   
+
+
+
      
 <!--左边二楼开始 -->       
- <div class="list-left-top22"><span class="left-s1">用户书籍推荐</span><span class="left-s2"><a href="#">更多>></a></span></div>
-      <div class="clear"></div>      
-        
- <ul class="left-2f">
-  {% if recbooks %}
-   {% for book in recbooks %}
-     <li><span class="left-2f-s1"><a href="/book/{{ book['id'] }}"><img src="{{ book['images']['medium'] }}" /></a></span>
-         <span class="left-2f-s2">
-             <p><a href="/book/{{ book['id'] }}">{{ book['title'] }}</a></p>
-             <p><!-- <img src="{{ book['images']['medium'] }}" /> --></p>
-             <p>作者：{{ book['author'] }}</p>
-             <p>{{ book['tags'] }}</p>
-             <p class="left-2f-s2-p1">{{ book['summary'] }}</p>
-         </span>
-     </li>
-   {% end %}
-   {% end %}
-  
- </ul>       
+   
+            
 <!--左边二楼结束-->
 
 </div>
@@ -304,25 +343,24 @@ function tab(tabId, tabC){
              
           </ul>
      </div>
-
+     {%if recbooks%}
      <div class="list-right2"><!--右边二楼-->
-        <div class="list-right1-top">热门书籍<a href="#">更多>></a></div>
+        <div class="list-right1-top">相似用户推荐书籍<a href="#">更多>></a></div>
 
           <ul class="shu-list">
-            {% for i in range(len(dombooks)) %}
-             <li>
-                <p class="shu-list-p1"><a href="/book/{{dombooks.values()[i][0]['id']}}"><img src="{{dombooks.values()[i][0]['images']['medium']}}" /></a></p>
-                <p class="shu-list-p2">{{dombooks.values()[i][0]['title']}}</p>
-                <!-- <p><img src="" /></p>  -->
-                <p>作者：{{dombooks.values()[i][0]['author']}}</p> 
-                <p>{{dombooks.values()[i][0]['tags']}}</p>
-             </li>
-
-             <div class="clear"></div>
-            {%end%}
-      
+              {%for book in recbooks %}
+               <li>
+                  <p class="shu-list-p1"><a href="/book/{{book['id']}}"><img src="{{book['images']['medium']}}" /></a></p>
+                  <p class="shu-list-p2">{{book['title']}}</p>
+                  <!-- <p><img src="" /></p>  -->
+                  <p>作者：{{book['author']}}</p> 
+                  <p>{{book['tags']}}</p>
+               </li>
+               <div class="clear"></div>
+              {%end%}
           </ul>
      </div>
+    {%end%}
   </div><!--/*右边结束*/-->
 </div>
 <div class="clear"></div>

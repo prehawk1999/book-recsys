@@ -16,6 +16,7 @@ class RecsysDatabase:
         self.book_recommend   = []
         self.book_domain      = {}
         self.book_tagged      = {}
+        self.field_books      = {}
 
     def summaryString(self, inpStr, num=12, dotlen=6):
         if num > 0 and len(inpStr) > num:
@@ -55,21 +56,43 @@ class RecsysDatabase:
 
         return self.book_popular
 
-    def getRecbooks(self, name):
         if self.book_recommend:
             return self.book_recommend
 
+    def getRecbooks(self, name):
         umodel = db.umodel.find_one({"user_id":name})
         # print umodel
         if not umodel or 'interest_recbooks' not in umodel:
             return
 
-        for b in umodel['interest_recbooks']:
+        for b in umodel['interest_recbooks'][:10]:
             book = self.findOneBook(b[0]).copy()
             if not book or 'title' not in book:
                 continue
             self.book_recommend.append(self.summaryBook(book))
         return self.book_recommend
+
+    def getFieldBooks(self, name, limit=10):
+        umodel = db.umodel.find_one({"user_id":name})
+        if not umodel or 'field_eval' not in umodel:
+            return
+        user = rsdb.findOneUser(name)
+        if not user:
+            return
+
+        use_read = [x['book_id'] for x in user['history']]
+
+        if not self.field_books:
+            for f in db.fields.find():
+                self.field_books[f['field']] = [self.summaryBook(b) for b in f['books']]
+
+        f_vec = umodel['field_eval'].items()
+        f_vec.sort(cmp=lambda a,b:cmp(a[1],b[1]),reverse=True)
+        f_books = {}
+        for f in f_vec:
+            f_books[f[0]] = [x for x in self.field_books[f[0]] if x not in use_read][:10]
+        return f_books
+
 
     def getDombooks(self, limit=10):
         if self.book_domain:
@@ -138,7 +161,7 @@ class RecsysDatabase:
     def insertUser(self, username, password):
         ret = db.users.find_one({"user_id":username})
         if not ret and username and password:
-            user_doc = {'user_id':username, 'password':password, 'history':[], 'uptime':datetime.datetime.utcnow()}
+            user_doc = {'website':1,'user_id':username, 'password':password, 'history':[], 'uptime':datetime.datetime.utcnow()}
             db.users.insert(user_doc)
             print 'insert one user:%s, %s' % (username, password)
 
@@ -162,13 +185,14 @@ class MainHandler(BaseHandler):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
-            # print name
-            rb = rsdb.getRecbooks(name)[:20]
+            rb = rsdb.getRecbooks(name)
+            fb = rsdb.getFieldBooks(name)
         else:
             name = None
             rb = None
+            fb = None
 
-        self.render("index.html", username=name, popbooks=pb, recbooks=rb, dombooks=pd)
+        self.render("index.html", username=name, popbooks=pb, recbooks=rb, dombooks=pd, fieldbooks=fb)
 
 class LoginHandler(BaseHandler):
     def get(self):
@@ -182,7 +206,8 @@ class LoginHandler(BaseHandler):
             if ('crawled' in user and password == u'123456') or ('password' in user and password == user['password']):
                 self.set_cookie('user', username)
                 self.redirect('/')
-
+            else:
+                self.redirect('/login')
 
 class BookHandler(BaseHandler):
     
@@ -190,35 +215,37 @@ class BookHandler(BaseHandler):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
+            rb = rsdb.getRecbooks(name)
         else:
+            rb = None
             name = None
 
-        dbooks = rsdb.getDombooks(10)
         ret = rsdb.findOneBook(book_id).copy()
         ret['origin_title'] = ret['origin_title'].strip()
         ret['summary'] = rsdb.prettifyText(ret['summary'])
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
         # print ret['comments']
-        return self.render("book.html", username=name, dombooks=dbooks,
+        return self.render("book.html", username=name, recbooks=rb,
             book_info=rsdb.summaryBook(ret, au_s=14, ta_s=100, su_s=-1))
 
     def post(self, book_id):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
+            rb = rsdb.getRecbooks(name)
         else:
+            rb = None
             name = ''
         comment = self.get_argument('comment') 
         rsdb.insertComment(comment, name, book_id)
 
-        dbooks = rsdb.getDombooks(10)
         ret = rsdb.findOneBook(book_id, update=True).copy()
         ret['origin_title'] = ret['origin_title'].strip()
         ret['summary'] = rsdb.prettifyText(ret['summary'])
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])   
-        return self.render("book.html", username=name, dombooks=dbooks,
+        return self.render("book.html", username=name, recbooks=rb,
             book_info=rsdb.summaryBook(ret, au_s=14, ta_s=34, su_s=-1))
 
 class UserHandler(BaseHandler):
@@ -227,16 +254,17 @@ class UserHandler(BaseHandler):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
+            rb = rsdb.getRecbooks(name)
         else:
+            rb
             name = None
-        dbooks = rsdb.getDombooks(10)
         user = rsdb.findOneUser(name)
         for h in user['history'][:45]:
             if 'book_id' not in h:
                 continue
             book = rsdb.findOneBook(h['book_id']).copy()
             h['book'] = rsdb.summaryBook(book)
-        self.render('user.html', username = name, dombooks=dbooks, userinfo=user)
+        self.render('user.html', username = name, recbooks=rb, userinfo=user)
 
     def post(self):
         cook = self.get_cookie('user')
@@ -274,23 +302,25 @@ class TagHandler(BaseHandler):
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
+            rb = rsdb.getRecbooks(name)
         else:
             name = None
+            rb = None
         tbooks = rsdb.findTagBooks(tagname)[:45]
-        dbooks = rsdb.getDombooks(10)
-        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, dombooks=dbooks)
+        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, recbooks=rb)
 
     def post(self):
         tagname = self.get_argument('tagname')
         cook = self.get_cookie('user')
         if cook:
             name = tornado.escape.xhtml_escape(cook)
+            rb = rsdb.getRecbooks(name)
         else:
             name = None
+            rb = None
 
         tbooks = rsdb.findTagBooks(tagname)[:45]
-        dbooks = rsdb.getDombooks(10)
-        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, dombooks=dbooks)
+        return self.render('tag.html', tagname=tagname, username=name, tagbooks=tbooks, recbooks=rb)
 
 
 class LogoutHandler(BaseHandler):

@@ -125,8 +125,8 @@ def build_hierachical_tags(mtrx, strg, stop_idx=1000, need_ask=True):
 
 
 def main():
-    domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.domain-classify.txt')]
-    # domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.com-word2vec-1000.txt')]
+    # domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.domain-classify.txt')]
+    domain = [i.split(' ')[0].decode('utf-8') for i in open('log/tag.com-word2vec-1000.txt')]
     # domain = [x.name for x in FieldTree().field_nodes]
     m = MI(domain)
     mtrx = m.solveMImatrix()

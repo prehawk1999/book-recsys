@@ -182,7 +182,7 @@ class FieldTree(object):
 
 		# 分类书籍到节点标签
 		for idx in lowest_idx:
-			logging.info('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
+			logging.debug('CLASSIFY book:%s TO lowest_idx:%s'% (book['title'], FieldTree.field_nodes[idx].name) )
 			FieldTree.field_nodes[idx].books_allow.add(book['id'])
 
 def main():

@@ -4,6 +4,7 @@ from Tag import Tag
 from MI import MI
 from HierarchicalClustering import *
 from FieldTree import *
+from WAC import *
 
 
 ## 层次聚类时的迭代次数
@@ -27,6 +28,11 @@ def build_tag_tree(domain):
 
     # 相似度矩阵，利用互信息来计算
     mtrx = m.solveMImatrix()
+    print len(mtrx)
+
+    # 尝试使用关联强度来代替互信息强度
+    # level = solveWACmatrix(mtrx, T=0.7, use_dump=False)
+    # asso  = buildAssoStrength(level)
 
     # 利用互信息相似矩阵计算互信息强度
     strg = dict( m.solveTagStrength(mtrx) )
@@ -39,7 +45,7 @@ def build_tag_tree(domain):
         # 人工剪枝，问答模式
         question = u'[%s] - %s...(len:%d), Do You Want To (D)iscard? (%d/%d)'%(root_node, ' '.join(cluster[1:][:10]), len(cluster), i, len(cluster_lst))
         if len(cluster) < MIN_CLUSTER_SIZE or raw_input(question.encode("utf-8")).lower() == u'd':
-            logging.warn('Discarded.')
+            # logging.warn('Discarded.')
             continue
 
         # 把每簇第一个节点加到fields上，称为簇的根节点
