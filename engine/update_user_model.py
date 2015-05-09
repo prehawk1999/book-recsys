@@ -20,7 +20,7 @@ INT_VEC_MAX = 2000
 USER_SIM_WINDOW = 30
 
 ## 开启标签标准化
-ENABLE_STANDALIZE = True
+ENABLE_STANDALIZE = False
 
 ## 进行标准化的相似度阀值
 STANDARD_THRES = 1
@@ -33,8 +33,6 @@ ENABLE_WEBSITE = True
 
 ## 训练集比重
 TRAIN_RATIO = 0.8
-
-
 
 # 缓存用户阅读历史和用户模型
 G_umodels   = {}
@@ -106,7 +104,8 @@ def updateUserModel(user, nowtime, utype):
 
     #记录更新时间
     umodel['uptime'] = nowtime
-    db.umodel.update({'_id':u_id}, umodel, upsert=True)
+    ret = db.umodel.update({'_id':u_id}, umodel, upsert=True)
+    # print ret['ok']
     return umodel
 
 ### 根据每条历史获得兴趣向量
@@ -173,7 +172,10 @@ def getVecByHistory(history):
 def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
     if isinstance(nowtime, unicode):
         nowtime = datetime.datetime.strptime(nowtime, "%Y-%m-%d")
-    timediff = nowtime - datetime.datetime.strptime(history_date, "%Y-%m-%d")
+    if isinstance(history_date, unicode):
+        timediff = nowtime - datetime.datetime.strptime(history_date, "%Y-%m-%d")
+    else:
+        timediff = nowtime - history_date
     if timediff.days <= 0:
         return 1
     return float(k)/float(math.log(timediff.days)**c+k)
@@ -181,10 +183,10 @@ def getEbbinghausVal(nowtime, history_date, c=1.25, k=1.84):
 ### 根据users表更新umodels表的每个用户,以及缓存部分数据
 #   给每个用户生成 books, users, umodel, tags
 def generateUModelFromUsers(query, limit):
-    db.umodel.remove({})
+    db.umodel.remove(query)
     total = db.users.find(query, limit=limit).count()
     for i,u in enumerate(db.users.find(query, limit=limit,timeout=False)):
-        if 'history' not in u:
+        if 'history' not in u or len(u['history']) < 5:
             continue
         #updateUserModel函数是计算特定用户的模型；
         #u是用户；第二个参数是当前时间
@@ -283,29 +285,6 @@ def generateRecBooksFromUModel():
             if len(user_books) > 0:
                 logging.info('sort interest_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
 
-        ## 获得根据用户专业向量的推荐书籍
-        # 专业向量中每个分量所代表的节点的书籍去除该用户阅读过的书籍
-        # if 'field_eval' in u:
-        #     u['field_recbooks'] = {}
-        #     for uf in u['field_eval'].items():
-        #         user_books = []
-        #         for node in FieldTree.field_nodes:
-        #             print '-=-'*10, node.name
-        #             if not node.match(uf[0]):
-        #                 continue
-        #             for book in node.books:
-        #                 if book not in user_read:
-        #                     print book['title']
-        #                     user_books.append( (book['id'], book['title']) )
-        #                     if len(user_books) > BOOK_REC_NUM:
-        #                         break
-        #         u['field_recbooks'][uf[0]] = user_books
-        #     # u['field_recbooks'] = user_books
-        #     if len(user_books) > 0:
-        #         logging.info('sort field_recbooks for user %s len:%d' % (u['user_id'], len(user_books)) )
-
-
-
         ## 写入用户最终推荐书目
         ret = db.umodel.update({"_id":u['_id']}, u)
         # logging.info('update user recommend books %s' % u['user_id'] )
@@ -334,46 +313,6 @@ def sortFieldNodeTree():
         ret = db.fields.update({"field":fn.name}, ret, upsert=True)
         if not ret['ok']:
             logging.warn('write db.field error')
-        # # 比较函数：按照专业度来排序（用户）；若a & b的专业度相同的话，就按照用户创建时间来排
-        # def umodel_sort(a, b):
-        #     aval = a['field_eval'][fn.name]
-        #     bval = b['field_eval'][fn.name]
-        #     if aval > bval:
-        #         return 1
-        #     elif aval == bval:
-        #         adate = datetime.datetime.strptime(a['history_vec'][0]['date'], "%Y-%m-%d")
-        #         bdate = datetime.datetime.strptime(b['history_vec'][0]['date'], "%Y-%m-%d")
-        #         daydiff = (adate - bdate).days
-        #         if daydiff > 0:
-        #             return 1
-        #         else:
-        #             return -1
-        #     else:
-        #         return -1
- 
-        # # 首先根据这个节点标签, 按照field_eval[fn.name]对所有用户进行排序, 从小到大
-        # # 然后根据用户的建立时间排序，也是从小到大
-        # # fliter有专业向量嘅用户；
-        # umodels = [ x for x in G_umodels.values() if 'field_eval' in x and fn.name in x['field_eval'] ]
-        # #根据just嘅比较函数来排序
-        # umodels.sort(cmp=umodel_sort, reverse=False)
-        # logging.debug('=%s=SORTING field_nodes:%s, len of umodels:%d, ' % ('-'*1, fn.name, len(umodels)) )
-        
-        # #um：每个用户模型中的用户
-        # for um in umodels: # 对于每个用户
-        #     #raw_books: 啱先果啲排好序嘅用户嘅阅读历史
-        #     raw_books = [ rsdb.findOneBook(x['book_id']) for x in G_historys[um['user_id']] if rsdb.findOneBook(x['book_id']) ]
-        #     raw_books.sort(cmp=lambda a,b:cmp(a['rating']['average'], b['rating']['average']), reverse=True)
-        #     #将书插入当前遍历节点
-        #     for b in raw_books:
-        #         ret = FieldTree.field_nodes[idx].insertBook(b)
-        #         if ret:
-        #             logging.debug('=%s=INSERT book %s' % ('-'*9, b['title']) )
-
-    # # 输出每个节点的 书籍情况
-    # for fn in FieldTree.field_nodes:
-    #     logging.info('node:%s, %d books inserted.' % (fn.name, len(fn.books)) )
-
 
 def Test(query, limit):
     N = 10 # 20 30 40
@@ -396,24 +335,22 @@ def Test(query, limit):
     logging.info('Testing total, Recall : %f%%, Precision : %f%%, F: %F%%' 
         % (T_Recall*100/limit, T_Precision*100/limit, (T_Recall*100/limit)/(T_Precision*100/limit) ) )
 
+def generateRecbooksFromUsers(query,limit=100):
+    generateUModelFromUsers(query=query, limit=limit)
+    # #保存最新更新的专业树
+    sortFieldNodeTree()
+    generateRecBooksFromUModel()
+
 def main():
-    # FieldTree.field_nodes = pickle.load(open('dump/FieldNodes'))
     #对阅读量大于15小于600的用户进行模型计算；将user表中的数据计算后保存到umodel表
     if ENABLE_WEBSITE:
         query = {'read':{'$gte':15}}
     else:
         query = {'website':1}
-    limit = 3000
-    generateUModelFromUsers(query, limit=limit)
-    # #保存最新更新的专业树
-    # # pickle.dump(FieldTree.field_nodes, open('dump/FieldNodes', 'w'))
-    sortFieldNodeTree()
-    generateRecBooksFromUModel()
+    limit = 100
+    generateRecbooksFromUsers(query,limit)
     Test(query, limit=limit)
-    # for fn in FieldTree.field_nodes:
-    #     print '-'*10, fn.name
-    #     for book in fn.books:
-    #         print book['title']
+
 
 if __name__ == '__main__':
     main()

@@ -6,6 +6,10 @@ import datetime
 import pymongo
 from pymongo import MongoClient
 from bson import ObjectId
+import sys
+sys.path.append('../engine/')
+
+from AppModel import AppModel
 
 class RecsysDatabase:
 
@@ -56,20 +60,25 @@ class RecsysDatabase:
 
         return self.book_popular
 
-        if self.book_recommend:
-            return self.book_recommend
-
     def getRecbooks(self, name):
+        self.book_recommend = []
         umodel = db.umodel.find_one({"user_id":name})
-        # print umodel
-        if not umodel or 'interest_recbooks' not in umodel:
-            return
+        if not umodel or 'interest_recbooks' not in umodel or not umodel['interest_recbooks']:
+            user = db.users.find_one({"user_id":name})
+            if 'website' not in user or len(user['history']) < 5:
+                return
+            # print 'start recommending.'
+            books = model.getRecBooks(name)
+            print len(books)
+            self.book_recommend = [self.summaryBook(b) for b in books][:10]
 
-        for b in umodel['interest_recbooks'][:10]:
-            book = self.findOneBook(b[0]).copy()
-            if not book or 'title' not in book:
-                continue
-            self.book_recommend.append(self.summaryBook(book))
+        else:
+            # print user['user_id']
+            for b in umodel['interest_recbooks'][:10]:
+                book = self.findOneBook(b[0]).copy()
+                if not book or 'title' not in book:
+                    continue
+                self.book_recommend.append(self.summaryBook(book))
         return self.book_recommend
 
     def getFieldBooks(self, name, limit=10):
@@ -110,22 +119,16 @@ class RecsysDatabase:
         return self.book_domain
 
     def findOneBook(self, book_id, update=False):
-        if book_id in self.books_info and not update:
-            return self.books_info[book_id]
-        else:
-            book = db.books.find_one({"id":book_id})
-            if book and 'title' in book:
-                self.books_info[book_id] = book
-                return book
+        book = db.books.find_one({"id":book_id})
+        if book and 'title' in book:
+            self.books_info[book_id] = book
+            return book
 
     def findOneUser(self, user_id):
-        if user_id in self.users_info:
-            return self.users_info[user_id]
-        else:
-            user = db.users.find_one({"user_id":user_id})
-            if user:
-                self.users_info[user_id] = user
-                return user
+        user = db.users.find_one({"user_id":user_id})
+        if user:
+            self.users_info[user_id] = user
+            return user
 
     def findTagBooks(self, tagname):
         if tagname in self.book_tagged:
@@ -225,9 +228,13 @@ class BookHandler(BaseHandler):
         ret['summary'] = rsdb.prettifyText(ret['summary'])
         ret['author_intro'] = rsdb.prettifyText(ret['author_intro'])
         ret['catalog'] = rsdb.prettifyText(ret['catalog'])
-        # print ret['comments']
-        return self.render("book.html", username=name, recbooks=rb,
-            book_info=rsdb.summaryBook(ret, au_s=14, ta_s=100, su_s=-1))
+        uinfo = rsdb.findOneUser(name)
+        if uinfo and 'history' in uinfo:
+            rd = [x['book_id'] for x in uinfo['history']]
+        else:
+            rd = None
+        return self.render("book.html", username=name, recbooks=rb, read=rd,
+            book_info=rsdb.summaryBook(ret, ti_s=100, au_s=100, ta_s=100, su_s=-1))
 
     def post(self, book_id):
         cook = self.get_cookie('user')
@@ -333,21 +340,22 @@ class RegisterHandler(BaseHandler):
     def get(self):
         cook = self.get_cookie('user')
         if cook:
-            name = tornado.escape.xhtml_escape(cook)
-        else:
-            name = None        
+            self.clear_cookie('user')
+        name = None        
         self.render('register.html', username=name)
 
     def post(self):
         name = self.get_argument('username')
         password = self.get_argument('password')
         rsdb.insertUser(name, password)
+        self.set_cookie('user', name)
         self.redirect('/')
 
 # mongo数据库配置
 conn = MongoClient('localhost',27017) 
 db = conn.group_mems
 rsdb = RecsysDatabase()
+model = AppModel()
 
 settings = {
     # "cookie_secret": "__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__", # 安全cookie所需的

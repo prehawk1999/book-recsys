@@ -62,7 +62,13 @@
             <p>isbn10/13: <span>{{ book_info['isbn10'] }}</span> <span>{{ book_info['isbn13'] }}</span></p>
             <p>定价：{{book_info['price']}}</p>
             <p>评分：{{book_info['rating']['average']}} | 
-                 {{book_info['rating']['numRaters']}}人  {%if username%}|<a href="#"><span class="show-tankuan">我来评分</span></a>{%end%}</p>
+                 {{book_info['rating']['numRaters']}}人  
+                 {%if username%}
+                 {%if not read or book_info['id'] not in read %}
+                 |<a href="#"><span class="show-tankuan">阅读</span></a>
+                 {%end%}
+                 {%end%}
+               </p>
             <p class="xq-jieshao-right-p2">
         </div>
       
@@ -71,7 +77,7 @@
       
 <!--鼠标点击下拉框-->
    <div class="tankuan" style="display: none;">
-      <div class="tankuan-top">添加收藏：我读过这本书<a href="#" class="closeBtn"><img src="/templates/images/d-33.png" /></a></div>
+      <div class="tankuan-top">添加到阅读历史<a href="#" class="closeBtn"><img src="/templates/images/d-33.png" /></a></div>
       <form name="taggit" method="post" action="/user"> 
       <div class="tankuan-nn">
            
@@ -300,7 +306,7 @@
   · <a href="#">黄镨卉</a>
    · <a href="#">秦梓欣</a>
     ·<a href="#"> 陈经冬</a>
-<p>all rights reserved 版权所有：陈经东</p>
+<p>all rights reserved 版权所有：陈经冬</p>
 </div>
    </div>
 </div>

@@ -62,7 +62,11 @@
         {% if 'book' in h %}
           <li><div class="lili-left"><a href="/book/{{h['book']['id']}}"><img src="{{h['book']['images']['medium']}}" /></a></div>
           <p class="lili-p6"><a href="/book/{{h['book']['id']}}">{{h['book']['title']}}</a></p>
-          <p class="lili-p7">{{h['book']['tags']}}</p>
+          <p class="lili-p7">我的评分：{{h['rate']}}分 {%if 'tags' in h %}| 我打的标签：{{' '.join(h['tags'])}} {%end%}</p>
+          <br/>
+          <br/>
+          <br/>
+          {%if 'comment' in h and h['comment']%}<p class="lili-p7">我的评论：{{h['comment']}}</p>{%end%}
           <p class="lili-p8">{{h['book']['rating']['numRaters']}}人读过<br />
                              {{h['book']['summary']}}<br />
                              <!-- <a href="#">修改</a><a href="#">删除</a> -->
@@ -274,7 +278,7 @@
   · <a href="#">黄镨卉</a>
    · <a href="#">秦梓欣</a>
     ·<a href="#"> 陈经冬</a>
-<p>all rights reserved 版权所有：陈经东</p>
+<p>all rights reserved 版权所有：陈经冬</p>
 </div>
    </div>
 </div>
